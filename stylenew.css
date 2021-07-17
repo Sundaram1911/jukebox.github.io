@@ -1657,7 +1657,7 @@ font-size: 28px;
 
 
 /* here media query start for min height 350 px * line number 1567*/    
-@media screen and (max-height:340px){
+@media screen and (max-height:450px){
   .alter{
     display: block;
     margin-top: 15px;
@@ -2260,10 +2260,10 @@ font-size: 28px;
   }
   .arc .arc2 #zinc1 {
     color: #fff;
-    font-size: 20px;
+    font-size: 28px;
     padding: 20px 20px;
     margin: 0px;
-    z-index: 99999;
+    z-index: 99999999;
     position: absolute;
   }
   .arc .arc2 #zinc {
@@ -2278,11 +2278,9 @@ font-size: 28px;
   .arc .arc2 p{
      color: #fff;
     font-size: 26px;
-    text-align: center;
     z-index: 999;
-    margin-top: -110px;
-    margin-left: 25px;
-    margin-bottom: -20px;
+    margin: -110px 20px -20px 20px;
+    text-align: center;
   }
 
   .arc .suff h1 {
@@ -2303,7 +2301,7 @@ font-size: 28px;
   .arc .arc2 h6{
     color: #fff;
     font-size: 16px;
-    margin-left: 33.5%;
+    text-align: center;
     margin-top: 0px;
     z-index: 999;
     position: absolute;

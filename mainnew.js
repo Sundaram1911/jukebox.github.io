@@ -1397,7 +1397,6 @@ function search_music(){
 }
 
 function viewsearch(){
-	document.getElementById("closeicon1").style.display="block";
 	document.getElementById("searchicon1").style.display="none";
 	document.getElementById("hidefolder").style.display="none";
 	document.getElementById("gupta").style.display="block";
@@ -1499,9 +1498,10 @@ function displayart(call){
 }
 function return2nd(were){
 	var b = document.getElementsByClassName("arc")[were];
-	document.getElementById("gupta").style.display = "block";
-	document.getElementById("hide_list1").style.display = "block";
     b.style.display="none";
+	document.getElementById("gupta").style.display="block";
+	document.getElementById("m").style.display="none";
+	console.log("return function Clicked");
 }
 
 function displaysongs(m){
