@@ -1,0 +1,32 @@
+<!DOCTYPE html> 
+<html lang="en"> 
+<head> 
+<meta name="viewport" content="width=device-width, intial-scale=1,minimum-scale=1,maximum-scale=1">	
+<title>Jukebox</title> 
+<!-- Load FontAwesome icons -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css"> 
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<link href="https://css.gg/arrow-long-up-c.css" rel="stylesheet">
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"></script>
+<script src="https://code.jquery.com/jquery-1.9.1.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" ></script>
+<script src="https://www.gstatic.com/firebasejs/8.7.0/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.7.0/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.7.0/firebase-analytics.js"></script>
+<script src="mainnew.js"></script>
+
+<!-- Load the custom CSS style file -->
+<link rel="stylesheet" type="text/css" href="auth_style.css"> 
+</head> 
+
+<body> 
+    <div class="container1">
+    <a href="index.html">Email Authentication</a><br>
+    <input type="email" placeholder="enter your email here" id="email"> <br/>
+    <input type="password" placeholder="enter your password" id="password"> <br/>
+    <button onclick="signUp()" id="signUp">Sign Up</button>
+    <p>or you have an account ? than <span class="red"><a href="jukesignin.html">Sign In</span></p>
+    </div>
+</body>
+</html>
