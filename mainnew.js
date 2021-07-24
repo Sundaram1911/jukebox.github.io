@@ -1,5 +1,9 @@
+$('.back').on("scroll", function () {
+    reveal();
+});
+
 window.onload = function(){
-	$("#loader-wrapper").fadeOut();
+	//$('#loader-wrapper').fadeOut();
 	//love_mood
 	art_song(175,0),art_song(158,1),art_song(157,2),art_song(156,3),art_song(155,4),
 	art_song(141,5),art_song(137,6),art_song(135,7),art_song(134,8),art_song(128,9),
@@ -11,14 +15,34 @@ window.onload = function(){
 	//workout mood
 	art_song(3,24),
 	art_song(209,25),art_song(22,26),art_song(23,27),art_song(27,28),art_song(28,29);
-	//top charts songs
-	
+	//top charts song
+		
 }
-$(document).ready(function(){
-	$('#magic').fadeIn('slow',function(){
-		$('#magic').delay(500).fadeOut();
-	});
-});
+
+
+function reveal(){
+	console.log("chutiye");
+	var reveals = document.querySelectorAll('.reveal');
+	for(var i=0;i < reveals.length; i++){
+		var windowheight = window.innerHeight;
+		var revealtop = reveals[i].getBoundingClientRect().top;
+		var revealpoint = 150;
+		if (revealtop < windowheight - revealpoint){
+				reveals[i].classList.add('active');
+		}
+		else{
+			reveals[i].classList.remove('active');
+		}
+	}
+}
+//$(document).ready(function(){
+	//$('#magic').fadeIn('slow',function(){
+		//$('#magic').delay(500).fadeOut();
+	//});
+//});
+
+
+
 // Select all the elements in the HTML page 
 // and assign them to a variable 
 let now_playing = document.querySelector(".now-playing"); 
@@ -1377,6 +1401,102 @@ let track_list = [
 	artist:'Guru Randhawa',
 	image:'https://c.saavncdn.com/259/Nain-Bengali-Hindi-2021-20210714071001-500x500.jpg',
 	path:'https://sdlhivkecdnems03.cdnsrv.jio.com/jiosaavn.cdn.jio.com/259/abef04a74b6fc5bbbcb1fbc5b8e14b56_160.mp4'
+},
+{
+	name:'Filhaal2 Mohabbat',//220
+	artist:'B Praak',
+	image:'<img src="https://i.scdn.co/image/ab67616d00001e02279e732c44948f9d56aa5413">',
+	path:'https://sgdccdnems04.cdnsrv.jio.com/jiosaavn.cdn.jio.com/621/143c6a6fb975b6387a943418e0e60f33_160.mp4'
+},
+{
+	name:'Nashe Se Chadh Gayi',//221
+	artist:'Arijit Singh',
+	image:'https://c.saavncdn.com/256/Befikre-Hindi-2016-20190329150318-500x500.jpg',
+	path:'https://sdlhivkcdnems05.cdnsrv.jio.com/jiosaavn.cdn.jio.com/256/6786cb875bc75dd60a541261ef04a919_160.mp4'
+},
+{
+	name:'Shaitan Ka Saala',//222
+	artist:'Sohail Sen,Vishal Dadlani',
+	image:'https://c.saavncdn.com/944/Housefull-4-Hindi-2019-20200114134101-500x500.jpg',
+	path:'https://snoidcdnems07.cdnsrv.jio.com/jiosaavn.cdn.jio.com/944/1278cf1bc987641d31f96196f4c078f7_160.mp4'
+},
+{
+	name:'Subha Hone Na De',//223
+	artist:'Pritam,Mika Singh',
+	image:'https://c.saavncdn.com/979/Desi-Boyz-2011-500x500.jpg',
+	path:'https://sgdccdnems02.cdnsrv.jio.com/jiosaavn.cdn.jio.com/979/4562c8ed1f766a6508c73f1a1a786fcb_160.mp4'
+},
+{
+	name:'Tu Meri',//224
+	artist:'Vishal Dadlani',
+	image:'https://c.saavncdn.com/169/Bang-Bang-Hindi-2014-20201005203831-500x500.jpg',
+	path:'https://sdlhivkecdnems04.cdnsrv.jio.com/jiosaavn.cdn.jio.com/169/cb2c2ff36be56fbf2fea3bd0671adb42_160.mp4'
+},
+{
+	name:'Malhari',//225
+	artist:'Vishal dadlani',
+	image:'',
+	path:'https://sgdccdnems02.cdnsrv.jio.com/jiosaavn.cdn.jio.com/732/79d2b5abd0a49b33a879788fd75b5822_160.mp4'
+},
+{
+	name:'Chammak Challo',//226
+	artist:'Vishal Shekhar,Akon',
+	image:'https://c.saavncdn.com/026/Ra-One-Hindi-2011-500x500.jpg',
+	path:'https://sgdccdnems03.cdnsrv.jio.com/jiosaavn.cdn.jio.com/026/4525eb9287203ed2f7d2abab5eff46bc_160.mp4'
+},
+{
+	name:'Dance Pe Chance',//227
+	artist:'Sunidhi Chauhan',
+	image:'https://c.saavncdn.com/344/Rab-Ne-Bana-Di-Jodi-Hindi-2008-500x500.jpg',
+	path:'https://snoidcdnems02.cdnsrv.jio.com/jiosaavn.cdn.jio.com/344/5faa9eb757721a43d1a42260409e034b_160.mp4'
+},
+{
+	name:'Yeh Aaina',//228
+	artist:'Shreya Ghoshal',
+	image:'https://c.saavncdn.com/807/Kabir-Singh-Hindi-2019-20190614075009-500x500.jpg',
+	path:'https://sgdccdnems04.cdnsrv.jio.com/jiosaavn.cdn.jio.com/807/7e9f871d4bd402b5fd9c3b46d087d276_160.mp4'
+},
+{
+	name:'Teri Meri',//229
+	artist:'Shreya Ghoshal,Himesh',
+	image:'https://c.saavncdn.com/667/Bodyguard-2011-500x500.jpg',
+	path:' https://snoidcdnems02.cdnsrv.jio.com/jiosaavn.cdn.jio.com/667/ea1e7d916b43ea0eb0997c76f3f057e6_160.mp4'
+},
+{
+	name:'Heeriye',//230
+	artist:'Arijit Singh,Shreya Ghoshal',
+	image:'https://c.saavncdn.com/181/Happy-Hardy-And-Heer-Hindi-2019-20200120065920-500x500.jpg',
+	path:'https://snoidcdnems06.cdnsrv.jio.com/jiosaavn.cdn.jio.com/181/372c99e366dbc4a8b215f6934afc1aec_160.mp4'
+},
+{
+	name:'Pal',//231
+	artist:'Arijit Singh,Shreya Ghoshal',
+	image:'https://c.saavncdn.com/619/Jalebi-Hindi-2018-20180921123431-500x500.jpg',
+	path:'https://sdlhivkcdnems05.cdnsrv.jio.com/jiosaavn.cdn.jio.com/619/b4445298084e62597bddbb334d62e078_160.mp4'
+},
+{
+	name:'Judaiyaan',//232
+	artist:'Darshan Raval,Shreya Ghoshal',
+	image:'https://c.saavncdn.com/170/Judaiyaan-Hindi-2020-20201010033124-500x500.jpg',
+	path:'https://sdlhivkcdnems05.cdnsrv.jio.com/jiosaavn.cdn.jio.com/170/c6c85dc509164192107314f09877a87b_160.mp4'
+},
+{
+	name:'Taare Ginn',//233
+	artist:'Shreya Ghoshal,A.R.Rahmaan',
+	image:'https://c.saavncdn.com/870/Dil-Bechara-Hindi-2020-20200709070438-500x500.jpg',
+	path:'https://sdlhivkecdnems02.cdnsrv.jio.com/jiosaavn.cdn.jio.com/870/ec5183010778d5db1164eabc32d9f0ed_160.mp4'
+},
+{
+	name:'Tumhe Jo Maine Dekha',//234
+	artist:'Shreya Ghoshal',
+	image:'https://c.saavncdn.com/388/Main-Hoon-Na-Hindi-2004-500x500.jpg',
+	path:'https://sdlhivkcdnems01.cdnsrv.jio.com/jiosaavn.cdn.jio.com/388/ef00f5ad4d77b83c1ca04a38d6745a92_160.mp4'
+},
+{
+	name:'Sunn Raha Hai',//235
+	artist:'Shreya Ghoshal',
+	image:'https://c.saavncdn.com/430/Aashiqui-2-Hindi-2013-500x500.jpg',
+	path:'https://sdlhivkecdnems04.cdnsrv.jio.com/jiosaavn.cdn.jio.com/430/d262bf981e14140383c36698e2e7730e_160.mp4'
 }
 ]; 
 
@@ -1541,7 +1661,7 @@ function song(i,j){
 			document.getElementsByClassName("discocap1")[j].innerHTML = yy;
 }
 
-track_index = 218;
+track_index = 235;
 
 //main function to play the all songs with the help of index number you can call easily with onclick event
 function loadTrack(track_index,were) {
@@ -1798,7 +1918,7 @@ function myFunction123() {
 
 
 function displaysidemenu(){
-	document.getElementById("option").style.width = "250px";
+	document.getElementById("option").style.width = "410px";
 	document.getElementById("bars").style.display="none";
 	document.getElementById("close").style.display="block";
 	console.log("event fired display menu");
@@ -1836,7 +1956,7 @@ var firebaseConfig = {
 		
 		const promise = auth.createUserWithEmailAndPassword(email.value, password.value);
 		promise.catch(e => alert(e.message));
-		alert("Signed Up, lets get Started !");
+
 	}
 
 	function signIn(){
@@ -1844,9 +1964,7 @@ var firebaseConfig = {
 		var password = document.getElementById("password");
 		
 		const promise = auth.signInWithEmailAndPassword(email.value, password.value);
-		alert("Successfully Sign In");
 		promise.catch(e => alert(e.message));
-
 	}
 	
 	function signOut(){
@@ -1858,7 +1976,7 @@ var firebaseConfig = {
 		
 		if(user){
 			var email = user.email;
-			alert("Active User " + email);
+			alert('active user ' + email);
 			//Take user to a different or home page
 			showuserdetails(user)
 			document.getElementById('userdetails').style.display = 'block';
@@ -1867,8 +1985,7 @@ var firebaseConfig = {
 			//is signed in
 			
 		}else{
-			
-			alert("No Active User");
+			alert('no active user');
 			document.getElementById('userdetails').style.display = 'none';
 			document.getElementById('googlesign').style.display="block";
 			document.getElementById('googlesignout').style.display="none";
@@ -1901,6 +2018,61 @@ var firebaseConfig = {
 		<h2 id="dash">Dashboard</h2>
 		<img src="${user.photoURL}" id="userimg">
 		<p id="username">${user.displayName}</p>
-		<p id="useremail">${user.email}</p> `
+		<p id="useremail">${user.email}</p> <br/>`
 
 	}
+
+//databse storage for new songs of jukebox 
+var messagesRef = firebase.database().ref('new_request_song');
+
+// Listen for form submit
+document.getElementById('request_song').addEventListener('submit', submitForm);
+
+// Submit form
+function submitForm(e){
+  e.preventDefault();
+
+  // Get values
+  let message = document.querySelector('#message').value;
+  let name = document.querySelector('#name').value;
+  let email = document.querySelector('#email').value;
+
+
+  // Save message
+  saveMessage(message,name, email);
+
+  // Show alert
+  document.querySelector('.request_alert').style.display = 'block';
+
+  // Hide alert after 3 seconds
+  setTimeout(function(){
+    document.querySelector('.request_alert').style.display = 'none';
+  },3000);
+
+  // Clear form
+  document.getElementById('request_song').reset();
+  sendEmail(message,name,email);
+}
+
+// Save message to firebase
+function saveMessage(message,name, email){
+  var newMessageRef = messagesRef.push();
+  newMessageRef.set({
+	message: message,
+    name: name,
+    email: email
+  });
+}
+
+function sendEmail(message,name,email,){
+  Email.send({
+    Host:'smtp.gmail.com',
+    Username:'guptasundaram7@gmail.com',
+    Password:'lfixbxvhmblfdpgn',
+    To:'guptasundaram7@gmail.com',
+    // president.rca3141@gmail.com
+    From:`${email}`,
+    Subject: `${name} sent you a message`,
+    Body: `name: ${name} <br/> Email: ${email}<br/> Message: ${message}`         
+  }).then( (message) => alert("message has been sent"))
+}

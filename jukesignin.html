@@ -22,11 +22,20 @@
 
 <body> 
     <div class="container1">
-    <a href="index.html">Email Sign In</a><br/>
-    <input type="email" placeholder="enter your email here" id="email"> <br/>
-    <input type="password" placeholder="enter your password" id="password"> <br/>
-    <button onclick="signIn()" id="signIn">Sign In</button><br>
-    <p>or you don't have an account ?<span class="red"><a href="jukesignup.html">Sign Up</span></p>
+        <div class="left">
+            <a href="index.html"><strong>Jukebox</strong></a>
+            <h2><i class="fa fa-envelope"></i> Email :</h2>
+            <input type="email" placeholder="enter your email here" id="email"> <br/>
+            <h2><i class="fa fa-key"></i> Password :</h2>
+            <input type="password" placeholder="enter your password" id="password"> <br/>
+            <button onclick="signIn()" id="signIn">Sign In</button><br>
+            <h5><span>or</span></h5>
+            <button onclick="googleSignIn()" id="googlesign"><img src="https://img.icons8.com/color/48/000000/google-logo.png"/>Sign In With Google</button><br>
+            <p>or you don't have an account ?<span class="red"><a href="jukesignup.html"> Sign Up</a></span></p>
+        </div>  
+        <div class="right">
+            <img src="main/images1.png">
+        </div>
     </div>
 </body>
 </html>

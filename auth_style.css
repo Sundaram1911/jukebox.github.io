@@ -6,21 +6,44 @@
 }
 
 .container1{
-    background-image: linear-gradient(to top left,#0099e3,#e42334);
+    display: inline-flex;
+    background: #000;
     margin-left: 0px;
-    width: 100%;
-    height: 100vh;
+    width: 80%;
+    margin: 2% 10%;
+    height: 90vh;
     padding: 20px;
+    border-radius: 12px;
+    border: 1px solid #ccc;
+    box-shadow:0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.left{
+    width: 50%;
+    height: 100%;
+    margin: 0px;
+}
+.right{
+    width: 50%;
+    height: 100%;
+    margin: 0px;
+    border-left: 2px solid #fff;
+}
+.right img{
+    width: 70%;
+    height: 70%;
+    z-index: 9999;
+    border-radius: 12px;
+    margin: 50px 0px 0px 90px;
 }
 .container1 a{
     color: #fff;
-    font-size: 20px;
+    font-size: 23px;
     letter-spacing: 1px;
-    padding: 0px 0px 10px 10px;
+    padding: 0px 0px 10px 0px;
 }
 #email,#password{
-    width: 40%;
-    margin: 10px 40px;
+    width: 90%;
+    margin: 0px 40px;
     border: 1px solid #ccc;
     border-radius: 4px; 
     padding: 5px 10px;
@@ -28,9 +51,10 @@
     margin-left: 0px;
     color: #000;
 }
-#email:focus ,#password:focus{
+#email input:focus ,#password input:focus{
     border: 1px solid #000;
     box-shadow:0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    outline: none;
 }
 
 #signUp,#signIn,#signOut{
@@ -40,64 +64,72 @@
     background-color: #0099e3;
     border-radius: 4px;
     border: none;
-    margin-top: 5px;
+    margin-top: 20px;
     margin-left: 0px;
 }
 .red a{
     font-size: 15px;
 }
 p{
-    padding-left: 10px;
+    padding-left: 0px;
     color: #fff;
     font-size: 16px;
     margin-top: 10px;
     width: 100%;
 }
+h2{
+    color :#fff;
+    font-size: 16px;
+    padding: 0px 0px;
+    margin-top: 15px;
+}
 #userdetails{
-    width: 100%;
+    width: 90%;
     margin: 20px 0px;
-    height: 50vh;
+    height: 40vh;
     border: 1px solid #ccc;
     background: #fff;
-    border-radius: 12px;
-    display: none;
+    border-radius: 6px;
+    display: block;
 }
 #userdetails h2{
     color: #000;
     font-size: 20px;
-    padding: 20px 10px;
-    margin-top: 20px;
+    padding: 0px 10px;
+    margin-top: 10px;
 }
 #userimg{
-    width: 200px;
-    height: 22vh;
-    border-radius: 12px;
+    width: 70px;
+    height: 12vh;
+    border-radius: 50%;
     border: 1px solid #ccc;
     padding: 0px 0px;
     margin-top: 20px;
-    margin-left: 20px;
+    margin-left: 10px;
     margin-bottom: 10px;
 }
 #username{
-    color: #000;
+    color: #111;
     font-size: 20px;
-    padding: -10px 10px 0px 10px;
-    margin-left: 10px;
+    padding: 0px 10px 0px 0px;
+    margin-left: 110px;
+    margin-top: -80px;
 }
 #useremail{
-    color: #000;
-    font-size: 20px;
-    padding: 0px 10px;
+    color: #222;
+    font-size: 18px;
+    padding: 0px 10px 0px 0px;
+    margin: -15px 0px 0px 110px;
 }
 
 #googlesign{
     color: #222;
     background-color: #fff;
-    padding: 4px 10px;
-    border-radius: 12px;
+    padding: 4px 15px;
+    border-radius: 20px;
     border: none;
     box-shadow: 0 10px 10px -10px black;
-    margin: 10px 10px;
+    margin: 10px 0px;
     font-size: 16px;
 }
 #googlesign img{
@@ -108,17 +140,28 @@ p{
 #googlesignout{
     color: #fff;
     background-color: orange;
-    padding: 10px 30px;
-    border-radius: 12px;
+    padding: 10px 20px;
+    border-radius: 20px;
     border: none;
     box-shadow: 0 10px 10px -10px black;
-    margin: 10px 10px;
-    font-size: 20px;
+    margin: 10px 0px;
+    font-size: 17px;
     display: none;
 }
-
-
-@media screen and (min-height: 750px){
+h5 {
+width: 90%; 
+text-align: center; 
+border-bottom: 1px solid #fff; 
+line-height: 0.1em;
+margin: 25px 0 20px; 
+}
+h5 span{
+    padding: 0px 10px;
+    color: #fff;
+    font-size: 20px;
+    background-color: #000;
+}
+@media screen and (max-height: 490px){
     .container1{
         background-image: url(main/authback.png);
         background-size: cover;
@@ -127,10 +170,26 @@ p{
         width: 100%;
         height: 100vh;
         padding: 20px;
+        margin-top: 0px;
+        border: none;
+        border-radius: 0px;
+        box-shadow: none;
+        display:inline-block;
+    }
+    .left{
+        width: 100%;
+        height: 100%;
+        margin: 0px;
+    }
+    .right{
+        width: 100%;
+        height: 100%;
+        margin: 0px;
+        display: none;
     }
     .container1 a{
         color: #fff;
-        font-size: 20px;
+        font-size: 24px;
         letter-spacing: 1px;
         padding: 0px 0px 10px 0px;
     }
@@ -181,6 +240,130 @@ p{
     }
     #googlesign img{
         width: 28px;
+        height: 8vh;
+        padding: 5px 5px 5px 0px;
+    }
+    #googlesignout{
+        color: #fff;
+        background-color: orange;
+        padding: 10px 30px;
+        border-radius: 12px;
+        border: none;
+        box-shadow: 0 10px 10px -10px black;
+        margin: 10px 10px;
+        font-size: 20px;
+        display: none;
+    }
+    h5 {
+        width: 100%; 
+        text-align: center; 
+        border-bottom: 1px solid #fff; 
+        line-height: 0.1em;
+        margin: 25px 0 20px; 
+        }
+        h5 span{
+            padding: 2px 10px;
+            color: #fff;
+            font-size: 18px;
+            border-radius: 2px;
+            background-color: #fff;
+            color: #000;
+        }
+}
+@media screen and (min-height: 750px){
+    .left{
+        width: 100%;
+        height: 100%;
+        margin: 0px;
+    }
+    .right{
+        width: 100%;
+        height: 100%;
+        margin: 0px;
+        display: none;
+    }
+    .container1{
+        background-image: url(main/authback.png);
+        background-size: cover;
+        background-origin: border-box;
+        margin-left: 0px;
+        width: 100%;
+        height: 100vh;
+        padding: 20px;
+        margin-top: 0px;
+        border: none;
+        border-radius: 0px;
+        box-shadow: none;
+        display: inline-block;
+    }
+    .container1 a{
+        color: #fff;
+        font-size: 24px;
+        letter-spacing: 1px;
+        padding: 0px 0px 10px 0px;
+    }
+    #email,#password{
+        width: 100%;
+        margin: 10px 20px;
+        border: 1px solid #ccc;
+        border-radius: 4px; 
+        padding: 5px 10px;
+        outline: none;
+        margin-left: 0px;
+        color: #000;
+    }
+    #email:focus ,#password:focus{
+        border: 1px solid #000;
+        box-shadow:0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    }
+    .red a{
+        font-size: 16px;
+        padding-left: 5px;
+    }
+    p{
+        padding-left: 0px;
+        color: #fff;
+        font-size: 17px;
+        margin-top: 12px;
+        width: 100%;
+    }
+    h5 {
+        width: 100%; 
+        text-align: center; 
+        border-bottom: 1px solid #fff; 
+        line-height: 0.1em;
+        margin: 25px 0 20px; 
+        }
+        h5 span{
+            padding: 2px 10px;
+            color: #fff;
+            font-size: 18px;
+            border-radius: 12px;
+            background-color: #fff;
+            color: #000;
+        }
+    #signUp,#signIn,#signOut{
+        color: #fff;
+        padding: 5px 15px;
+        font-size: 18px;
+        background-color: #0099e3;
+        border-radius: 4px;
+        border: none;
+        margin-top: 8px;
+        margin-left: 0px;
+    }
+    #googlesign{
+        color: #222;
+        background-color: #fff;
+        padding: 4px 15px;
+        border-radius: 12px;
+        border: none;
+        box-shadow: 0 10px 10px -10px black;
+        margin: 15px 0px;
+        font-size: 17px;
+    }
+    #googlesign img{
+        width: 28px;
         height: 4.2vh;
         padding: 5px 5px 5px 0px;
     }
@@ -194,5 +377,43 @@ p{
         margin: 10px 10px;
         font-size: 20px;
         display: none;
+    }
+    #userdetails{
+        width: 100%;
+        margin: 20px 0px;
+        height: 40vh;
+        border: 1px solid #ccc;
+        background: #fff;
+        border-radius: 6px;
+        display: block;
+    }
+    #userdetails h2{
+        color: #000;
+        font-size: 20px;
+        padding: 0px 10px;
+        margin-top: 10px;
+    }
+    #userimg{
+        width: 80px;
+        height: 11vh;
+        border-radius: 50%;
+        border: 1px solid #ccc;
+        padding: 0px 0px;
+        margin-top: 20px;
+        margin-left: 10px;
+        margin-bottom: 10px;
+    }
+    #username{
+        color: #111;
+        font-size: 20px;
+        padding: 0px 10px 0px 0px;
+        margin-left: 110px;
+        margin-top: -80px;
+    }
+    #useremail{
+        color: #222;
+        font-size: 18px;
+        padding: 0px 10px 0px 0px;
+        margin: -15px 0px 0px 110px;
     }
 }
