@@ -3,7 +3,7 @@ $('.back').on("scroll", function () {
 });
 
 window.onload = function(){
-	//$('#loader-wrapper').fadeOut();
+	$('#loader-wrapper').fadeOut();
 	//love_mood
 	art_song(175,0),art_song(158,1),art_song(157,2),art_song(156,3),art_song(155,4),
 	art_song(141,5),art_song(137,6),art_song(135,7),art_song(134,8),art_song(128,9),
