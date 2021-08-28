@@ -21,7 +21,6 @@ window.onload = function(){
 
 
 function reveal(){
-	console.log("chutiye");
 	var reveals = document.querySelectorAll('.reveal');
 	for(var i=0;i < reveals.length; i++){
 		var windowheight = window.innerHeight;
@@ -1497,6 +1496,66 @@ let track_list = [
 	artist:'Shreya Ghoshal',
 	image:'https://c.saavncdn.com/430/Aashiqui-2-Hindi-2013-500x500.jpg',
 	path:'https://sdlhivkecdnems04.cdnsrv.jio.com/jiosaavn.cdn.jio.com/430/d262bf981e14140383c36698e2e7730e_160.mp4'
+},
+{
+	name:'Raataan Lambiyan',//236
+	artist:'Jubin Nautiyal',
+	image:'https://c.saavncdn.com/222/Raataan-Lambiyan-From-Shershaah--Hindi-2021-20210729181107-500x500.jpg',
+	path:'https://sdlhivkecdnems01.cdnsrv.jio.com/jiosaavn.cdn.jio.com/222/115d5cb9924b84b4b8ff3a5a4d732ef1_160.mp4'
+},
+{
+	name:'Ranjha',
+	artist:'Bpraak',
+	image:'https://c.saavncdn.com/264/Ranjha-From-Shershaah--Hindi-2021-20210804173407-500x500.jpg',
+	path:'https://snoidcdnems06.cdnsrv.jio.com/jiosaavn.cdn.jio.com/264/eb5bf3908be1c26cfda000e615c647d6_160.mp4'
+},
+{
+	name:'Barsaat ki Dhun',
+	artist:'Jubin Nautiyal',
+	image:'https://c.saavncdn.com/600/Barsaat-Ki-Dhun-Hindi-2021-20210720121009-500x500.jpg',
+	path:'https://sgdccdnems03.cdnsrv.jio.com/jiosaavn.cdn.jio.com/600/34fcd4b1b45889b24dd35246104156e7_160.mp4'
+},
+{
+	name:'Gallan Kardi',
+	artist:'Jazzy B,Jyotika tangri',
+	image:'https://c.saavncdn.com/423/Jawaani-Jaaneman-Hindi-2020-20201117092602-500x500.jpg',
+	path:'https://sgdccdnems04.cdnsrv.jio.com/jiosaavn.cdn.jio.com/423/9350d142b11210217ff344c478af692e_160.mp4'
+},
+{
+	name:'Jee Ni Karda',
+	artist:'JAss Manak,Nikita Gandhi',
+	image:'https://c.saavncdn.com/302/Jee-Ni-Karda-From-Sardar-Ka-Grandson--Hindi-2021-20210425051001-500x500.jpg',
+	path:'https://sgdccdnems01.cdnsrv.jio.com/jiosaavn.cdn.jio.com/302/9e06321a66a8de23911fd5b8b62a08d0_160.mp4'
+},
+{
+	name:'Naah (Bala)',
+	artist:'Hardy Sandhu',
+	image:'https://c.saavncdn.com/647/Naah-Goriye-From-Bala--Hindi-2019-20191025062350-500x500.jpg',
+	path:'https://sdlhivkcdnems05.cdnsrv.jio.com/jiosaavn.cdn.jio.com/647/8705ed29f0c98c39bd5e64d1bd624268_160.mp4'
+},
+{
+	name:'Montero',
+	artist:'Lil Nas X',
+	image:'https://c.saavncdn.com/012/MONTERO-Call-Me-By-Your-Name--English-2021-20210322233947-500x500.jpg',
+	path:'https://snoidcdnems04.cdnsrv.jio.com/jiosaavn.cdn.jio.com/012/f5b28379824be192ddde090a6c046c55_160.mp4'
+},
+{
+	name:'Dont Let Me down',
+	artist:'Chainsmokers',
+	image:'https://c.saavncdn.com/848/Don-t-Let-Me-Down-English-2016-500x500.jpg',
+	path:'https://snoidcdnems03.cdnsrv.jio.com/jiosaavn.cdn.jio.com/848/29c0372cad82dee0a7b942eb15119a8d_160.mp4'
+},
+{
+	name:'Attention',
+	artist:'Charlie Puth',
+	image:'https://c.saavncdn.com/292/Attention-English-2017-500x500.jpg',
+	path:'https://sdlhivkecdnems03.cdnsrv.jio.com/jiosaavn.cdn.jio.com/292/cd080a5ab86f380a194bda417682efb2_160.mp4'
+},
+{
+	name:'Lovely',
+	artist:'Billie Eilish',
+	image:'https://c.saavncdn.com/947/lovely-English-2018-20180418150240-500x500.jpg',
+	path:'https://sgdccdnems02.cdnsrv.jio.com/jiosaavn.cdn.jio.com/947/580fe2c0cb03ba147b00a4b2261764d4_160.mp4'
 }
 ]; 
 
@@ -1534,6 +1593,7 @@ function viewsearch(){
 	$('.artists').css('display', 'none');
 	$('.choose').css('display', 'none');
 	$('#hide_slider').css('display', 'none');
+	$('.head').css('display','none');
 	
 }
 
@@ -1580,6 +1640,7 @@ function displayblocks(){ //for mainpage listen event a
 	document.getElementById("sundaram").style.display="none";
 	document.getElementById("hide_spinner").style.display="block";
 	document.getElementById("sundi").style.display="none";
+	document.getElementById("hidefolder").style.display="none";
 	document.getElementById("hide_list").style.display="block";
 	document.getElementById("hide_list1").style.display="block";
 	document.getElementById("foot").style.display="block";
@@ -1591,6 +1652,7 @@ function displayblocks(){ //for mainpage listen event a
 	document.getElementById("searchicon1").style.display="block";
 	document.getElementById("m").style.display="none";
 	document.getElementById("hide_slider").style.display="block";
+	$('.head').css('display','block');
 	$('#banner').css('display', 'flex');
 	$('.artists').css('display', 'flex');
 	$('#hide_slider').css('display', 'block');
@@ -1612,6 +1674,7 @@ function hideblocks(){  //for 2nd page jukebox title back to mainpage function a
 
 function displayart(call){
     var a = document.getElementsByClassName("arc")[call];
+	document.getElementById("hidefolder").style.display="block";
     a.style.display="block";
     document.getElementById("gupta").style.display = "none";
     console.log("check");
@@ -1661,7 +1724,6 @@ function song(i,j){
 			document.getElementsByClassName("discocap1")[j].innerHTML = yy;
 }
 
-track_index = 235;
 
 //main function to play the all songs with the help of index number you can call easily with onclick event
 function loadTrack(track_index,were) {
@@ -1690,6 +1752,10 @@ updateTimer = setInterval(seekUpdate, 1000);
 curr_track.addEventListener("ended", nextTrack);
 loadTrack1(track_index);
 playTrack();
+
+var track_holder = `${track_index}`
+console.log(track_holder);
+document.getElementById('holder1').innerHTML = track_holder;
 
 document.getElementById("gupta").style.display="block";
 document.getElementById("hide_spinner").style.display="none";
@@ -1794,8 +1860,11 @@ playpause_btn.innerHTML = '<i class="fa fa-play-circle fa-5x"></i>';
 
 function nextTrack() { 
 // Go back to the first track if the 
+a= document.getElementById('holder1').innerText;
+track_index = a;
+console.log(track_index);
 if (track_index < track_list.length) 
-	track_index -= 1; 
+	track_index += 1; 
 else track_index = 0; 
 var were=0;
 // Load and play the new track 
@@ -1807,8 +1876,8 @@ playTrack();
 function prevTrack() { 
 // Go back to the last track if the 
 
-if (track_index <= track_list.length) 
-	track_index += 1; 
+if (track_index < track_list.length) 
+	track_index -= 1; 
 else track_index = 0; 
 // Load and play the new track 3 
 var were = 0;
