@@ -9,6 +9,9 @@
 body{
   width: 100%;
 }
+#holder1{
+  display: none;
+}
 .option{
   display: none;
 }
@@ -5186,9 +5189,13 @@ font-size: 28px;
   
     .alter{
       display: block;
-      margin-top: -50px;
+      margin-top: 0px;
     }
-
+    .alter .fa{
+    color: #fff;
+    font-size: 18px;
+    padding: 10px;
+    }
     .alter input{
       width: 93%;
       border: 1px solid #ccc;
