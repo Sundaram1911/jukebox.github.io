@@ -1864,7 +1864,7 @@ a= document.getElementById('holder1').innerText;
 track_index = a;
 console.log(track_index);
 if (track_index < track_list.length) 
-	track_index += 1; 
+	track_index -= 1; 
 else track_index = 0; 
 var were=0;
 // Load and play the new track 
@@ -1877,7 +1877,7 @@ function prevTrack() {
 // Go back to the last track if the 
 
 if (track_index < track_list.length) 
-	track_index -= 1; 
+	track_index += 1; 
 else track_index = 0; 
 // Load and play the new track 3 
 var were = 0;
