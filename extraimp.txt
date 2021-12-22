@@ -1,0 +1,46 @@
+function signUp(){
+		
+		var email = document.getElementById("email");
+		var password = document.getElementById("password");
+		
+		const promise = auth.createUserWithEmailAndPassword(email.value, password.value);
+		promise.catch(e => alert(e.message));
+
+	}
+
+	function signIn(){
+		var email = document.getElementById("email");
+		var password = document.getElementById("password");
+		
+		const promise = auth.signInWithEmailAndPassword(email.value, password.value);
+		promise.catch(e => alert(e.message));
+	}
+
+
+    document.getElementById('userdetails').style.display = 'block';
+			document.getElementById('googlesign').style.display="none";
+			document.getElementById('googlesignout').style.display="block";
+
+            document.getElementById('userdetails').style.display = 'none';
+			document.getElementById('googlesign').style.display="block";
+			document.getElementById('googlesignout').style.display="none";
+
+            	googleSignIn=()=>{
+		base_provider = new firebase.auth.GoogleAuthProvider()
+		firebase.auth().signInWithPopup(base_provider).then(function(result){
+			console.log(result)
+			console.log('sign btn clicked');
+			document.getElementById('userdetails').styel.display = 'block';
+		}).catch(function(err){
+			console.log(err)
+		})
+	}
+
+	googleSignOut=()=>{
+		firebase.auth().signOut().then(()=>{
+			document.getElementById('googlesign').style.display="block";
+			document.getElementById('googlesignout').style.display="none";
+		}).catch(e=>{
+			console.log(e)
+		})
+	}

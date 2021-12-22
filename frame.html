@@ -1,0 +1,3772 @@
+<!DOCTYPE html> 
+<html lang="en"> 
+<head> 
+<meta name="viewport" content="width=device-width, intial-scale=1,minimum-scale=1,maximum-scale=1">	
+<title>Jukebox</title> 
+<!-- Load FontAwesome icons -->
+<link rel="icon" href="main/favicon.ico">
+<link href="https://css.gg/arrow-long-up-c.css" rel="stylesheet">
+<script src="https://kit.fontawesome.com/c45aced2c8.js"></script>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"></script>
+<script src="https://code.jquery.com/jquery-1.9.1.min.js"></script>
+
+<script src="https://www.gstatic.com/firebasejs/8.7.0/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.7.0/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.7.0/firebase-database.js"></script>
+<script src="https://smtpjs.com/v3/smtp.js"></script>
+
+<!-- Load the custom CSS style file -->
+<link rel="stylesheet" type="text/css" href="stylenew.css"> 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+</head> 
+
+<body> 
+
+<div class="back">
+	<div id="magic"><h1>Jukebox</h1></div>
+	<div id="loader-wrapper">
+		<span class="loader"></span>
+	</div>
+<!--Artist deatils start from  here -->
+<div id="hidefolder">
+<section class="arc">  <!--1st -->
+	<div class="arc2">
+		<i class="fa fa-angle-down" id="zinc1" onclick="return2nd(0)"></i><i class="fa fa-search" id="zinc" onclick="viewsearch()"></i>
+		<img src="https://iphonewallpaperworld.com/wp-content/uploads/2020/12/Guru-Randhawa-Photo-wallpaper-20.jpg">
+		<p>Guru Randhawa</p><br>
+		<h6><i class="far fa-check-circle"></i> Verified Artist</h6>
+	</div>
+	<div class="suff"><h1><i class="fa fa-play-circle"></i>  SUFFLE PLAY</h1></div>
+
+	<div class="musiclist">
+		<ul>
+			<li onclick="loadTrack(0,0)"><div class="arc3"><img src="block/lahore.jpg"></div>
+				<div class="arc4"><p>Lahore<br><span>Guru Randhawa</span></p></div>
+				<div class="arc5"><i class="fa fa-ellipsis-v"></i></div>
+			</li>
+			<li onclick="loadTrack(65,0)"><div class="arc3"><img src="block/ishqtera.jpg"></div>
+				<div class="arc4"><p>Ishq Tera<br/><span id="cap">Guru Randhawa</span></p></div>
+				<div class="arc5"><i class="fa fa-ellipsis-v"></i></div>
+			</li>
+			<li onclick="loadTrack(36,0)"><div class="arc3"><img src="block/mornibanke.jpg"></div>
+				<div class="arc4"><p>Morni Banke<br/><span>Guru Randhawa</span></p></div>
+				<div class="arc5"><i class="fa fa-ellipsis-v"></i></div>
+			</li>
+			<li onclick="loadTrack(49,0)"><div class="arc3"><img src="block/patola.jpg"></div>
+				<div class="arc4"><p>Patola<br/><span id="cap">Guru Randhawa</span></p></div>
+				<div class="arc5"><i class="fa fa-ellipsis-v"></i></div>
+			</li>
+			<li onclick="loadTrack(37,0)"><div class="arc3"><img src="block/rani.jpg"></div>
+				<div class="arc4"><p>Meri Rani<br/><span id="cap">Guru Randhawa</span></p></div>
+				<div class="arc5"><i class="fa fa-ellipsis-v"></i></div>
+			</li>
+			<li onclick="loadTrack(8,0)"><div class="arc3"><img src="block/madeinindia.jpg"></div>
+				<div class="arc4"><p>Made In India<br/><span id="cap">Guru Randhawa</span></p></div>
+				<div class="arc5"><i class="fa fa-ellipsis-v"></i></div>
+			</li>
+		</ul>
+	</div>
+</section>
+
+<section class="arc">  <!--2nd -->
+	<div class="arc2">
+		<i class="fa fa-angle-down" id="zinc1" onclick="return2nd(1)"></i><i class="fa fa-search" id="zinc"></i>
+		<img src="https://c.saavncdn.com/artists/Hardy_Sandhu_001_20190913112018_500x500.jpg">
+		<p>Hardy Sandhu</p><br>
+		<h6><i class="far fa-check-circle"></i> Verified Artist</h6>
+	</div>
+	<div class="suff"><h1><i class="fa fa-play-circle"></i> SUFFLE PLAY</h1></div>
+
+	<div class="musiclist">
+		<ul>
+			<li onclick="loadTrack(74,1)"><div class="arc3"><img src="block/dancelike.jpg"></div>
+				<div class="arc4"><p>Dance Like<br><span>Hardy Sandhu</span></p></div>
+				<div class="arc5"><i class="fa fa-ellipsis-v"></i></div>
+			</li>
+			<li onclick="loadTrack(72,1)"><div class="arc3"><img src="block/naah.jpg"></div>
+				<div class="arc4"><p>Naah<br/><span id="cap">Hardy Sandhu</span></p></div>
+				<div class="arc5"><i class="fa fa-ellipsis-v"></i></div>
+			</li>
+			<li onclick="loadTrack(75,1)"><div class="arc3"><img src="block/yaar.jpg"></div>
+				<div class="arc4"><p>Yaar Superstar<br/><span>Hardy Sandhu</span></p></div>
+				<div class="arc5"><i class="fa fa-ellipsis-v"></i></div>
+			</li>
+			<li onclick="loadTrack(2,1)"><div class="arc3"><img src="block/a105.jpeg"></div>
+				<div class="arc4"><p>Jee Kar Da<br/><span id="cap">Hardy Sandhu</span></p></div>
+				<div class="arc5"><i class="fa fa-ellipsis-v"></i></div>
+			</li>
+			<li onclick="loadTrack(76,1)"><div class="arc3"><img src="block/backbone.jpg"></div>
+				<div class="arc4"><p>Bakbone<br/><span id="cap">Hardy Sandhu</span></p></div>
+				<div class="arc5"><i class="fa fa-ellipsis-v"></i></div>
+			</li>
+			<li onclick="loadTrack(77,1)"><div class="arc3"><img src="block/chandighar.jpg"></div>
+				<div class="arc4"><p>Chandighar Me<br/><span id="cap">Hardy Sandhu</span></p></div>
+				<div class="arc5"><i class="fa fa-ellipsis-v"></i></div>
+			</li>
+			<li onclick="loadTrack(73,1)"><div class="arc3"><img src="block/kyabaat.jpg"></div>
+				<div class="arc4"><p>Kya Baat<br/><span id="cap">Hardy Sandhu</span></p></div>
+				<div class="arc5"><i class="fa fa-ellipsis-v"></i></div>
+			</li>
+
+		</ul>
+	</div>
+</section>
+
+<section class="arc"><!--3rd -->
+	<div class="arc2">
+		<i class="fa fa-angle-down" id="zinc1" onclick="return2nd(2)"></i><i class="fa fa-search" id="zinc"></i>
+		<img src="https://c.saavncdn.com/artists/Eminem_500x500.jpg">
+		<p>Eminem</p><br>
+		<h6><i class="far fa-check-circle"></i> Verified Artist</h6>
+	</div>
+	<div class="suff"><h1><i class="fa fa-play-circle"></i> SUFFLE PLAY</h1></div>
+
+	<div class="musiclist">
+		<ul>
+			<li onclick="loadTrack(57,2)"><div class="arc3"><img src="block/notafraid.jpg"></div>
+				<div class="arc4"><p>Not Afraid<br><span>Eminem</span></p></div>
+				<div class="arc5"><i class="fa fa-ellipsis-v"></i></div>
+			</li>
+			<li onclick="loadTrack(58,2)"><div class="arc3"><img src="block/river.jpg"></div>
+				<div class="arc4"><p>River Ft. Ed Sheeran<br/><span>Eminem</span></p></div>
+				<div class="arc5"><i class="fa fa-ellipsis-v"></i></div>
+			</li>
+			<li onclick="loadTrack(59,2)"><div class="arc3"><img src="block/nolove.jpg"></div>
+				<div class="arc4"><p>No Love<br/><span id="cap">Eminem</span></p></div>
+				<div class="arc5"><i class="fa fa-ellipsis-v"></i></div>
+			</li>
+			<li onclick="loadTrack(60,2)"><div class="arc3"><img src="block/killer.jpg"></div>
+				<div class="arc4"><p>Killer<br/><span id="cap">Eminem</span></p></div>
+				<div class="arc5"><i class="fa fa-ellipsis-v"></i></div>
+			</li>
+			<li onclick="loadTrack(61,2)"><div class="arc3"><img src="block/blackmagin.jpg"></div>
+				<div class="arc4"><p>Black Magic<br/><span id="cap">Eminem</span></p></div>
+				<div class="arc5"><i class="fa fa-ellipsis-v"></i></div>
+			</li>
+			<li onclick="loadTrack(63,2)"><div class="arc3"><img src="block/spacebound.jpg"></div>
+				<div class="arc4"><p>Space Bound<br/><span id="cap">Eminem</span></p></div>
+				<div class="arc5"><i class="fa fa-ellipsis-v"></i></div>
+			</li>
+			<li onclick="loadTrack(62,2)"><div class="arc3"><img src="block/rapgod.jpg"></div>
+				<div class="arc4"><p>Rap God<br/><span id="cap">Eminem</span></p></div>
+				<div class="arc5"><i class="fa fa-ellipsis-v"></i></div>
+			</li>
+			<li onclick="loadTrack(64,2)"><div class="arc3"><img src="block/godzilla.jpg"></div>
+				<div class="arc4"><p>Godzilla<br/><span id="cap">Eminem</span></p></div>
+				<div class="arc5"><i class="fa fa-ellipsis-v"></i></div>
+			</li>
+
+		</ul>
+	</div>
+</section>
+
+<section class="arc"> <!--4th -->
+	<div class="arc2">
+		<i class="fa fa-angle-down" id="zinc1" onclick="return2nd(3)"></i><i class="fa fa-search" id="zinc"></i>
+		<img src="https://c.saavncdn.com/943/Kohinoor-Hindi-2019-20191007230518-500x500.jpg">
+		<p>Divine</p><br>
+		<h6><i class="far fa-check-circle"></i> Verified Artist</h6>
+	</div>
+	<div class="suff"><h1><i class="fa fa-play-circle"></i> SUFFLE PLAY</h1></div>
+
+	<div class="musiclist">
+		<ul>
+			<li onclick="loadTrack(7,3)"><div class="arc3"><img src="block/farak.jpg"></div>
+				<div class="arc4"><p>Farak<br/><span id="cap">Divine</span></p></div>
+				<div class="arc5"><i class="fa fa-ellipsis-v"></i></div>
+			</li>
+			<li onclick="loadTrack(79,3)"><div class="arc3"><img src="block/punyapaap.jpg"></div>
+				<div class="arc4"><p>Walking Miracle<br/><span id="cap">Divine</span></p></div>
+				<div class="arc5"><i class="fa fa-ellipsis-v"></i></div>
+			</li>
+			<li onclick="loadTrack(80,3)"><div class="arc3"><img src="block/mirchi.jpg"></div>
+				<div class="arc4"><p>Mirchi<br/><span id="cap">Divine</span></p></div>
+				<div class="arc5"><i class="fa fa-ellipsis-v"></i></div>
+			</li>
+			<li onclick="loadTrack(81,3)"><div class="arc3"><img src="block/merabhai.jpg"></div>
+				<div class="arc4"><p>Mera Bhai<br/><span id="cap">Divine</span></p></div>
+				<div class="arc5"><i class="fa fa-ellipsis-v"></i></div>
+			</li>
+			<li onclick="loadTrack(82,3)"><div class="arc3"><img src="block/remand.jpg"></div>
+				<div class="arc4"><p>Remand<br/><span id="cap">Divine</span></p></div>
+				<div class="arc5"><i class="fa fa-ellipsis-v"></i></div>
+			</li>
+			<li onclick="loadTrack(29,3)"><div class="arc3"><img src="block/cityslum.jpg"></div>
+				<div class="arc4"><p>City Slums<br/><span id="cap">Divine</span></p></div>
+				<div class="arc5"><i class="fa fa-ellipsis-v"></i></div>
+			</li>
+			<li onclick="loadTrack(32,3)"><div class="arc3"><img src="block/legends.jpg"></div>
+				<div class="arc4"><p>Legends<br/><span id="cap">Divine</span></p></div>
+				<div class="arc5"><i class="fa fa-ellipsis-v"></i></div>
+			</li>
+			<li onclick="loadTrack(34,3)"><div class="arc3"><img src="block/nocompitition.jpg"></div>
+				<div class="arc4"><p>No Competition<br/><span id="cap">Divine</span></p></div>
+				<div class="arc5"><i class="fa fa-ellipsis-v"></i></div>
+			</li>
+			<li onclick="loadTrack(22,3)"><div class="arc3"><img src="block/oneside.jpg"></div>
+				<div class="arc4"><p>One Side<br/><span id="cap">Divine</span></p></div>
+				<div class="arc5"><i class="fa fa-ellipsis-v"></i></div>
+			</li>
+			<li onclick="loadTrack(23,3)"><div class="arc3"><img src="block/punya.jpeg"></div>
+				<div class="arc4"><p>Satya<br/><span id="cap">Divine</span></p></div>
+				<div class="arc5"><i class="fa fa-ellipsis-v"></i></div>
+			</li>
+			<li onclick="loadTrack(25,3)"><div class="arc3"><img src="block/punya.jpeg"></div>
+				<div class="arc4"><p>Rider<br/><span id="cap">Divine</span></p></div>
+				<div class="arc5"><i class="fa fa-ellipsis-v"></i></div>
+			</li>
+			<li onclick="loadTrack(26,3)"><div class="arc3"><img src="block/punya.jpeg"></div>
+				<div class="arc4"><p>3:59<br/><span id="cap">Divine</span></p></div>
+				<div class="arc5"><i class="fa fa-ellipsis-v"></i></div>
+			</li>
+		</ul>
+	</div>
+</section>
+
+<section class="arc"><!--5th -->
+	<div class="arc2">
+		<i class="fa fa-angle-down" id="zinc1" onclick="return2nd(4)"></i><i class="fa fa-search" id="zinc"></i>
+		<img src="block/arman.jpg">
+		<p>Arman Malik</p><br>
+		<h6><i class="far fa-check-circle"></i> Verified Artist</h6>
+	</div>
+	<div class="suff"><h1><i class="fa fa-play-circle"></i> SUFFLE PLAY</h1></div>
+
+	<div class="musiclist">
+		<ul>
+			<li onclick="loadTrack(17,4)"><div class="arc3"><img src="block/pehlapyar.jpg"></div>
+				<div class="arc4"><p>Pehla Pyaar<br/><span id="cap">Arman Malik</span></p></div>
+				<div class="arc5"><i class="fa fa-ellipsis-v"></i></div>
+			</li>
+			<li onclick="loadTrack(119,4)"><div class="arc3"><img src="https://c.saavncdn.com/258/T-Series-Mixtape-Hindi-2017-20170818102253-150x150.jpg"></div>
+				<div class="arc4"><p>Bol Do Na-Tu Jo Mila<br/><span id="cap">Arman Malik,Jonita Gandhi</span></p></div>
+				<div class="arc5"><i class="fa fa-ellipsis-v"></i></div>
+			</li>
+			<li onclick="loadTrack(133,4)">
+				<div class="arc3"><img src="https://c.saavncdn.com/032/Veham-Hindi-2020-20201214051001-500x500.jpg"></div>
+				<div class="arc4"><p>Veham<br/><span id="cap">Arman Malik</span></p></div>
+				<div class="arc5"><i class="fa fa-ellipsis-v"></i></div>
+			</li>
+			<li onclick="loadTrack(134,4)">
+				<div class="arc3"><img src="https://c.saavncdn.com/268/Broken-but-Beautiful-Season-3-Hindi-2021-20210603155120-500x500.jpg"></div>
+				<div class="arc4"><p>Kya Kiya Hai Tune<br/><span id="cap">Arman Malik</span></p></div>
+				<div class="arc5"><i class="fa fa-ellipsis-v"></i></div>
+			</li>
+			<li onclick="loadTrack(125,4)"><div class="arc3"><img src="https://c.saavncdn.com/323/Saina-Hindi-2021-20210326161001-500x500.jpg"></div>
+				<div class="arc4"><p>Parinda<br/><span id="cap">Arman Malik</span></p></div>
+				<div class="arc5"><i class="fa fa-ellipsis-v"></i></div>
+			</li>
+		</ul>
+	</div>
+</section>
+
+<section class="arc"><!--6th -->
+	<div class="arc2">
+		<i class="fa fa-angle-down" id="zinc1" onclick="return2nd(5)"></i><i class="fa fa-search" id="zinc"></i>
+		<img src="main/love.png">
+		<p>Love</p>
+	</div>
+	<div class="suff"><h1><i class="fa fa-play-circle"></i> SUFFLE PLAY</h1></div>
+
+	<div class="musiclist">
+		<ul>
+			<li onclick="loadTrack(175,5)">  
+				<div class="artist_img"></div>
+				<div class="wrapp">
+					<div class="artist_s"></div>
+					<div class="artist_n"></div>
+				</div>
+				<i class="fa fa-ellipsis-v"></i>
+			</li>
+			<li onclick="loadTrack(158,5)">  
+				<div class="artist_img"></div>
+				<div class="wrapp">
+					<div class="artist_s"></div>
+					<div class="artist_n"></div>
+				</div>
+				<i class="fa fa-ellipsis-v"></i>
+			</li>
+			<li onclick="loadTrack(157,5)">  
+				<div class="artist_img"></div>
+				<div class="wrapp">
+					<div class="artist_s"></div>
+					<div class="artist_n"></div>
+				</div>
+				<i class="fa fa-ellipsis-v"></i>
+			</li>
+			<li onclick="loadTrack(156,5)">  
+				<div class="artist_img"></div>
+				<div class="wrapp">
+					<div class="artist_s"></div>
+					<div class="artist_n"></div>
+				</div>
+				<i class="fa fa-ellipsis-v"></i>
+			</li>
+			<li onclick="loadTrack(155,5)">  
+				<div class="artist_img"></div>
+				<div class="wrapp">
+					<div class="artist_s"></div>
+					<div class="artist_n"></div>
+				</div>
+				<i class="fa fa-ellipsis-v"></i>
+			</li>
+			<li onclick="loadTrack(141,5)">  
+				<div class="artist_img"></div>
+				<div class="wrapp">
+					<div class="artist_s"></div>
+					<div class="artist_n"></div>
+				</div>
+				<i class="fa fa-ellipsis-v"></i>
+			</li>
+			<li onclick="loadTrack(137,5)">  
+				<div class="artist_img"></div>
+				<div class="wrapp">
+					<div class="artist_s"></div>
+					<div class="artist_n"></div>
+				</div>
+				<i class="fa fa-ellipsis-v"></i>
+			</li>
+			<li onclick="loadTrack(135,5)">  
+				<div class="artist_img"></div>
+				<div class="wrapp">
+					<div class="artist_s"></div>
+					<div class="artist_n"></div>
+				</div>
+				<i class="fa fa-ellipsis-v"></i>
+			</li>
+			<li onclick="loadTrack(134,5)">  
+				<div class="artist_img"></div>
+				<div class="wrapp">
+					<div class="artist_s"></div>
+					<div class="artist_n"></div>
+				</div>
+				<i class="fa fa-ellipsis-v"></i>
+			</li>
+			<li onclick="loadTrack(128,5)">  
+				<div class="artist_img"></div>
+				<div class="wrapp">
+					<div class="artist_s"></div>
+					<div class="artist_n"></div>
+				</div>
+				<i class="fa fa-ellipsis-v"></i>
+			</li>
+			<li onclick="loadTrack(129,5)">  
+				<div class="artist_img"></div>
+				<div class="wrapp">
+					<div class="artist_s"></div>
+					<div class="artist_n"></div>
+				</div>
+				<i class="fa fa-ellipsis-v"></i>
+			</li>
+			<li onclick="loadTrack(120,5)">  
+				<div class="artist_img"></div>
+				<div class="wrapp">
+					<div class="artist_s"></div>
+					<div class="artist_n"></div>
+				</div>
+				<i class="fa fa-ellipsis-v"></i>
+			</li>
+		</ul>
+	</div>
+</section>
+
+<section class="arc"><!--7th -->
+	<div class="arc2">
+		<i class="fa fa-angle-down" id="zinc1" onclick="return2nd(6)"></i><i class="fa fa-search" id="zinc"></i>
+		<img src="main/party.png">
+		<p>Party</p>
+	</div>
+	<div class="suff"><h1><i class="fa fa-play-circle"></i> SUFFLE PLAY</h1></div>
+
+	<div class="musiclist">
+		<ul>
+			<li onclick="loadTrack(131,6)">  
+				<div class="artist_img"></div>
+				<div class="wrapp">
+					<div class="artist_s"></div>
+					<div class="artist_n"></div>
+				</div>
+				<i class="fa fa-ellipsis-v"></i>
+			</li>
+			<li onclick="loadTrack(132,6)">  
+				<div class="artist_img"></div>
+				<div class="wrapp">
+					<div class="artist_s"></div>
+					<div class="artist_n"></div>
+				</div>
+				<i class="fa fa-ellipsis-v"></i>
+			</li>
+			<li onclick="loadTrack(138,6)">  
+				<div class="artist_img"></div>
+				<div class="wrapp">
+					<div class="artist_s"></div>
+					<div class="artist_n"></div>
+				</div>
+				<i class="fa fa-ellipsis-v"></i>
+			</li>
+			<li onclick="loadTrack(142,6)">  
+				<div class="artist_img"></div>
+				<div class="wrapp">
+					<div class="artist_s"></div>
+					<div class="artist_n"></div>
+				</div>
+				<i class="fa fa-ellipsis-v"></i>
+			</li>
+			<li onclick="loadTrack(148,6)">  
+				<div class="artist_img"></div>
+				<div class="wrapp">
+					<div class="artist_s"></div>
+					<div class="artist_n"></div>
+				</div>
+				<i class="fa fa-ellipsis-v"></i>
+			</li>
+			<li onclick="loadTrack(150,6)">  
+				<div class="artist_img"></div>
+				<div class="wrapp">
+					<div class="artist_s"></div>
+					<div class="artist_n"></div>
+				</div>
+				<i class="fa fa-ellipsis-v"></i>
+			</li>
+			<li onclick="loadTrack(159,6)">  
+				<div class="artist_img"></div>
+				<div class="wrapp">
+					<div class="artist_s"></div>
+					<div class="artist_n"></div>
+				</div>
+				<i class="fa fa-ellipsis-v"></i>
+			</li>
+			<li onclick="loadTrack(160,6)">  
+				<div class="artist_img"></div>
+				<div class="wrapp">
+					<div class="artist_s"></div>
+					<div class="artist_n"></div>
+				</div>
+				<i class="fa fa-ellipsis-v"></i>
+			</li>
+			<li onclick="loadTrack(161,6)">  
+				<div class="artist_img"></div>
+				<div class="wrapp">
+					<div class="artist_s"></div>
+					<div class="artist_n"></div>
+				</div>
+				<i class="fa fa-ellipsis-v"></i>
+			</li>
+			<li onclick="loadTrack(163,6)">  
+				<div class="artist_img"></div>
+				<div class="wrapp">
+					<div class="artist_s"></div>
+					<div class="artist_n"></div>
+				</div>
+				<i class="fa fa-ellipsis-v"></i>
+			</li>
+			<li onclick="loadTrack(177,6)">  
+				<div class="artist_img"></div>
+				<div class="wrapp">
+					<div class="artist_s"></div>
+					<div class="artist_n"></div>
+				</div>
+				<i class="fa fa-ellipsis-v"></i>
+			</li>
+			<li onclick="loadTrack(93,6)">  
+				<div class="artist_img"></div>
+				<div class="wrapp">
+					<div class="artist_s"></div>
+					<div class="artist_n"></div>
+				</div>
+				<i class="fa fa-ellipsis-v"></i>
+			</li>
+		</ul>
+	</div>
+</section>
+
+<section class="arc"><!--8th -->
+	<div class="arc2">
+		<i class="fa fa-angle-down" id="zinc1" onclick="return2nd(7)"></i><i class="fa fa-search" id="zinc"></i>
+		<img src="main/chill.png">
+		<p>Chill</p>
+	</div>
+	<div class="suff"><h1><i class="fa fa-play-circle"></i> SUFFLE PLAY</h1></div>
+
+	<div class="musiclist">
+		<ul>
+			<li onclick="loadTrack(105,7)"><div class="arc3"><img src="https://c.saavncdn.com/257/Vibez-English-2021-20210106225626-500x500.jpg"></div>
+				<div class="arc4"><p>Vibez<br/><span id="cap">Zyan Malik</span></p></div>
+				<div class="arc5"><i class="fa fa-ellipsis-v"></i></div>
+			</li>
+			<li onclick="loadTrack(162,7)"><div class="arc3"><img src="https://c.saavncdn.com/883/Play-Date-English-2021-20210409015428-500x500.jpg"></div>
+				<div class="arc4"><p>Play Date<br/><span id="cap">Ashley Price</span></p></div>
+				<div class="arc5"><i class="fa fa-ellipsis-v"></i></div>
+			</li>
+			<li onclick="loadTrack(55,7)"><div class="arc3"><img src="block/barishleteaana.jpg"></div>
+				<div class="arc4"><p>Barish Lete Aana<br/><span id="cap">Darshan Raval</span></p></div>
+				<div class="arc5"><i class="fa fa-ellipsis-v"></i></div>
+			</li>
+			<li onclick="loadTrack(106,7)"><div class="arc3"><img src="https://c.saavncdn.com/681/Let-Me-Down-Slowly-English-2018-20180524060056-500x500.jpg"></div>
+				<div class="arc4"><p>Let Me Down Slowly<br/><span id="cap">Alec Benjamin</span></p></div>
+				<div class="arc5"><i class="fa fa-ellipsis-v"></i></div>
+			</li>
+			<li onclick="loadTrack(109,7)"><div class="arc3"><img src="https://c.saavncdn.com/432/Umbrella-The-White-Panda-Remix--English-2017-20170824104552-150x150.jpg"></div>
+				<div class="arc4"><p>Umbrella<br/><span id="cap">Ember Island</span></p></div>
+				<div class="arc5"><i class="fa fa-ellipsis-v"></i></div>
+			</li>
+			<li onclick="loadTrack(108,7)"><div class="arc3"><img src="https://c.saavncdn.com/923/Please-Don-t-Go-English-2015-500x500.jpg"></div>
+				<div class="arc4"><p>Please Dont Go<br/><span id="cap">Joel Adams</span></p></div>
+				<div class="arc5"><i class="fa fa-ellipsis-v"></i></div>
+			</li>
+			<li onclick="loadTrack(87,7)"><div class="arc3"><img src="block/kedarnath.jpg"></div>
+				<div class="arc4"><p>Namo Namo<br/><span id="cap">Amit Mishra</span></p></div>
+				<div class="arc5"><i class="fa fa-ellipsis-v"></i></div>
+			</li>
+		</ul>
+	</div>
+</section>
+
+<section class="arc"><!--9th -->
+	<div class="arc2">
+		<i class="fa fa-angle-down" id="zinc1" onclick="return2nd(8)"></i><i class="fa fa-search" id="zinc"></i>
+		<img src="main/workout.png">
+		<p>Workout</p>
+	</div>
+	<div class="suff"><h1><i class="fa fa-play-circle"></i> SUFFLE PLAY</h1></div>
+
+	<div class="musiclist">
+		<ul>
+			<li onclick="loadTrack(121,8)"><div class="arc3"><img src="https://c.saavncdn.com/319/Sanju-Hindi-2018-20180629-500x500.jpg"></div>
+				<div class="arc4"><p>Kar Har Maidan Fhateh<br/><span id="cap">Shreya Ghoshal, Sukhwinder Singh</span></p></div>
+				<div class="arc5"><i class="fa fa-ellipsis-v"></i></div>
+			</li>
+			<li onclick="loadTrack(123,8)"><div class="arc3"><img src="https://c.saavncdn.com/512/Gully-Boy-Hindi-2019-20190225175507-500x500.jpg"></div>
+				<div class="arc4"><p>Sher Aaya Sher<br/><span id="cap">Divine,Major C</span></p></div>
+				<div class="arc5"><i class="fa fa-ellipsis-v"></i></div>
+			</li>
+			<li onclick="loadTrack(124,8)"><div class="arc3"><img src="https://c.saavncdn.com/480/Dangal-Hindi-2016-20200116120806-500x500.jpg"></div>
+				<div class="arc4"><p>Dangal<br/><span id="cap">Daler Mehndi</span></p></div>
+				<div class="arc5"><i class="fa fa-ellipsis-v"></i></div>
+			</li>
+			<li onclick="loadTrack(125,8)"><div class="arc3"><img src="https://c.saavncdn.com/323/Saina-Hindi-2021-20210326161001-500x500.jpg"></div>
+				<div class="arc4"><p>Parinda<br/><span id="cap">Arman Malik</span></p></div>
+				<div class="arc5"><i class="fa fa-ellipsis-v"></i></div>
+			</li>
+			<li onclick="loadTrack(126,8)"><div class="arc3"><img src="https://c.saavncdn.com/621/Le-Chhalaang-From-Chhalaang--Hindi-2020-20201105111001-500x500.jpg"></div>
+				<div class="arc4"><p>Le Chalang<br/><span id="cap">Daler Mehndi</span></p></div>
+				<div class="arc5"><i class="fa fa-ellipsis-v"></i></div>
+			</li>
+			<li onclick="loadTrack(110,8)"><div class="arc3"><img src="https://c.saavncdn.com/059/Sugar-Brownies-English-2019-20190326005637-500x500.jpg"></div>
+				<div class="arc4"><p>Sugar And Brownies<br/><span id="cap">Dharia</span></p></div>
+				<div class="arc5"><i class="fa fa-ellipsis-v"></i></div>
+			</li>
+		</ul>
+	</div>
+</section>
+<section class="arc"><!--10th -->
+	<div class="arc2">
+		<i class="fa fa-angle-down" id="zinc1" onclick="return2nd(9)"></i><i class="fa fa-search" id="zinc"></i>
+		<img src="https://lyricsrail.com/wp-content/uploads/2020/11/QUARANSTREAM-Day-6-_-Non-Stop-Hip-Hop-Music-Videos-From-South-Asian-Desi-Artists-_-2020.jpg">
+		<p>Desi Rap</p>
+	</div>
+	<div class="suff"><h1><i class="fa fa-play-circle"></i> SUFFLE PLAY</h1></div>
+
+	<div class="musiclist">
+		<ul>
+			<li onclick="loadTrack(209,9)">  
+				<div class="artist_img"></div>
+				<div class="wrapp">
+					<div class="artist_s"></div>
+					<div class="artist_n"></div>
+				</div>
+				<i class="fa fa-ellipsis-v"></i>
+			</li>
+			<li onclick="loadTrack(3,9)">  
+				<div class="artist_img"></div>
+				<div class="wrapp">
+					<div class="artist_s"></div>
+					<div class="artist_n"></div>
+				</div>
+				<i class="fa fa-ellipsis-v"></i>
+			</li>
+			<li onclick="loadTrack(7,9)">  
+				<div class="artist_img"></div>
+				<div class="wrapp">
+					<div class="artist_s"></div>
+					<div class="artist_n"></div>
+				</div>
+				<i class="fa fa-ellipsis-v"></i>
+			</li>
+			<li onclick="loadTrack(22,9)">  
+				<div class="artist_img"></div>
+				<div class="wrapp">
+					<div class="artist_s"></div>
+					<div class="artist_n"></div>
+				</div>
+				<i class="fa fa-ellipsis-v"></i>
+			</li>
+			<li onclick="loadTrack(101,9)">  
+				<div class="artist_img"></div>
+				<div class="wrapp">
+					<div class="artist_s"></div>
+					<div class="artist_n"></div>
+				</div>
+				<i class="fa fa-ellipsis-v"></i>
+			</li>
+			<li onclick="loadTrack(23,9)">  
+				<div class="artist_img"></div>
+				<div class="wrapp">
+					<div class="artist_s"></div>
+					<div class="artist_n"></div>
+				</div>
+				<i class="fa fa-ellipsis-v"></i>
+			</li>
+			<li onclick="loadTrack(28,9)">  
+				<div class="artist_img"></div>
+				<div class="wrapp">
+					<div class="artist_s"></div>
+					<div class="artist_n"></div>
+				</div>
+				<i class="fa fa-ellipsis-v"></i>
+			</li>
+			<li onclick="loadTrack(29,9)">  
+				<div class="artist_img"></div>
+				<div class="wrapp">
+					<div class="artist_s"></div>
+					<div class="artist_n"></div>
+				</div>
+				<i class="fa fa-ellipsis-v"></i>
+			</li>
+		</ul>
+	</div>
+</section>
+<section class="arc">  <!--11th -->
+	<div class="arc2">
+		<i class="fa fa-angle-down" id="zinc1" onclick="return2nd(10)"></i><i class="fa fa-search" id="zinc" onclick="viewsearch()"></i>
+		<img src="https://c.saavncdn.com/artists/Shreya_Ghoshal_002_20200822043816_500x500.jpg">
+		<p>Shreya Ghoshal</p><br>
+		<h6><i class="far fa-check-circle"></i> Verified Artist</h6>
+	</div>
+	<div class="suff"><h1><i class="fa fa-play-circle"></i>  SUFFLE PLAY</h1></div>
+
+	<div class="musiclist">
+		<ul> 
+			<li onclick="loadTrack(121,10)">  
+				<div class="artist_img"></div>
+				<div class="wrapp">
+					<div class="artist_s"></div>
+					<div class="artist_n"></div>
+				</div>
+				<i class="fa fa-ellipsis-v"></i>
+			</li>
+			<li onclick="loadTrack(228,10)">  
+				<div class="artist_img"></div>
+				<div class="wrapp">
+					<div class="artist_s"></div>
+					<div class="artist_n"></div>
+				</div>
+				<i class="fa fa-ellipsis-v"></i>
+			</li>
+			<li onclick="loadTrack(229,10)">  
+				<div class="artist_img"></div>
+				<div class="wrapp">
+					<div class="artist_s"></div>
+					<div class="artist_n"></div>
+				</div>
+				<i class="fa fa-ellipsis-v"></i>
+			</li>
+			<li onclick="loadTrack(230,10)">  
+				<div class="artist_img"></div>
+				<div class="wrapp">
+					<div class="artist_s"></div>
+					<div class="artist_n"></div>
+				</div>
+				<i class="fa fa-ellipsis-v"></i>
+			</li>
+			<li onclick="loadTrack(231,10)">  
+				<div class="artist_img"></div>
+				<div class="wrapp">
+					<div class="artist_s"></div>
+					<div class="artist_n"></div>
+				</div>
+				<i class="fa fa-ellipsis-v"></i>
+			</li>
+			<li onclick="loadTrack(232,10)">  
+				<div class="artist_img"></div>
+				<div class="wrapp">
+					<div class="artist_s"></div>
+					<div class="artist_n"></div>
+				</div>
+				<i class="fa fa-ellipsis-v"></i>
+			</li>
+			<li onclick="loadTrack(233,10)">  
+				<div class="artist_img"></div>
+				<div class="wrapp">
+					<div class="artist_s"></div>
+					<div class="artist_n"></div>
+				</div>
+				<i class="fa fa-ellipsis-v"></i>
+			</li>
+			<li onclick="loadTrack(234,10)">  
+				<div class="artist_img"></div>
+				<div class="wrapp">
+					<div class="artist_s"></div>
+					<div class="artist_n"></div>
+				</div>
+				<i class="fa fa-ellipsis-v"></i>
+			</li>
+			<li onclick="loadTrack(235,10)">  
+				<div class="artist_img"></div>
+				<div class="wrapp">
+					<div class="artist_s"></div>
+					<div class="artist_n"></div>
+				</div>
+				<i class="fa fa-ellipsis-v"></i>
+			</li>
+		</ul>
+	</div>
+</section>
+<section class="arc">  <!--12th -->
+	<div class="arc2">
+		<i class="fa fa-angle-down" id="zinc1" onclick="return2nd(11)"></i><i class="fa fa-search" id="zinc" onclick="viewsearch()"></i>
+		<img src="https://c.saavncdn.com/artists/Neha_Kakkar_006_20200822042626_500x500.jpg">
+		<p>Neha Kakkar</p><br>
+		<h6><i class="far fa-check-circle"></i> Verified Artist</h6>
+	</div>
+	<div class="suff"><h1><i class="fa fa-play-circle"></i>  SUFFLE PLAY</h1></div>
+
+	<div class="musiclist">
+		<ul> 
+			<li onclick="loadTrack(40,11)">  
+				<div class="artist_img"></div>
+				<div class="wrapp">
+					<div class="artist_s"></div>
+					<div class="artist_n"></div>
+				</div>
+				<i class="fa fa-ellipsis-v"></i>
+			</li>
+			<li onclick="loadTrack(41,11)">  
+				<div class="artist_img"></div>
+				<div class="wrapp">
+					<div class="artist_s"></div>
+					<div class="artist_n"></div>
+				</div>
+				<i class="fa fa-ellipsis-v"></i>
+			</li>
+			<li onclick="loadTrack(120,11)">  
+				<div class="artist_img"></div>
+				<div class="wrapp">
+					<div class="artist_s"></div>
+					<div class="artist_n"></div>
+				</div>
+				<i class="fa fa-ellipsis-v"></i>
+			</li>
+				<li onclick="loadTrack(131,11)">  
+				<div class="artist_img"></div>
+				<div class="wrapp">
+					<div class="artist_s"></div>
+					<div class="artist_n"></div>
+				</div>
+				<i class="fa fa-ellipsis-v"></i>
+			</li>
+			<li onclick="loadTrack(157,11)">  
+				<div class="artist_img"></div>
+				<div class="wrapp">
+					<div class="artist_s"></div>
+					<div class="artist_n"></div>
+				</div>
+				<i class="fa fa-ellipsis-v"></i>
+			</li>
+			<li onclick="loadTrack(161,11)">  
+				<div class="artist_img"></div>
+				<div class="wrapp">
+					<div class="artist_s"></div>
+					<div class="artist_n"></div>
+				</div>
+				<i class="fa fa-ellipsis-v"></i>
+			</li>
+			<li onclick="loadTrack(210,11)">  
+				<div class="artist_img"></div>
+				<div class="wrapp">
+					<div class="artist_s"></div>
+					<div class="artist_n"></div>
+				</div>
+				<i class="fa fa-ellipsis-v"></i>
+			</li>
+			
+		</ul>
+	</div>
+</section>
+<section class="arc">  <!--13th -->
+	<div class="arc2">
+		<i class="fa fa-angle-down" id="zinc1" onclick="return2nd(12)"></i><i class="fa fa-search" id="zinc" onclick="viewsearch()"></i>
+		<img src="https://c.saavncdn.com/artists/Badshah_004_20191118143638_500x500.jpg">
+		<p>Badshah</p><br>
+		<h6><i class="far fa-check-circle"></i> Verified Artist</h6>
+	</div>
+	<div class="suff"><h1><i class="fa fa-play-circle"></i>  SUFFLE PLAY</h1></div>
+
+	<div class="musiclist">
+		<ul> 
+			<li onclick="loadTrack(14,12)">  
+				<div class="artist_img"></div>
+				<div class="wrapp">
+					<div class="artist_s"></div>
+					<div class="artist_n"></div>
+				</div>
+				<i class="fa fa-ellipsis-v"></i>
+			</li>
+			<li onclick="loadTrack(15,12)">  
+				<div class="artist_img"></div>
+				<div class="wrapp">
+					<div class="artist_s"></div>
+					<div class="artist_n"></div>
+				</div>
+				<i class="fa fa-ellipsis-v"></i>
+			</li>
+			<li onclick="loadTrack(117,12)">  
+				<div class="artist_img"></div>
+				<div class="wrapp">
+					<div class="artist_s"></div>
+					<div class="artist_n"></div>
+				</div>
+				<i class="fa fa-ellipsis-v"></i>
+			</li>
+			<li onclick="loadTrack(159,12)">  
+				<div class="artist_img"></div>
+				<div class="wrapp">
+					<div class="artist_s"></div>
+					<div class="artist_n"></div>
+				</div>
+				<i class="fa fa-ellipsis-v"></i>
+			</li>
+			<li onclick="loadTrack(160,12)">  
+				<div class="artist_img"></div>
+				<div class="wrapp">
+					<div class="artist_s"></div>
+					<div class="artist_n"></div>
+				</div>
+				<i class="fa fa-ellipsis-v"></i>
+			</li>
+			<li onclick="loadTrack(248,12)">  
+				<div class="artist_img"></div>
+				<div class="wrapp">
+					<div class="artist_s"></div>
+					<div class="artist_n"></div>
+				</div>
+				<i class="fa fa-ellipsis-v"></i>
+			</li>
+			<li onclick="loadTrack(250,12)">  
+				<div class="artist_img"></div>
+				<div class="wrapp">
+					<div class="artist_s"></div>
+					<div class="artist_n"></div>
+				</div>
+				<i class="fa fa-ellipsis-v"></i>
+			</li>
+			
+			
+		</ul>
+	</div>
+</section>
+<section class="arc">  <!--13th -->
+	<div class="arc2">
+		<i class="fa fa-angle-down" id="zinc1" onclick="return2nd(13)"></i><i class="fa fa-search" id="zinc" onclick="viewsearch()"></i>
+		<img src="https://c.saavncdn.com/artists/Badshah_004_20191118143638_500x500.jpg">
+		<p>Arijit Singh</p><br>
+		<h6><i class="far fa-check-circle"></i> Verified Artist</h6>
+	</div>
+	<div class="suff"><h1><i class="fa fa-play-circle"></i>  SUFFLE PLAY</h1></div>
+
+	<div class="musiclist">
+		<ul> 
+			<li onclick="loadTrack(4,13)">  
+				<div class="artist_img"></div>
+				<div class="wrapp">
+					<div class="artist_s"></div>
+					<div class="artist_n"></div>
+				</div>
+				<i class="fa fa-ellipsis-v"></i>
+			</li>
+			<li onclick="loadTrack(11,13)">  
+				<div class="artist_img"></div>
+				<div class="wrapp">
+					<div class="artist_s"></div>
+					<div class="artist_n"></div>
+				</div>
+				<i class="fa fa-ellipsis-v"></i>
+			</li>
+			<li onclick="loadTrack(30,13)">  
+				<div class="artist_img"></div>
+				<div class="wrapp">
+					<div class="artist_s"></div>
+					<div class="artist_n"></div>
+				</div>
+				<i class="fa fa-ellipsis-v"></i>
+			</li>
+			<li onclick="loadTrack(46,13)">  
+				<div class="artist_img"></div>
+				<div class="wrapp">
+					<div class="artist_s"></div>
+					<div class="artist_n"></div>
+				</div>
+				<i class="fa fa-ellipsis-v"></i>
+			</li>
+			<li onclick="loadTrack(111,13)">  
+				<div class="artist_img"></div>
+				<div class="wrapp">
+					<div class="artist_s"></div>
+					<div class="artist_n"></div>
+				</div>
+				<i class="fa fa-ellipsis-v"></i>
+			</li>
+			<li onclick="loadTrack(112,13)">  
+				<div class="artist_img"></div>
+				<div class="wrapp">
+					<div class="artist_s"></div>
+					<div class="artist_n"></div>
+				</div>
+				<i class="fa fa-ellipsis-v"></i>
+			</li>
+			<li onclick="loadTrack(113,13)">  
+				<div class="artist_img"></div>
+				<div class="wrapp">
+					<div class="artist_s"></div>
+					<div class="artist_n"></div>
+				</div>
+				<i class="fa fa-ellipsis-v"></i>
+			</li>
+			<li onclick="loadTrack(115,13)">  
+				<div class="artist_img"></div>
+				<div class="wrapp">
+					<div class="artist_s"></div>
+					<div class="artist_n"></div>
+				</div>
+				<i class="fa fa-ellipsis-v"></i>
+			</li>
+			<li onclick="loadTrack(116,13)">  
+				<div class="artist_img"></div>
+				<div class="wrapp">
+					<div class="artist_s"></div>
+					<div class="artist_n"></div>
+				</div>
+				<i class="fa fa-ellipsis-v"></i>
+			</li>
+			<li onclick="loadTrack(129,13)">  
+				<div class="artist_img"></div>
+				<div class="wrapp">
+					<div class="artist_s"></div>
+					<div class="artist_n"></div>
+				</div>
+				<i class="fa fa-ellipsis-v"></i>
+			</li>
+			<li onclick="loadTrack(152,13)">  
+				<div class="artist_img"></div>
+				<div class="wrapp">
+					<div class="artist_s"></div>
+					<div class="artist_n"></div>
+				</div>
+				<i class="fa fa-ellipsis-v"></i>
+			</li>
+			<li onclick="loadTrack(155,13)">  
+				<div class="artist_img"></div>
+				<div class="wrapp">
+					<div class="artist_s"></div>
+					<div class="artist_n"></div>
+				</div>
+				<i class="fa fa-ellipsis-v"></i>
+			</li>
+			<li onclick="loadTrack(187,13)">  
+				<div class="artist_img"></div>
+				<div class="wrapp">
+					<div class="artist_s"></div>
+					<div class="artist_n"></div>
+				</div>
+				<i class="fa fa-ellipsis-v"></i>
+			</li>
+			<li onclick="loadTrack(213,13)">  
+				<div class="artist_img"></div>
+				<div class="wrapp">
+					<div class="artist_s"></div>
+					<div class="artist_n"></div>
+				</div>
+				<i class="fa fa-ellipsis-v"></i>
+			</li>
+			<li onclick="loadTrack(214,13)">  
+				<div class="artist_img"></div>
+				<div class="wrapp">
+					<div class="artist_s"></div>
+					<div class="artist_n"></div>
+				</div>
+				<i class="fa fa-ellipsis-v"></i>
+			</li>
+			<li onclick="loadTrack(215,13)">  
+				<div class="artist_img"></div>
+				<div class="wrapp">
+					<div class="artist_s"></div>
+					<div class="artist_n"></div>
+				</div>
+				<i class="fa fa-ellipsis-v"></i>
+			</li>
+			<li onclick="loadTrack(221,13)">  
+				<div class="artist_img"></div>
+				<div class="wrapp">
+					<div class="artist_s"></div>
+					<div class="artist_n"></div>
+				</div>
+				<i class="fa fa-ellipsis-v"></i>
+			</li>
+			<li onclick="loadTrack(230,13)">  
+				<div class="artist_img"></div>
+				<div class="wrapp">
+					<div class="artist_s"></div>
+					<div class="artist_n"></div>
+				</div>
+				<i class="fa fa-ellipsis-v"></i>
+			</li>
+			<li onclick="loadTrack(231,13)">  
+				<div class="artist_img"></div>
+				<div class="wrapp">
+					<div class="artist_s"></div>
+					<div class="artist_n"></div>
+				</div>
+				<i class="fa fa-ellipsis-v"></i>
+			</li>
+			
+			
+		</ul>
+	</div>
+</section>
+</div>
+
+
+	
+<!--Ends -->
+<span id="sundaram">
+	<!--for search bar list of more than 200 songs-->
+
+	<!--header content main name of app module-->
+		<div class="head">
+			<div class="log">
+				<img src="main/logo1.png">
+				<h1> Jukebox 
+				<span id="holder1">0</span>
+				</h1>
+				<i class="fa fa-bars" id="bars" onclick="displaysidemenu()"></i>
+			</div>
+			<!--for desktop view screen view menu nav bar list-->
+			<div class="desktop_navbar">
+				<a href="index.html">Home</a>
+				<a href="#"  onclick="displayblocks()">Music</a>
+				<a href="#">Account</a>
+				<a href="http://www.starwebzz.in" target="_blank">Company</a>
+				<a href="index.html">share</a>
+			</div>
+			<!--for media screen view side nav bar list-->
+			<div class="option" id="option">
+				<h2><i class="fa fa-times" onclick="hidesidemenu()" id="close"></i>Welcome</h2>
+				<li><a href="#"><i class="fa fa-sign-in"></i>signed as<span id="fetch"></span></a></li>
+				<li><a href="index.html"><i class="fa fa-home"></i>Home</a></li>
+				<li><a href="#" onclick="displayblocks()"><i class="fa fa-music"></i>Music</a></li>
+				<li><a href="#"><i class="fa fa-address-card"></i>Account</a></li>
+				<li><a href="http://www.starwebzz.in"><i class="fa fa-building"></i>Company</a></li>
+				<li><a href="#"><i class="fa fa-share"></i>Share</a></li>
+				<li><a href="#" onclick="signOut()"><i class="fa fa-sign-out"></i>sign out</a></li>
+			</div>
+		</div>
+		<div class="container">
+   			 <div class="box">
+					 <div class="title">
+			            <span class="block"></span>
+			            <h1>Jukebox<span></span></h1>
+			        </div>
+
+			        <div class="role">
+			            <div class="block"></div>
+			            <p>Stream Anywhere</p>
+
+			        </div>
+					<div class="mid">
+						<a onclick="displayblocks()">Listen</a>
+						<a onclick="openFullscreen()">Gesture</a>
+					</div>
+			
+			  </div>
+		</div>
+		
+</span>
+	
+<span id="gupta">
+<div class="head">
+<div class="log">
+	<h1 onclick="hideblocks()" id="appname">Jukebox</h1>
+	<h2>
+		<i onclick="viewsearch()" class="fa fa-search" id="searchicon1"></i>
+		<i onclick="mainpage()" class="fa fa-close" id="closeicon1"></i>
+	</h2>
+
+</div>
+
+	
+</div>
+
+<div class="alter" id="m">
+	<i class="fa fa-angle-down" onclick="displayblocks()"></i>
+	<input id="searchbar" onkeyup="search_music(),displaysongs(0)" type="text" name="search" placeholder="search Your favourite Music">
+	<i class="fa fa-search" id="searchicon"></i>
+<ol id="list">
+	<li class="sea" onclick="loadTrack(0,0)">
+		<div class="lis"></div>
+		<div class="upperdown">
+			<div class="disco"></div>
+			<div class="discocap"></div>
+		</div>
+		<i class="fa fa-ellipsis-v"></i>
+	</li>
+	<li class="sea" onclick="loadTrack(1,0)">
+		<div class="lis"></div>
+		<div class="upperdown">
+			<div class="disco"></div>
+			<div class="discocap"></div>
+		</div>
+		<i class="fa fa-ellipsis-v"></i>
+	</li>
+	<li class="sea" onclick="loadTrack(2,0)">
+		<div class="lis"></div>
+		<div class="upperdown">
+			<div class="disco"></div>
+			<div class="discocap"></div>
+		</div>
+		<i class="fa fa-ellipsis-v"></i>
+	</li>
+	<li class="sea" onclick="loadTrack(3,0)">
+		<div class="lis"></div>
+		<div class="upperdown">
+			<div class="disco"></div>
+			<div class="discocap"></div>
+		</div>
+		<i class="fa fa-ellipsis-v"></i>
+	</li>
+	<li class="sea" onclick="loadTrack(4,0)">
+		<div class="lis"></div>
+		<div class="upperdown">
+			<div class="disco"></div>
+			<div class="discocap"></div>
+		</div>
+		<i class="fa fa-ellipsis-v"></i>
+	</li>
+	<li class="sea" onclick="loadTrack(5,0)">
+		<div class="lis"></div>
+		<div class="upperdown">
+			<div class="disco"></div>
+			<div class="discocap"></div>
+		</div>
+		<i class="fa fa-ellipsis-v"></i>
+	</li>
+	<li class="sea" onclick="loadTrack(6,0)">
+		<div class="lis"></div>
+		<div class="upperdown">
+			<div class="disco"></div>
+			<div class="discocap"></div>
+		</div>
+		<i class="fa fa-ellipsis-v"></i>
+	</li>
+	<li class="sea" onclick="loadTrack(7,0)">
+		<div class="lis"></div>
+		<div class="upperdown">
+			<div class="disco"></div>
+			<div class="discocap"></div>
+		</div>
+		<i class="fa fa-ellipsis-v"></i>
+	</li>
+	<li class="sea" onclick="loadTrack(8,0)">
+		<div class="lis"></div>
+		<div class="upperdown">
+			<div class="disco"></div>
+			<div class="discocap"></div>
+		</div>
+		<i class="fa fa-ellipsis-v"></i>
+	</li>
+	<li class="sea" onclick="loadTrack(9,0)">
+		<div class="lis"></div>
+		<div class="upperdown">
+			<div class="disco"></div>
+			<div class="discocap"></div>
+		</div>
+		<i class="fa fa-ellipsis-v"></i>
+	</li>
+	<li class="sea" onclick="loadTrack(10,0)">
+		<div class="lis"></div>
+		<div class="upperdown">
+			<div class="disco"></div>
+			<div class="discocap"></div>
+		</div>
+		<i class="fa fa-ellipsis-v"></i>
+	</li>
+	<li class="sea" onclick="loadTrack(11,0)">
+		<div class="lis"></div>
+		<div class="upperdown">
+			<div class="disco"></div>
+			<div class="discocap"></div>
+		</div>
+		<i class="fa fa-ellipsis-v"></i>
+	</li>
+	<li class="sea" onclick="loadTrack(12,0)">
+		<div class="lis"></div>
+		<div class="upperdown">
+			<div class="disco"></div>
+			<div class="discocap"></div>
+		</div>
+		<i class="fa fa-ellipsis-v"></i>
+	</li>
+	<li class="sea" onclick="loadTrack(13,0)">
+		<div class="lis"></div>
+		<div class="upperdown">
+			<div class="disco"></div>
+			<div class="discocap"></div>
+		</div>
+		<i class="fa fa-ellipsis-v"></i>
+	</li>
+	<li class="sea" onclick="loadTrack(14,0)">
+		<div class="lis"></div>
+		<div class="upperdown">
+			<div class="disco"></div>
+			<div class="discocap"></div>
+		</div>
+		<i class="fa fa-ellipsis-v"></i>
+	</li>
+	<li class="sea" onclick="loadTrack(15,0)">
+		<div class="lis"></div>
+		<div class="upperdown">
+			<div class="disco"></div>
+			<div class="discocap"></div>
+		</div>
+		<i class="fa fa-ellipsis-v"></i>
+	</li>
+	<li class="sea" onclick="loadTrack(16,0)">
+		<div class="lis"></div>
+		<div class="upperdown">
+			<div class="disco"></div>
+			<div class="discocap"></div>
+		</div>
+		<i class="fa fa-ellipsis-v"></i>
+	</li>
+	<li class="sea" onclick="loadTrack(17,0)">
+		<div class="lis"></div>
+		<div class="upperdown">
+			<div class="disco"></div>
+			<div class="discocap"></div>
+		</div>
+		<i class="fa fa-ellipsis-v"></i>
+	</li>
+	<li class="sea" onclick="loadTrack(18,0)">
+		<div class="lis"></div>
+		<div class="upperdown">
+			<div class="disco"></div>
+			<div class="discocap"></div>
+		</div>
+		<i class="fa fa-ellipsis-v"></i>
+	</li>
+	<li class="sea" onclick="loadTrack(19,0)">
+		<div class="lis"></div>
+		<div class="upperdown">
+			<div class="disco"></div>
+			<div class="discocap"></div>
+		</div>
+		<i class="fa fa-ellipsis-v"></i>
+	</li>
+	<li class="sea" onclick="loadTrack(20,0)">
+		<div class="lis"></div>
+		<div class="upperdown">
+			<div class="disco"></div>
+			<div class="discocap"></div>
+		</div>
+		<i class="fa fa-ellipsis-v"></i>
+	</li>
+	<li class="sea" onclick="loadTrack(21,0)">
+		<div class="lis"></div>
+		<div class="upperdown">
+			<div class="disco"></div>
+			<div class="discocap"></div>
+		</div>
+		<i class="fa fa-ellipsis-v"></i>
+	</li>
+	<li class="sea" onclick="loadTrack(22,0)">
+		<div class="lis"></div>
+		<div class="upperdown">
+			<div class="disco"></div>
+			<div class="discocap"></div>
+		</div>
+		<i class="fa fa-ellipsis-v"></i>
+	</li>
+	<li class="sea" onclick="loadTrack(23,0)">
+		<div class="lis"></div>
+		<div class="upperdown">
+			<div class="disco"></div>
+			<div class="discocap"></div>
+		</div>
+		<i class="fa fa-ellipsis-v"></i>
+	</li>
+	<li class="sea" onclick="loadTrack(24,0)">
+		<div class="lis"></div>
+		<div class="upperdown">
+			<div class="disco"></div>
+			<div class="discocap"></div>
+		</div>
+		<i class="fa fa-ellipsis-v"></i>
+	</li>
+	<li class="sea" onclick="loadTrack(25,0)">
+		<div class="lis"></div>
+		<div class="upperdown">
+			<div class="disco"></div>
+			<div class="discocap"></div>
+		</div>
+		<i class="fa fa-ellipsis-v"></i>
+	</li>
+	<li class="sea" onclick="loadTrack(26,0)">
+		<div class="lis"></div>
+		<div class="upperdown">
+			<div class="disco"></div>
+			<div class="discocap"></div>
+		</div>
+		<i class="fa fa-ellipsis-v"></i>
+	</li>
+	<li class="sea" onclick="loadTrack(27,0)">
+		<div class="lis"></div>
+		<div class="upperdown">
+			<div class="disco"></div>
+			<div class="discocap"></div>
+		</div>
+		<i class="fa fa-ellipsis-v"></i>
+	</li>
+	<li class="sea" onclick="loadTrack(28,0)">
+		<div class="lis"></div>
+		<div class="upperdown">
+			<div class="disco"></div>
+			<div class="discocap"></div>
+		</div>
+		<i class="fa fa-ellipsis-v"></i>
+	</li>
+	<li class="sea" onclick="loadTrack(29,0)">
+		<div class="lis"></div>
+		<div class="upperdown">
+			<div class="disco"></div>
+			<div class="discocap"></div>
+		</div>
+		<i class="fa fa-ellipsis-v"></i>
+	</li>
+	<li class="sea" onclick="loadTrack(30,0)">
+		<div class="lis"></div>
+		<div class="upperdown">
+			<div class="disco"></div>
+			<div class="discocap"></div>
+		</div>
+		<i class="fa fa-ellipsis-v"></i>
+	</li>
+	<li class="sea" onclick="loadTrack(31,0)">
+		<div class="lis"></div>
+		<div class="upperdown">
+			<div class="disco"></div>
+			<div class="discocap"></div>
+		</div>
+		<i class="fa fa-ellipsis-v"></i>
+	</li>
+	<li class="sea" onclick="loadTrack(32,0)">
+		<div class="lis"></div>
+		<div class="upperdown">
+			<div class="disco"></div>
+			<div class="discocap"></div>
+		</div>
+		<i class="fa fa-ellipsis-v"></i>
+	</li>
+	<li class="sea" onclick="loadTrack(33,0)">
+		<div class="lis"></div>
+		<div class="upperdown">
+			<div class="disco"></div>
+			<div class="discocap"></div>
+		</div>
+		<i class="fa fa-ellipsis-v"></i>
+	</li>
+	<li class="sea" onclick="loadTrack(34,0)">
+		<div class="lis"></div>
+		<div class="upperdown">
+			<div class="disco"></div>
+			<div class="discocap"></div>
+		</div>
+		<i class="fa fa-ellipsis-v"></i>
+	</li>
+	<li class="sea" onclick="loadTrack(35,0)">
+		<div class="lis"></div>
+		<div class="upperdown">
+			<div class="disco"></div>
+			<div class="discocap"></div>
+		</div>
+		<i class="fa fa-ellipsis-v"></i>
+	</li>
+	<li class="sea" onclick="loadTrack(36,0)">
+		<div class="lis"></div>
+		<div class="upperdown">
+			<div class="disco"></div>
+			<div class="discocap"></div>
+		</div>
+		<i class="fa fa-ellipsis-v"></i>
+	</li>
+	<li class="sea" onclick="loadTrack(37,0)">
+		<div class="lis"></div>
+		<div class="upperdown">
+			<div class="disco"></div>
+			<div class="discocap"></div>
+		</div>
+		<i class="fa fa-ellipsis-v"></i>
+	</li>
+	<li class="sea" onclick="loadTrack(38,0)">
+		<div class="lis"></div>
+		<div class="upperdown">
+			<div class="disco"></div>
+			<div class="discocap"></div>
+		</div>
+		<i class="fa fa-ellipsis-v"></i>
+	</li>
+	<li class="sea" onclick="loadTrack(39,0)">
+		<div class="lis"></div>
+		<div class="upperdown">
+			<div class="disco"></div>
+			<div class="discocap"></div>
+		</div>
+		<i class="fa fa-ellipsis-v"></i>
+	</li>
+	<li class="sea" onclick="loadTrack(40,0)">
+		<div class="lis"></div>
+		<div class="upperdown">
+			<div class="disco"></div>
+			<div class="discocap"></div>
+		</div>
+		<i class="fa fa-ellipsis-v"></i>
+	</li>
+	<li class="sea" onclick="loadTrack(41,0)">
+		<div class="lis"></div>
+		<div class="upperdown">
+			<div class="disco"></div>
+			<div class="discocap"></div>
+		</div>
+		<i class="fa fa-ellipsis-v"></i>
+	</li>
+	<li class="sea" onclick="loadTrack(42,0)">
+		<div class="lis"></div>
+		<div class="upperdown">
+			<div class="disco"></div>
+			<div class="discocap"></div>
+		</div>
+		<i class="fa fa-ellipsis-v"></i>
+	</li>
+	<li class="sea" onclick="loadTrack(43,0)">
+		<div class="lis"></div>
+		<div class="upperdown">
+			<div class="disco"></div>
+			<div class="discocap"></div>
+		</div>
+		<i class="fa fa-ellipsis-v"></i>
+	</li>
+	<li class="sea" onclick="loadTrack(44,0)">
+		<div class="lis"></div>
+		<div class="upperdown">
+			<div class="disco"></div>
+			<div class="discocap"></div>
+		</div>
+		<i class="fa fa-ellipsis-v"></i>
+	</li>
+	<li class="sea" onclick="loadTrack(45,0)">
+		<div class="lis"></div>
+		<div class="upperdown">
+			<div class="disco"></div>
+			<div class="discocap"></div>
+		</div>
+		<i class="fa fa-ellipsis-v"></i>
+	</li>
+	<li class="sea" onclick="loadTrack(46,0)">
+		<div class="lis"></div>
+		<div class="upperdown">
+			<div class="disco"></div>
+			<div class="discocap"></div>
+		</div>
+		<i class="fa fa-ellipsis-v"></i>
+	</li>
+	<li class="sea" onclick="loadTrack(47,0)">
+		<div class="lis"></div>
+		<div class="upperdown">
+			<div class="disco"></div>
+			<div class="discocap"></div>
+		</div>
+		<i class="fa fa-ellipsis-v"></i>
+	</li>
+	<li class="sea" onclick="loadTrack(48,0)">
+		<div class="lis"></div>
+		<div class="upperdown">
+			<div class="disco"></div>
+			<div class="discocap"></div>
+		</div>
+		<i class="fa fa-ellipsis-v"></i>
+	</li>
+	<li class="sea" onclick="loadTrack(49,0)">
+		<div class="lis"></div>
+		<div class="upperdown">
+			<div class="disco"></div>
+			<div class="discocap"></div>
+		</div>
+		<i class="fa fa-ellipsis-v"></i>
+	</li>
+	<li class="sea" onclick="loadTrack(50,0)">
+		<div class="lis"></div>
+		<div class="upperdown">
+			<div class="disco"></div>
+			<div class="discocap"></div>
+		</div>
+		<i class="fa fa-ellipsis-v"></i>
+	</li>
+	<li class="sea" onclick="loadTrack(51,0)">
+		<div class="lis"></div>
+		<div class="upperdown">
+			<div class="disco"></div>
+			<div class="discocap"></div>
+		</div>
+		<i class="fa fa-ellipsis-v"></i>
+	</li>
+	<li class="sea" onclick="loadTrack(52,0)">
+		<div class="lis"></div>
+		<div class="upperdown">
+			<div class="disco"></div>
+			<div class="discocap"></div>
+		</div>
+		<i class="fa fa-ellipsis-v"></i>
+	</li>
+	<li class="sea" onclick="loadTrack(53,0)">
+		<div class="lis"></div>
+		<div class="upperdown">
+			<div class="disco"></div>
+			<div class="discocap"></div>
+		</div>
+		<i class="fa fa-ellipsis-v"></i>
+	</li>
+	<li class="sea" onclick="loadTrack(54,0)">
+		<div class="lis"></div>
+		<div class="upperdown">
+			<div class="disco"></div>
+			<div class="discocap"></div>
+		</div>
+		<i class="fa fa-ellipsis-v"></i>
+	</li>
+	<li class="sea" onclick="loadTrack(55,0)">
+		<div class="lis"></div>
+		<div class="upperdown">
+			<div class="disco"></div>
+			<div class="discocap"></div>
+		</div>
+		<i class="fa fa-ellipsis-v"></i>
+	</li>
+	<li class="sea" onclick="loadTrack(56,0)">
+		<div class="lis"></div>
+		<div class="upperdown">
+			<div class="disco"></div>
+			<div class="discocap"></div>
+		</div>
+		<i class="fa fa-ellipsis-v"></i>
+	</li>
+	<li class="sea" onclick="loadTrack(57,0)">
+		<div class="lis"></div>
+		<div class="upperdown">
+			<div class="disco"></div>
+			<div class="discocap"></div>
+		</div>
+		<i class="fa fa-ellipsis-v"></i>
+	</li>
+	<li class="sea" onclick="loadTrack(58,0)">
+		<div class="lis"></div>
+		<div class="upperdown">
+			<div class="disco"></div>
+			<div class="discocap"></div>
+		</div>
+		<i class="fa fa-ellipsis-v"></i>
+	</li>
+	<li class="sea" onclick="loadTrack(59,0)">
+		<div class="lis"></div>
+		<div class="upperdown">
+			<div class="disco"></div>
+			<div class="discocap"></div>
+		</div>
+		<i class="fa fa-ellipsis-v"></i>
+	</li>
+	<li class="sea" onclick="loadTrack(60,0)">
+		<div class="lis"></div>
+		<div class="upperdown">
+			<div class="disco"></div>
+			<div class="discocap"></div>
+		</div>
+		<i class="fa fa-ellipsis-v"></i>
+	</li>
+	<li class="sea" onclick="loadTrack(61,0)">
+		<div class="lis"></div>
+		<div class="upperdown">
+			<div class="disco"></div>
+			<div class="discocap"></div>
+		</div>
+		<i class="fa fa-ellipsis-v"></i>
+	</li>
+	<li class="sea" onclick="loadTrack(62,0)">
+		<div class="lis"></div>
+		<div class="upperdown">
+			<div class="disco"></div>
+			<div class="discocap"></div>
+		</div>
+		<i class="fa fa-ellipsis-v"></i>
+	</li>
+	<li class="sea" onclick="loadTrack(63,0)">
+		<div class="lis"></div>
+		<div class="upperdown">
+			<div class="disco"></div>
+			<div class="discocap"></div>
+		</div>
+		<i class="fa fa-ellipsis-v"></i>
+	</li>
+	<li class="sea" onclick="loadTrack(64,0)">
+		<div class="lis"></div>
+		<div class="upperdown">
+			<div class="disco"></div>
+			<div class="discocap"></div>
+		</div>
+		<i class="fa fa-ellipsis-v"></i>
+	</li>
+	<li class="sea" onclick="loadTrack(65,0)">
+		<div class="lis"></div>
+		<div class="upperdown">
+			<div class="disco"></div>
+			<div class="discocap"></div>
+		</div>
+		<i class="fa fa-ellipsis-v"></i>
+	</li>
+	<li class="sea" onclick="loadTrack(66,0)">
+		<div class="lis"></div>
+		<div class="upperdown">
+			<div class="disco"></div>
+			<div class="discocap"></div>
+		</div>
+		<i class="fa fa-ellipsis-v"></i>
+	</li>
+	<li class="sea" onclick="loadTrack(67,0)">
+		<div class="lis"></div>
+		<div class="upperdown">
+			<div class="disco"></div>
+			<div class="discocap"></div>
+		</div>
+		<i class="fa fa-ellipsis-v"></i>
+	</li>
+	<li class="sea" onclick="loadTrack(68,0)">
+		<div class="lis"></div>
+		<div class="upperdown">
+			<div class="disco"></div>
+			<div class="discocap"></div>
+		</div>
+		<i class="fa fa-ellipsis-v"></i>
+	</li>
+	<li class="sea" onclick="loadTrack(69,0)">
+		<div class="lis"></div>
+		<div class="upperdown">
+			<div class="disco"></div>
+			<div class="discocap"></div>
+		</div>
+		<i class="fa fa-ellipsis-v"></i>
+	</li>
+	<li class="sea" onclick="loadTrack(70,0)">
+		<div class="lis"></div>
+		<div class="upperdown">
+			<div class="disco"></div>
+			<div class="discocap"></div>
+		</div>
+		<i class="fa fa-ellipsis-v"></i>
+	</li>
+	<li class="sea" onclick="loadTrack(71,0)">
+		<div class="lis"></div>
+		<div class="upperdown">
+			<div class="disco"></div>
+			<div class="discocap"></div>
+		</div>
+		<i class="fa fa-ellipsis-v"></i>
+	</li>
+	<li class="sea" onclick="loadTrack(72,0)">
+		<div class="lis"></div>
+		<div class="upperdown">
+			<div class="disco"></div>
+			<div class="discocap"></div>
+		</div>
+		<i class="fa fa-ellipsis-v"></i>
+	</li>
+	<li class="sea" onclick="loadTrack(73,0)">
+		<div class="lis"></div>
+		<div class="upperdown">
+			<div class="disco"></div>
+			<div class="discocap"></div>
+		</div>
+		<i class="fa fa-ellipsis-v"></i>
+	</li>
+	<li class="sea" onclick="loadTrack(74,0)">
+		<div class="lis"></div>
+		<div class="upperdown">
+			<div class="disco"></div>
+			<div class="discocap"></div>
+		</div>
+		<i class="fa fa-ellipsis-v"></i>
+	</li>
+	<li class="sea" onclick="loadTrack(75,0)">
+		<div class="lis"></div>
+		<div class="upperdown">
+			<div class="disco"></div>
+			<div class="discocap"></div>
+		</div>
+		<i class="fa fa-ellipsis-v"></i>
+	</li>
+	<li class="sea" onclick="loadTrack(76,0)">
+		<div class="lis"></div>
+		<div class="upperdown">
+			<div class="disco"></div>
+			<div class="discocap"></div>
+		</div>
+		<i class="fa fa-ellipsis-v"></i>
+	</li>
+	<li class="sea" onclick="loadTrack(77,0)">
+		<div class="lis"></div>
+		<div class="upperdown">
+			<div class="disco"></div>
+			<div class="discocap"></div>
+		</div>
+		<i class="fa fa-ellipsis-v"></i>
+	</li>
+	<li class="sea" onclick="loadTrack(78,0)">
+		<div class="lis"></div>
+		<div class="upperdown">
+			<div class="disco"></div>
+			<div class="discocap"></div>
+		</div>
+		<i class="fa fa-ellipsis-v"></i>
+	</li>
+	<li class="sea" onclick="loadTrack(79,0)">
+		<div class="lis"></div>
+		<div class="upperdown">
+			<div class="disco"></div>
+			<div class="discocap"></div>
+		</div>
+		<i class="fa fa-ellipsis-v"></i>
+	</li>
+	<li class="sea" onclick="loadTrack(80,0)">
+		<div class="lis"></div>
+		<div class="upperdown">
+			<div class="disco"></div>
+			<div class="discocap"></div>
+		</div>
+		<i class="fa fa-ellipsis-v"></i>
+	</li>
+	<li class="sea" onclick="loadTrack(81,0)">
+		<div class="lis"></div>
+		<div class="upperdown">
+			<div class="disco"></div>
+			<div class="discocap"></div>
+		</div>
+		<i class="fa fa-ellipsis-v"></i>
+	</li>
+	<li class="sea" onclick="loadTrack(82,0)">
+		<div class="lis"></div>
+		<div class="upperdown">
+			<div class="disco"></div>
+			<div class="discocap"></div>
+		</div>
+		<i class="fa fa-ellipsis-v"></i>
+	</li>
+	<li class="sea" onclick="loadTrack(83,0)">
+		<div class="lis"></div>
+		<div class="upperdown">
+			<div class="disco"></div>
+			<div class="discocap"></div>
+		</div>
+		<i class="fa fa-ellipsis-v"></i>
+	</li>
+<li class="sea" onclick="loadTrack(84,0)"><!--Old Song starting point for search bar-->
+	<div class="lis"></div>
+	<div class="upperdown">
+		<div class="disco"></div>
+		<div class="discocap"></div>
+	</div>
+	<i class="fa fa-ellipsis-v"></i>
+</li>
+<li class="sea" onclick="loadTrack(85,0)">
+	<div class="lis"></div>
+	<div class="upperdown">
+		<div class="disco"></div>
+		<div class="discocap"></div>
+	</div>
+	<i class="fa fa-ellipsis-v"></i>
+</li>
+<li class="sea" class="sea" onclick="loadTrack(86,0)">
+	<div class="lis"></div>
+	<div class="upperdown">
+		<div class="disco"></div>
+		<div class="discocap"></div>
+	</div>
+	<i class="fa fa-ellipsis-v"></i>
+</li>
+<li class="sea" class="sea" onclick="loadTrack(87,0)">
+	<div class="lis"></div>
+	<div class="upperdown">
+		<div class="disco"></div>
+		<div class="discocap"></div>
+	</div>
+	<i class="fa fa-ellipsis-v"></i>
+</li>
+<li class="sea" class="sea" onclick="loadTrack(88,0)">
+	<div class="lis"></div>
+	<div class="upperdown">
+		<div class="disco"></div>
+		<div class="discocap"></div>
+	</div>
+	<i class="fa fa-ellipsis-v"></i>
+</li>
+<li class="sea" onclick="loadTrack(89,0)">
+	<div class="lis"></div>
+	<div class="upperdown">
+		<div class="disco"></div>
+		<div class="discocap"></div>
+	</div>
+	<i class="fa fa-ellipsis-v"></i>
+</li>
+<li class="sea" onclick="loadTrack(90,0)">
+	<div class="lis"></div>
+	<div class="upperdown">
+		<div class="disco"></div>
+		<div class="discocap"></div>
+	</div>
+	<i class="fa fa-ellipsis-v"></i>
+</li>
+<li class="sea" onclick="loadTrack(91,0)">
+	<div class="lis"></div>
+	<div class="upperdown">
+		<div class="disco"></div>
+		<div class="discocap"></div>
+	</div>
+	<i class="fa fa-ellipsis-v"></i>
+</li>
+<li class="sea" onclick="loadTrack(92,0)">
+	<div class="lis"></div>
+	<div class="upperdown">
+		<div class="disco"></div>
+		<div class="discocap"></div>
+	</div>
+	<i class="fa fa-ellipsis-v"></i>
+</li>
+<li class="sea" onclick="loadTrack(93,0)">
+	<div class="lis"></div>
+	<div class="upperdown">
+		<div class="disco"></div>
+		<div class="discocap"></div>
+	</div>
+	<i class="fa fa-ellipsis-v"></i>
+</li>
+<li class="sea" onclick="loadTrack(94,0)">
+	<div class="lis"></div>
+	<div class="upperdown">
+		<div class="disco"></div>
+		<div class="discocap"></div>
+	</div>
+	<i class="fa fa-ellipsis-v"></i>
+</li>
+<li class="sea" onclick="loadTrack(95,0)">
+	<div class="lis"></div>
+	<div class="upperdown">
+		<div class="disco"></div>
+		<div class="discocap"></div>
+	</div>
+	<i class="fa fa-ellipsis-v"></i>
+</li>
+<li class="sea" onclick="loadTrack(96,0)">
+	<div class="lis"></div>
+	<div class="upperdown">
+		<div class="disco"></div>
+		<div class="discocap"></div>
+	</div>
+	<i class="fa fa-ellipsis-v"></i>
+</li>
+<li class="sea" onclick="loadTrack(97,0)">
+	<div class="lis"></div>
+	<div class="upperdown">
+		<div class="disco"></div>
+		<div class="discocap"></div>
+	</div>
+	<i class="fa fa-ellipsis-v"></i>
+</li>
+<li class="sea" onclick="loadTrack(98,0)">
+	<div class="lis"></div>
+	<div class="upperdown">
+		<div class="disco"></div>
+		<div class="discocap"></div>
+	</div>
+	<i class="fa fa-ellipsis-v"></i>
+</li>
+<li class="sea" onclick="loadTrack(99,0)">
+	<div class="lis"></div>
+	<div class="upperdown">
+		<div class="disco"></div>
+		<div class="discocap"></div>
+	</div>
+	<i class="fa fa-ellipsis-v"></i>
+</li>
+<li class="sea" onclick="loadTrack(100,0)">
+	<div class="lis"></div>
+	<div class="upperdown">
+		<div class="disco"></div>
+		<div class="discocap"></div>
+	</div>
+	<i class="fa fa-ellipsis-v"></i>
+</li>
+<li class="sea" onclick="loadTrack(101,0)">
+	<div class="lis"></div>
+	<div class="upperdown">
+		<div class="disco"></div>
+		<div class="discocap"></div>
+	</div>
+	<i class="fa fa-ellipsis-v"></i>
+</li>
+<li class="sea" onclick="loadTrack(102,0)">
+	<div class="lis"></div>
+	<div class="upperdown">
+		<div class="disco"></div>
+		<div class="discocap"></div>
+	</div>
+	<i class="fa fa-ellipsis-v"></i>
+</li>
+<li class="sea" onclick="loadTrack(103,0)">
+	<div class="lis"></div>
+	<div class="upperdown">
+		<div class="disco"></div>
+		<div class="discocap"></div>
+	</div>
+	<i class="fa fa-ellipsis-v"></i>
+</li>
+<li class="sea" onclick="loadTrack(104,0)">
+	<div class="lis"></div>
+	<div class="upperdown">
+		<div class="disco"></div>
+		<div class="discocap"></div>
+	</div>
+	<i class="fa fa-ellipsis-v"></i>
+</li>
+<li class="sea" onclick="loadTrack(105,0)">
+	<div class="lis"></div>
+	<div class="upperdown">
+		<div class="disco"></div>
+		<div class="discocap"></div>
+	</div>
+	<i class="fa fa-ellipsis-v"></i>
+</li>
+<li class="sea" onclick="loadTrack(106,0)">
+	<div class="lis"></div>
+	<div class="upperdown">
+		<div class="disco"></div>
+		<div class="discocap"></div>
+	</div>
+	<i class="fa fa-ellipsis-v"></i>
+</li>
+<li class="sea" onclick="loadTrack(107,0)">
+	<div class="lis"></div>
+	<div class="upperdown">
+		<div class="disco"></div>
+		<div class="discocap"></div>
+	</div>
+	<i class="fa fa-ellipsis-v"></i>
+</li>
+<li class="sea" onclick="loadTrack(108,0)">
+	<div class="lis"></div>
+	<div class="upperdown">
+		<div class="disco"></div>
+		<div class="discocap"></div>
+	</div>
+	<i class="fa fa-ellipsis-v"></i>
+</li>
+<li class="sea" onclick="loadTrack(109,0)">
+	<div class="lis"></div>
+	<div class="upperdown">
+		<div class="disco"></div>
+		<div class="discocap"></div>
+	</div>
+	<i class="fa fa-ellipsis-v"></i>
+</li>
+<li class="sea" onclick="loadTrack(110,0)">
+	<div class="lis"></div>
+	<div class="upperdown">
+		<div class="disco"></div>
+		<div class="discocap"></div>
+	</div>
+	<i class="fa fa-ellipsis-v"></i>
+</li>
+<li class="sea" onclick="loadTrack(111,0)">
+	<div class="lis"></div>
+	<div class="upperdown">
+		<div class="disco"></div>
+		<div class="discocap"></div>
+	</div>
+	<i class="fa fa-ellipsis-v"></i>
+</li>
+<li class="sea" onclick="loadTrack(112,0)">
+	<div class="lis"></div>
+	<div class="upperdown">
+		<div class="disco"></div>
+		<div class="discocap"></div>
+	</div>
+	<i class="fa fa-ellipsis-v"></i>
+</li>
+<li class="sea" onclick="loadTrack(113,0)">
+	<div class="lis"></div>
+	<div class="upperdown">
+		<div class="disco"></div>
+		<div class="discocap"></div>
+	</div>
+	<i class="fa fa-ellipsis-v"></i>
+</li>
+<li class="sea" onclick="loadTrack(114,0)">
+	<div class="lis"></div>
+	<div class="upperdown">
+		<div class="disco"></div>
+		<div class="discocap"></div>
+	</div>
+	<i class="fa fa-ellipsis-v"></i>
+</li>
+<li class="sea" onclick="loadTrack(115,0)">
+	<div class="lis"></div>
+	<div class="upperdown">
+		<div class="disco"></div>
+		<div class="discocap"></div>
+	</div>
+	<i class="fa fa-ellipsis-v"></i>
+</li>
+<li class="sea" onclick="loadTrack(116,0)">
+	<div class="lis"></div>
+	<div class="upperdown">
+		<div class="disco"></div>
+		<div class="discocap"></div>
+	</div>
+	<i class="fa fa-ellipsis-v"></i>
+</li>
+<li class="sea" onclick="loadTrack(117,0)">
+	<div class="lis"></div>
+	<div class="upperdown">
+		<div class="disco"></div>
+		<div class="discocap"></div>
+	</div>
+	<i class="fa fa-ellipsis-v"></i>
+</li>
+<li class="sea" onclick="loadTrack(118,0)">
+	<div class="lis"></div>
+	<div class="upperdown">
+		<div class="disco"></div>
+		<div class="discocap"></div>
+	</div>
+	<i class="fa fa-ellipsis-v"></i>
+</li>
+<li class="sea" onclick="loadTrack(119,0)">
+	<div class="lis"></div>
+	<div class="upperdown">
+		<div class="disco"></div>
+		<div class="discocap"></div>
+	</div>
+	<i class="fa fa-ellipsis-v"></i>
+</li>
+<li class="sea" onclick="loadTrack(120,0)">
+<div class="lis"></div>
+<div class="upperdown">
+	<div class="disco"></div>
+	<div class="discocap"></div>
+</div>
+<i class="fa fa-ellipsis-v"></i>
+</li>
+<li class="sea" onclick="loadTrack(121,0)">
+<div class="lis"></div>
+<div class="upperdown">
+	<div class="disco"></div>
+	<div class="discocap"></div>
+</div>
+<i class="fa fa-ellipsis-v"></i>
+</li>
+<li class="sea" onclick="loadTrack(122,0)">
+<div class="lis"></div>
+<div class="upperdown">
+	<div class="disco"></div>
+	<div class="discocap"></div>
+</div>
+<i class="fa fa-ellipsis-v"></i>
+</li>
+<li class="sea" onclick="loadTrack(123,0)">
+<div class="lis"></div>
+<div class="upperdown">
+	<div class="disco"></div>
+	<div class="discocap"></div>
+</div>
+<i class="fa fa-ellipsis-v"></i>
+</li>
+<li class="sea" onclick="loadTrack(124,0)">
+<div class="lis"></div>
+<div class="upperdown">
+	<div class="disco"></div>
+	<div class="discocap"></div>
+</div>
+<i class="fa fa-ellipsis-v"></i>
+</li>
+<li class="sea" onclick="loadTrack(125,0)">
+<div class="lis"></div>
+<div class="upperdown">
+	<div class="disco"></div>
+	<div class="discocap"></div>
+</div>
+<i class="fa fa-ellipsis-v"></i>
+</li>
+<li class="sea" onclick="loadTrack(126,0)">
+<div class="lis"></div>
+<div class="upperdown">
+	<div class="disco"></div>
+	<div class="discocap"></div>
+</div>
+<i class="fa fa-ellipsis-v"></i>
+</li>
+<li class="sea" onclick="loadTrack(127,0)">
+<div class="lis"></div>
+<div class="upperdown">
+	<div class="disco"></div>
+	<div class="discocap"></div>
+</div>
+<i class="fa fa-ellipsis-v"></i>
+</li>
+<li class="sea" onclick="loadTrack(128,0)">
+<div class="lis"></div>
+<div class="upperdown">
+	<div class="disco"></div>
+	<div class="discocap"></div>
+</div>
+<i class="fa fa-ellipsis-v"></i>
+</li>
+<li class="sea" onclick="loadTrack(129,0)">
+<div class="lis"></div>
+<div class="upperdown">
+	<div class="disco"></div>
+	<div class="discocap"></div>
+</div>
+<i class="fa fa-ellipsis-v"></i>
+</li>
+<li class="sea" onclick="loadTrack(130,0)">
+<div class="lis"></div>
+<div class="upperdown">
+	<div class="disco"></div>
+	<div class="discocap"></div>
+</div>
+<i class="fa fa-ellipsis-v"></i>
+</li>
+<li class="sea" onclick="loadTrack(131,0)">
+<div class="lis"></div>
+<div class="upperdown">
+	<div class="disco"></div>
+	<div class="discocap"></div>
+</div>
+<i class="fa fa-ellipsis-v"></i>
+</li>
+<li class="sea" onclick="loadTrack(132,0)">
+<div class="lis"></div>
+<div class="upperdown">
+	<div class="disco"></div>
+	<div class="discocap"></div>
+</div>
+<i class="fa fa-ellipsis-v"></i>
+</li>
+<li class="sea" onclick="loadTrack(133,0)">
+<div class="lis"></div>
+<div class="upperdown">
+	<div class="disco"></div>
+	<div class="discocap"></div>
+</div>
+<i class="fa fa-ellipsis-v"></i>
+</li>
+<li class="sea" onclick="loadTrack(134,0)">
+<div class="lis"></div>
+<div class="upperdown">
+	<div class="disco"></div>
+	<div class="discocap"></div>
+</div>
+<i class="fa fa-ellipsis-v"></i>
+</li>
+<li class="sea" onclick="loadTrack(135,0)">
+<div class="lis"></div>
+<div class="upperdown">
+	<div class="disco"></div>
+	<div class="discocap"></div>
+</div>
+<i class="fa fa-ellipsis-v"></i>
+</li>
+<li class="sea" onclick="loadTrack(136,0)">
+<div class="lis"></div>
+<div class="upperdown">
+	<div class="disco"></div>
+	<div class="discocap"></div>
+</div>
+<i class="fa fa-ellipsis-v"></i>
+</li>
+<li class="sea" onclick="loadTrack(137,0)">
+<div class="lis"></div>
+<div class="upperdown">
+	<div class="disco"></div>
+	<div class="discocap"></div>
+</div>
+<i class="fa fa-ellipsis-v"></i>
+</li>
+<li class="sea" onclick="loadTrack(138,0)">
+<div class="lis"></div>
+<div class="upperdown">
+	<div class="disco"></div>
+	<div class="discocap"></div>
+</div>
+<i class="fa fa-ellipsis-v"></i>
+</li>
+<li class="sea" onclick="loadTrack(139,0)">
+<div class="lis"></div>
+<div class="upperdown">
+	<div class="disco"></div>
+	<div class="discocap"></div>
+</div>
+<i class="fa fa-ellipsis-v"></i>
+</li>
+<li class="sea" onclick="loadTrack(140,0)">
+<div class="lis"></div>
+<div class="upperdown">
+	<div class="disco"></div>
+	<div class="discocap"></div>
+</div>
+<i class="fa fa-ellipsis-v"></i>
+</li>
+<li class="sea" onclick="loadTrack(141,0)">
+<div class="lis"></div>
+<div class="upperdown">
+	<div class="disco"></div>
+	<div class="discocap"></div>
+</div>
+<i class="fa fa-ellipsis-v"></i>
+</li>
+<li class="sea" onclick="loadTrack(142,0)">
+<div class="lis"></div>
+<div class="upperdown">
+	<div class="disco"></div>
+	<div class="discocap"></div>
+</div>
+<i class="fa fa-ellipsis-v"></i>
+</li>
+<li class="sea" onclick="loadTrack(143,0)">
+<div class="lis"></div>
+<div class="upperdown">
+	<div class="disco"></div>
+	<div class="discocap"></div>
+</div>
+<i class="fa fa-ellipsis-v"></i>
+</li>
+<li class="sea" onclick="loadTrack(144,0)">
+<div class="lis"></div>
+<div class="upperdown">
+	<div class="disco"></div>
+	<div class="discocap"></div>
+</div>
+<i class="fa fa-ellipsis-v"></i>
+</li>
+<li class="sea" onclick="loadTrack(145,0)">
+<div class="lis"></div>
+<div class="upperdown">
+	<div class="disco"></div>
+	<div class="discocap"></div>
+</div>
+<i class="fa fa-ellipsis-v"></i>
+</li>
+<li class="sea" onclick="loadTrack(146,0)">
+<div class="lis"></div>
+<div class="upperdown">
+	<div class="disco"></div>
+	<div class="discocap"></div>
+</div>
+<i class="fa fa-ellipsis-v"></i>
+</li>
+<li class="sea" onclick="loadTrack(147,0)">
+<div class="lis"></div>
+<div class="upperdown">
+	<div class="disco"></div>
+	<div class="discocap"></div>
+</div>
+<i class="fa fa-ellipsis-v"></i>
+</li>
+<li class="sea" onclick="loadTrack(148,0)">
+<div class="lis"></div>
+<div class="upperdown">
+	<div class="disco"></div>
+	<div class="discocap"></div>
+</div>
+<i class="fa fa-ellipsis-v"></i>
+</li>
+<li class="sea" onclick="loadTrack(149,0)">
+<div class="lis"></div>
+<div class="upperdown">
+	<div class="disco"></div>
+	<div class="discocap"></div>
+</div>
+<i class="fa fa-ellipsis-v"></i>
+</li>
+<li class="sea" onclick="loadTrack(150,0)">
+<div class="lis"></div>
+<div class="upperdown">
+	<div class="disco"></div>
+	<div class="discocap"></div>
+</div>
+<i class="fa fa-ellipsis-v"></i>
+</li>
+<li class="sea" onclick="loadTrack(151,0)">
+<div class="lis"></div>
+<div class="upperdown">
+	<div class="disco"></div>
+	<div class="discocap"></div>
+</div>
+<i class="fa fa-ellipsis-v"></i>
+</li>
+<li class="sea" onclick="loadTrack(152,0)">
+<div class="lis"></div>
+<div class="upperdown">
+	<div class="disco"></div>
+	<div class="discocap"></div>
+</div>
+<i class="fa fa-ellipsis-v"></i>
+</li>
+<li class="sea" onclick="loadTrack(153,0)">
+<div class="lis"></div>
+<div class="upperdown">
+	<div class="disco"></div>
+	<div class="discocap"></div>
+</div>
+<i class="fa fa-ellipsis-v"></i>
+</li>
+<li class="sea" onclick="loadTrack(154,0)">
+<div class="lis"></div>
+<div class="upperdown">
+	<div class="disco"></div>
+	<div class="discocap"></div>
+</div>
+<i class="fa fa-ellipsis-v"></i>
+</li>
+<li class="sea" onclick="loadTrack(155,0)">
+<div class="lis"></div>
+<div class="upperdown">
+	<div class="disco"></div>
+	<div class="discocap"></div>
+</div>
+<i class="fa fa-ellipsis-v"></i>
+</li>
+<li class="sea" onclick="loadTrack(156,0)">
+<div class="lis"></div>
+<div class="upperdown">
+	<div class="disco"></div>
+	<div class="discocap"></div>
+</div>
+<i class="fa fa-ellipsis-v"></i>
+</li>
+<li class="sea" onclick="loadTrack(157,0)">
+<div class="lis"></div>
+<div class="upperdown">
+	<div class="disco"></div>
+	<div class="discocap"></div>
+</div>
+<i class="fa fa-ellipsis-v"></i>
+</li>
+<li class="sea" onclick="loadTrack(158,0)">
+<div class="lis"></div>
+<div class="upperdown">
+	<div class="disco"></div>
+	<div class="discocap"></div>
+</div>
+<i class="fa fa-ellipsis-v"></i>
+</li>
+<li class="sea" onclick="loadTrack(159,0)">
+<div class="lis"></div>
+<div class="upperdown">
+	<div class="disco"></div>
+	<div class="discocap"></div>
+</div>
+<i class="fa fa-ellipsis-v"></i>
+</li>
+<li class="sea" onclick="loadTrack(160,0)">
+<div class="lis"></div>
+<div class="upperdown">
+	<div class="disco"></div>
+	<div class="discocap"></div>
+</div>
+<i class="fa fa-ellipsis-v"></i>
+</li>
+<li class="sea" onclick="loadTrack(161,0)">
+<div class="lis"></div>
+<div class="upperdown">
+	<div class="disco"></div>
+	<div class="discocap"></div>
+</div>
+<i class="fa fa-ellipsis-v"></i>
+</li>
+<li class="sea" onclick="loadTrack(162,0)">
+<div class="lis"></div>
+<div class="upperdown">
+	<div class="disco"></div>
+	<div class="discocap"></div>
+</div>
+<i class="fa fa-ellipsis-v"></i>
+</li>
+<li class="sea" onclick="loadTrack(163,0)">
+<div class="lis"></div>
+<div class="upperdown">
+	<div class="disco"></div>
+	<div class="discocap"></div>
+</div>
+<i class="fa fa-ellipsis-v"></i>
+</li>
+<li class="sea" onclick="loadTrack(164,0)">
+<div class="lis"></div>
+<div class="upperdown">
+	<div class="disco"></div>
+	<div class="discocap"></div>
+</div>
+<i class="fa fa-ellipsis-v"></i>
+</li>
+<li class="sea" onclick="loadTrack(165,0)">
+<div class="lis"></div>
+<div class="upperdown">
+	<div class="disco"></div>
+	<div class="discocap"></div>
+</div>
+<i class="fa fa-ellipsis-v"></i>
+</li>
+<li class="sea" onclick="loadTrack(166,0)">
+<div class="lis"></div>
+<div class="upperdown">
+	<div class="disco"></div>
+	<div class="discocap"></div>
+</div>
+<i class="fa fa-ellipsis-v"></i>
+</li>
+<li class="sea" onclick="loadTrack(167,0)">
+<div class="lis"></div>
+<div class="upperdown">
+	<div class="disco"></div>
+	<div class="discocap"></div>
+</div>
+<i class="fa fa-ellipsis-v"></i>
+</li>
+<li class="sea" onclick="loadTrack(168,0)">
+<div class="lis"></div>
+<div class="upperdown">
+	<div class="disco"></div>
+	<div class="discocap"></div>
+</div>
+<i class="fa fa-ellipsis-v"></i>
+</li>
+<li class="sea" onclick="loadTrack(169,0)">
+<div class="lis"></div>
+<div class="upperdown">
+	<div class="disco"></div>
+	<div class="discocap"></div>
+</div>
+<i class="fa fa-ellipsis-v"></i>
+</li>
+<li class="sea" onclick="loadTrack(170,0)">
+<div class="lis"></div>
+<div class="upperdown">
+	<div class="disco"></div>
+	<div class="discocap"></div>
+</div>
+<i class="fa fa-ellipsis-v"></i>
+</li>
+<li class="sea" onclick="loadTrack(171,0)"><!--Old Song starting point for search bar-->
+<div class="lis"></div>
+<div class="upperdown">
+<div class="disco"></div>
+<div class="discocap"></div>
+</div>
+<i class="fa fa-ellipsis-v"></i>
+</li>
+<li class="sea" onclick="loadTrack(172,0)">
+<div class="lis"></div>
+<div class="upperdown">
+<div class="disco"></div>
+<div class="discocap"></div>
+</div>
+<i class="fa fa-ellipsis-v"></i>
+</li>
+<li class="sea" onclick="loadTrack(173,0)">
+<div class="lis"></div>
+<div class="upperdown">
+<div class="disco"></div>
+<div class="discocap"></div>
+</div>
+<i class="fa fa-ellipsis-v"></i>
+</li>
+<li class="sea" onclick="loadTrack(174,0)">
+<div class="lis"></div>
+<div class="upperdown">
+<div class="disco"></div>
+<div class="discocap"></div>
+</div>
+<i class="fa fa-ellipsis-v"></i>
+</li>
+<li class="sea" onclick="loadTrack(175,0)">
+<div class="lis"></div>
+<div class="upperdown">
+<div class="disco"></div>
+<div class="discocap"></div>
+</div>
+<i class="fa fa-ellipsis-v"></i>
+</li>
+<li class="sea" onclick="loadTrack(176,0)">
+<div class="lis"></div>
+<div class="upperdown">
+<div class="disco"></div>
+<div class="discocap"></div>
+</div>
+<i class="fa fa-ellipsis-v"></i>
+</li>
+<li class="sea" onclick="loadTrack(177,0)">
+<div class="lis"></div>
+<div class="upperdown">
+<div class="disco"></div>
+<div class="discocap"></div>
+</div>
+<i class="fa fa-ellipsis-v"></i>
+</li>
+<li class="sea" onclick="loadTrack(178,0)">
+<div class="lis"></div>
+<div class="upperdown">
+<div class="disco"></div>
+<div class="discocap"></div>
+</div>
+<i class="fa fa-ellipsis-v"></i>
+</li>
+<li class="sea" onclick="loadTrack(179,0)">
+<div class="lis"></div>
+<div class="upperdown">
+<div class="disco"></div>
+<div class="discocap"></div>
+</div>
+<i class="fa fa-ellipsis-v"></i>
+</li>
+<li class="sea" onclick="loadTrack(180,0)">
+<div class="lis"></div>
+<div class="upperdown">
+<div class="disco"></div>
+<div class="discocap"></div>
+</div>
+<i class="fa fa-ellipsis-v"></i>
+</li>
+<li class="sea" onclick="loadTrack(181,0)">
+<div class="lis"></div>
+<div class="upperdown">
+<div class="disco"></div>
+<div class="discocap"></div>
+</div>
+<i class="fa fa-ellipsis-v"></i>
+</li>
+<li class="sea" onclick="loadTrack(182,0)">
+<div class="lis"></div>
+<div class="upperdown">
+<div class="disco"></div>
+<div class="discocap"></div>
+</div>
+<i class="fa fa-ellipsis-v"></i>
+</li>
+<li class="sea" onclick="loadTrack(183,0)">
+<div class="lis"></div>
+<div class="upperdown">
+<div class="disco"></div>
+<div class="discocap"></div>
+</div>
+<i class="fa fa-ellipsis-v"></i>
+</li>
+<li class="sea" onclick="loadTrack(184,0)">
+<div class="lis"></div>
+<div class="upperdown">
+<div class="disco"></div>
+<div class="discocap"></div>
+</div>
+<i class="fa fa-ellipsis-v"></i>
+</li>
+<li class="sea" onclick="loadTrack(185,0)">
+<div class="lis"></div>
+<div class="upperdown">
+<div class="disco"></div>
+<div class="discocap"></div>
+</div>
+<i class="fa fa-ellipsis-v"></i>
+</li>
+<li class="sea" onclick="loadTrack(186,0)">
+<div class="lis"></div>
+<div class="upperdown">
+<div class="disco"></div>
+<div class="discocap"></div>
+</div>
+<i class="fa fa-ellipsis-v"></i>
+</li>
+<li class="sea" onclick="loadTrack(187,0)">
+<div class="lis"></div>
+<div class="upperdown">
+<div class="disco"></div>
+<div class="discocap"></div>
+</div>
+<i class="fa fa-ellipsis-v"></i>
+</li>
+<li class="sea" onclick="loadTrack(188,0)">
+<div class="lis"></div>
+<div class="upperdown">
+<div class="disco"></div>
+<div class="discocap"></div>
+</div>
+<i class="fa fa-ellipsis-v"></i>
+</li>
+<li class="sea" onclick="loadTrack(189,0)">
+<div class="lis"></div>
+<div class="upperdown">
+<div class="disco"></div>
+<div class="discocap"></div>
+</div>
+<i class="fa fa-ellipsis-v"></i>
+</li>
+<li class="sea" onclick="loadTrack(190,0)">
+<div class="lis"></div>
+<div class="upperdown">
+<div class="disco"></div>
+<div class="discocap"></div>
+</div>
+<i class="fa fa-ellipsis-v"></i>
+</li>
+<li class="sea" onclick="loadTrack(191,0)">
+<div class="lis"></div>
+<div class="upperdown">
+<div class="disco"></div>
+<div class="discocap"></div>
+</div>
+<i class="fa fa-ellipsis-v"></i>
+</li>
+<li class="sea" onclick="loadTrack(192,0)">
+<div class="lis"></div>
+<div class="upperdown">
+<div class="disco"></div>
+<div class="discocap"></div>
+</div>
+<i class="fa fa-ellipsis-v"></i>
+</li>
+<li class="sea" onclick="loadTrack(193,0)">
+<div class="lis"></div>
+<div class="upperdown">
+<div class="disco"></div>
+<div class="discocap"></div>
+</div>
+<i class="fa fa-ellipsis-v"></i>
+</li>
+<li class="sea" onclick="loadTrack(194,0)">
+<div class="lis"></div>
+<div class="upperdown">
+<div class="disco"></div>
+<div class="discocap"></div>
+</div>
+<i class="fa fa-ellipsis-v"></i>
+</li>
+<li class="sea" onclick="loadTrack(195,0)">
+<div class="lis"></div>
+<div class="upperdown">
+<div class="disco"></div>
+<div class="discocap"></div>
+</div>
+<i class="fa fa-ellipsis-v"></i>
+</li>
+<li class="sea" onclick="loadTrack(196,0)">
+<div class="lis"></div>
+<div class="upperdown">
+<div class="disco"></div>
+<div class="discocap"></div>
+</div>
+<i class="fa fa-ellipsis-v"></i>
+</li>
+<li class="sea" onclick="loadTrack(197,0)">
+<div class="lis"></div>
+<div class="upperdown">
+<div class="disco"></div>
+<div class="discocap"></div>
+</div>
+<i class="fa fa-ellipsis-v"></i>
+</li>
+<li class="sea" onclick="loadTrack(198,0)">
+<div class="lis"></div>
+<div class="upperdown">
+<div class="disco"></div>
+<div class="discocap"></div>
+</div>
+<i class="fa fa-ellipsis-v"></i>
+</li>
+<li class="sea" onclick="loadTrack(199,0)">
+<div class="lis"></div>
+<div class="upperdown">
+<div class="disco"></div>
+<div class="discocap"></div>
+</div>
+<i class="fa fa-ellipsis-v"></i>
+</li>
+<li class="sea" onclick="loadTrack(200,0)">
+<div class="lis"></div>
+<div class="upperdown">
+<div class="disco"></div>
+<div class="discocap"></div>
+</div>
+<i class="fa fa-ellipsis-v"></i>
+</li>
+<li class="sea" onclick="loadTrack(201,0)">
+	<div class="lis"></div>
+	<div class="upperdown">
+	<div class="disco"></div>
+	<div class="discocap"></div>
+	</div>
+	<i class="fa fa-ellipsis-v"></i>
+</li>
+<li class="sea" onclick="loadTrack(202,0)">
+	<div class="lis"></div>
+	<div class="upperdown">
+	<div class="disco"></div>
+	<div class="discocap"></div>
+	</div>
+	<i class="fa fa-ellipsis-v"></i>
+</li>
+<li class="sea" onclick="loadTrack(203,0)">
+	<div class="lis"></div>
+	<div class="upperdown">
+	<div class="disco"></div>
+	<div class="discocap"></div>
+	</div>
+	<i class="fa fa-ellipsis-v"></i>
+</li>
+<li class="sea" onclick="loadTrack(204,0)">
+	<div class="lis"></div>
+	<div class="upperdown">
+	<div class="disco"></div>
+	<div class="discocap"></div>
+	</div>
+	<i class="fa fa-ellipsis-v"></i>
+</li>
+<li class="sea" onclick="loadTrack(205,0)">
+	<div class="lis"></div>
+	<div class="upperdown">
+	<div class="disco"></div>
+	<div class="discocap"></div>
+	</div>
+	<i class="fa fa-ellipsis-v"></i>
+</li>
+<li class="sea" onclick="loadTrack(206,0)">
+	<div class="lis"></div>
+	<div class="upperdown">
+	<div class="disco"></div>
+	<div class="discocap"></div>
+	</div>
+	<i class="fa fa-ellipsis-v"></i>
+</li>
+<li class="sea" onclick="loadTrack(207,0)">
+	<div class="lis"></div>
+	<div class="upperdown">
+	<div class="disco"></div>
+	<div class="discocap"></div>
+	</div>
+	<i class="fa fa-ellipsis-v"></i>
+</li>
+<li class="sea" onclick="loadTrack(208,0)">
+	<div class="lis"></div>
+	<div class="upperdown">
+	<div class="disco"></div>
+	<div class="discocap"></div>
+	</div>
+	<i class="fa fa-ellipsis-v"></i>
+</li>
+<li class="sea" onclick="loadTrack(209,0)">
+	<div class="lis"></div>
+	<div class="upperdown">
+	<div class="disco"></div>
+	<div class="discocap"></div>
+	</div>
+	<i class="fa fa-ellipsis-v"></i>
+</li>
+<li class="sea" onclick="loadTrack(210,0)">
+	<div class="lis"></div>
+	<div class="upperdown">
+	<div class="disco"></div>
+	<div class="discocap"></div>
+	</div>
+	<i class="fa fa-ellipsis-v"></i>
+</li>
+<li class="sea" onclick="loadTrack(211,0)">
+	<div class="lis"></div>
+	<div class="upperdown">
+	<div class="disco"></div>
+	<div class="discocap"></div>
+	</div>
+	<i class="fa fa-ellipsis-v"></i>
+</li>
+<li class="sea" onclick="loadTrack(212,0)">
+	<div class="lis"></div>
+	<div class="upperdown">
+	<div class="disco"></div>
+	<div class="discocap"></div>
+	</div>
+	<i class="fa fa-ellipsis-v"></i>
+</li>
+<li class="sea" onclick="loadTrack(213,0)">
+	<div class="lis"></div>
+	<div class="upperdown">
+	<div class="disco"></div>
+	<div class="discocap"></div>
+	</div>
+	<i class="fa fa-ellipsis-v"></i>
+</li>
+<li class="sea" onclick="loadTrack(214,0)">
+	<div class="lis"></div>
+	<div class="upperdown">
+	<div class="disco"></div>
+	<div class="discocap"></div>
+	</div>
+	<i class="fa fa-ellipsis-v"></i>
+</li>
+<li class="sea" onclick="loadTrack(215,0)">
+	<div class="lis"></div>
+	<div class="upperdown">
+	<div class="disco"></div>
+	<div class="discocap"></div>
+	</div>
+	<i class="fa fa-ellipsis-v"></i>
+</li>
+<li class="sea" onclick="loadTrack(216,0)">
+	<div class="lis"></div>
+	<div class="upperdown">
+	<div class="disco"></div>
+	<div class="discocap"></div>
+	</div>
+	<i class="fa fa-ellipsis-v"></i>
+</li>
+<li class="sea" onclick="loadTrack(217,0)">
+	<div class="lis"></div>
+	<div class="upperdown">
+	<div class="disco"></div>
+	<div class="discocap"></div>
+	</div>
+	<i class="fa fa-ellipsis-v"></i>
+</li>
+<li class="sea" onclick="loadTrack(218,0)">
+	<div class="lis"></div>
+	<div class="upperdown">
+	<div class="disco"></div>
+	<div class="discocap"></div>
+	</div>
+	<i class="fa fa-ellipsis-v"></i>
+</li>
+<li class="sea" onclick="loadTrack(219,0)">
+	<div class="lis"></div>
+	<div class="upperdown">
+	<div class="disco"></div>
+	<div class="discocap"></div>
+	</div>
+	<i class="fa fa-ellipsis-v"></i>
+</li>
+<li class="sea" onclick="loadTrack(220,0)">
+	<div class="lis"></div>
+	<div class="upperdown">
+	<div class="disco"></div>
+	<div class="discocap"></div>
+	</div>
+	<i class="fa fa-ellipsis-v"></i>
+</li>
+<li class="sea" onclick="loadTrack(221,0)">
+	<div class="lis"></div>
+	<div class="upperdown">
+	<div class="disco"></div>
+	<div class="discocap"></div>
+	</div>
+	<i class="fa fa-ellipsis-v"></i>
+</li>
+<li class="sea" onclick="loadTrack(222,0)">
+	<div class="lis"></div>
+	<div class="upperdown">
+	<div class="disco"></div>
+	<div class="discocap"></div>
+	</div>
+	<i class="fa fa-ellipsis-v"></i>
+</li>
+<li class="sea" onclick="loadTrack(223,0)">
+	<div class="lis"></div>
+	<div class="upperdown">
+	<div class="disco"></div>
+	<div class="discocap"></div>
+	</div>
+	<i class="fa fa-ellipsis-v"></i>
+</li>
+<li class="sea" onclick="loadTrack(224,0)">
+	<div class="lis"></div>
+	<div class="upperdown">
+	<div class="disco"></div>
+	<div class="discocap"></div>
+	</div>
+	<i class="fa fa-ellipsis-v"></i>
+</li>
+<li class="sea" onclick="loadTrack(225,0)">
+	<div class="lis"></div>
+	<div class="upperdown">
+	<div class="disco"></div>
+	<div class="discocap"></div>
+	</div>
+	<i class="fa fa-ellipsis-v"></i>
+</li>
+<li class="sea" onclick="loadTrack(226,0)">
+	<div class="lis"></div>
+	<div class="upperdown">
+	<div class="disco"></div>
+	<div class="discocap"></div>
+	</div>
+	<i class="fa fa-ellipsis-v"></i>
+</li>
+<li class="sea" onclick="loadTrack(227,0)">
+	<div class="lis"></div>
+	<div class="upperdown">
+	<div class="disco"></div>
+	<div class="discocap"></div>
+	</div>
+	<i class="fa fa-ellipsis-v"></i>
+</li>
+<li class="sea" onclick="loadTrack(228,0)">
+	<div class="lis"></div>
+	<div class="upperdown">
+	<div class="disco"></div>
+	<div class="discocap"></div>
+	</div>
+	<i class="fa fa-ellipsis-v"></i>
+</li>
+<li class="sea" onclick="loadTrack(229,0)">
+	<div class="lis"></div>
+	<div class="upperdown">
+	<div class="disco"></div>
+	<div class="discocap"></div>
+	</div>
+	<i class="fa fa-ellipsis-v"></i>
+</li>
+<li class="sea" onclick="loadTrack(230,0)">
+	<div class="lis"></div>
+	<div class="upperdown">
+	<div class="disco"></div>
+	<div class="discocap"></div>
+	</div>
+	<i class="fa fa-ellipsis-v"></i>
+</li>
+<li class="sea" onclick="loadTrack(231,0)">
+	<div class="lis"></div>
+	<div class="upperdown">
+	<div class="disco"></div>
+	<div class="discocap"></div>
+	</div>
+	<i class="fa fa-ellipsis-v"></i>
+</li>
+<li class="sea" onclick="loadTrack(232,0)">
+	<div class="lis"></div>
+	<div class="upperdown">
+	<div class="disco"></div>
+	<div class="discocap"></div>
+	</div>
+	<i class="fa fa-ellipsis-v"></i>
+</li>
+<li class="sea" onclick="loadTrack(233,0)">
+	<div class="lis"></div>
+	<div class="upperdown">
+	<div class="disco"></div>
+	<div class="discocap"></div>
+	</div>
+	<i class="fa fa-ellipsis-v"></i>
+</li>
+<li class="sea" onclick="loadTrack(234,0)">
+	<div class="lis"></div>
+	<div class="upperdown">
+	<div class="disco"></div>
+	<div class="discocap"></div>
+	</div>
+	<i class="fa fa-ellipsis-v"></i>
+</li>
+<li class="sea" onclick="loadTrack(235,0)">
+	<div class="lis"></div>
+	<div class="upperdown">
+	<div class="disco"></div>
+	<div class="discocap"></div>
+	</div>
+	<i class="fa fa-ellipsis-v"></i>
+</li>
+<li class="sea" onclick="loadTrack(236,0)">
+	<div class="lis"></div>
+	<div class="upperdown">
+	<div class="disco"></div>
+	<div class="discocap"></div>
+	</div>
+	<i class="fa fa-ellipsis-v"></i>
+</li>
+<li class="sea" onclick="loadTrack(237,0)">
+	<div class="lis"></div>
+	<div class="upperdown">
+	<div class="disco"></div>
+	<div class="discocap"></div>
+	</div>
+	<i class="fa fa-ellipsis-v"></i>
+</li>
+<li class="sea" onclick="loadTrack(238,0)">
+	<div class="lis"></div>
+	<div class="upperdown">
+	<div class="disco"></div>
+	<div class="discocap"></div>
+	</div>
+	<i class="fa fa-ellipsis-v"></i>
+</li>
+<li class="sea" onclick="loadTrack(239,0)">
+	<div class="lis"></div>
+	<div class="upperdown">
+	<div class="disco"></div>
+	<div class="discocap"></div>
+	</div>
+	<i class="fa fa-ellipsis-v"></i>
+</li>
+<li class="sea" onclick="loadTrack(240,0)">
+	<div class="lis"></div>
+	<div class="upperdown">
+	<div class="disco"></div>
+	<div class="discocap"></div>
+	</div>
+	<i class="fa fa-ellipsis-v"></i>
+</li>
+<li class="sea" onclick="loadTrack(241,0)">
+	<div class="lis"></div>
+	<div class="upperdown">
+	<div class="disco"></div>
+	<div class="discocap"></div>
+	</div>
+	<i class="fa fa-ellipsis-v"></i>
+</li>
+<li class="sea" onclick="loadTrack(242,0)">
+	<div class="lis"></div>
+	<div class="upperdown">
+	<div class="disco"></div>
+	<div class="discocap"></div>
+	</div>
+	<i class="fa fa-ellipsis-v"></i>
+</li>
+<li class="sea" onclick="loadTrack(243,0)">
+	<div class="lis"></div>
+	<div class="upperdown">
+	<div class="disco"></div>
+	<div class="discocap"></div>
+	</div>
+	<i class="fa fa-ellipsis-v"></i>
+</li>
+<li class="sea" onclick="loadTrack(244,0)">
+	<div class="lis"></div>
+	<div class="upperdown">
+	<div class="disco"></div>
+	<div class="discocap"></div>
+	</div>
+	<i class="fa fa-ellipsis-v"></i>
+</li>
+<li class="sea" onclick="loadTrack(245,0)">
+	<div class="lis"></div>
+	<div class="upperdown">
+	<div class="disco"></div>
+	<div class="discocap"></div>
+	</div>
+	<i class="fa fa-ellipsis-v"></i>
+</li>
+<li class="sea" onclick="loadTrack(246,0)">
+	<div class="lis"></div>
+	<div class="upperdown">
+	<div class="disco"></div>
+	<div class="discocap"></div>
+	</div>
+	<i class="fa fa-ellipsis-v"></i>
+</li>
+<li class="sea" onclick="loadTrack(247,0)">
+	<div class="lis"></div>
+	<div class="upperdown">
+	<div class="disco"></div>
+	<div class="discocap"></div>
+	</div>
+	<i class="fa fa-ellipsis-v"></i>
+</li>
+<li class="sea" onclick="loadTrack(248,0)">
+	<div class="lis"></div>
+	<div class="upperdown">
+	<div class="disco"></div>
+	<div class="discocap"></div>
+	</div>
+	<i class="fa fa-ellipsis-v"></i>
+</li>
+<li class="sea" onclick="loadTrack(249,0)">
+	<div class="lis"></div>
+	<div class="upperdown">
+	<div class="disco"></div>
+	<div class="discocap"></div>
+	</div>
+	<i class="fa fa-ellipsis-v"></i>
+</li>
+<li class="sea" onclick="loadTrack(250,0)">
+	<div class="lis"></div>
+	<div class="upperdown">
+	<div class="disco"></div>
+	<div class="discocap"></div>
+	</div>
+	<i class="fa fa-ellipsis-v"></i>
+</li>
+</ol>
+</div>
+
+<div id="hide_slider">
+	<div class="vedioslider">
+		<iframe src="https://www.youtube.com/embed/WBqoJVEyJPU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+		<iframe src="https://www.youtube.com/embed/rCoPr8UwRMc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+		<iframe src="https://www.youtube.com/embed/NwdQx2P_ytk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+		<iframe src="https://www.youtube.com/embed/IbBT5VZ3Lpg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+		<iframe src="https://www.youtube.com/embed/jPdG0GP2sjo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+	</div>
+</div>
+
+
+<div class="choose">
+	<p>Artist</p>
+</div>
+
+<div class="artists">
+	<div class="art1" onclick="displayart(0)">
+		<img src="https://iphonewallpaperworld.com/wp-content/uploads/2020/12/Guru-Randhawa-Photo-wallpaper-20.jpg">
+		<h2>Guru Randhawa</h2>
+	</div>
+<div class="art1" onclick="displayart(1)">
+	<img src="block/hardy.jpeg"><br/>
+	<h2>Hardy Sandhu</h2>
+</div>
+<div class="art1" onclick="displayart(2)">
+	<img src="block/eminem.jpeg"><br/>
+	<h2>Eminem</h2>
+</div>
+<div class="art1" onclick="displayart(10)">
+	<img src="https://c.saavncdn.com/artists/Shreya_Ghoshal_002_20200822043816_500x500.jpg"><br/>
+	<h2>Shreya Ghoshal</h2>
+</div>
+<div class="art1" onclick="displayart(11)">
+	<img src="https://c.saavncdn.com/artists/Neha_Kakkar_006_20200822042626_500x500.jpg"><br/>
+	<h2>Neha Kakkar</h2>
+</div>
+<div class="art1" onclick="displayart(3)">
+	<img src="block/divine.jpeg"><br/>
+	<h2>Divine</h2>
+</div>
+<div class="art1" onclick="displayart(4)">
+	<img src="block/arman.jpg"><br/>
+	<h2>Arman Malik</h2>
+</div>
+
+<div class="art1" onclick="displayart(12)">
+	<img src="https://c.saavncdn.com/artists/Badshah_004_20191118143638_500x500.jpg"><br/>
+	<h2>Badshah</h2>
+</div>
+<div class="art1" onclick="displayart(13)">
+	<img src="https://c.saavncdn.com/artists/Arijit_Singh_500x500.jpg"><br/>
+	<h2>Arijit Singh</h2>
+</div>
+
+
+</div>
+
+<div class="choose"><p>Moods</p></div>
+<div class="flex1" id="hide_list1"><!--Categories of moods-->
+	<div class="top1" onclick="displayart(5)">
+		<h1>Love</h1>
+	</div>
+	<div class="top2" onclick="displayart(6)">
+		<h1>Party</h1>
+	</div>
+
+	<div class="top3" onclick="displayart(7)"><h1>Chill</h1></div>
+	<div class="top4" onclick="displayart(8)"><h1>Workout</h1></div>
+
+	<div class="top7" onclick="displayart(9)"><h1>Hip-Hop</h1></div>
+</div>
+
+
+
+<div class="choose"><p>Latest Trends</p></div>
+
+<!--Latest Trends on home page-->
+<div id="banner">
+
+	<img src="https://sdlhivkcdnems01.cdnsrv.jio.com/c.saavncdn.com/843/Baawla-Hindi-2021-20210727000901-500x500.jpg" onclick="loadTrack(250,0)">
+	<img src="https://c.saavncdn.com/942/Soulmate-Hindi-2021-20210905053510-500x500.jpg" onclick="loadTrack(246,0)">
+	<img src="https://c.saavncdn.com/947/lovely-English-2018-20180418150240-500x500.jpg" onclick="loadTrack(245,0)">
+	<img src="https://c.saavncdn.com/647/Naah-Goriye-From-Bala--Hindi-2019-20191025062350-500x500.jpg" onclick="loadTrack(241,0)">
+	<img src="https://c.saavncdn.com/959/Thoda-Thoda-Pyaar-Hindi-2021-20210212084501-500x500.jpg" onclick="loadTrack(182,0)">
+	<img src="https://c.saavncdn.com/347/Baarish-Ban-Jaana-Hindi-2021-20210601053345-500x500.jpg" onclick="loadTrack(83,0)">
+	<img src="https://c.saavncdn.com/349/Is-Qadar-Hindi-2021-20210408051001-500x500.jpg" onclick="loadTrack(44,0)">
+	<img src="https://c.saavncdn.com/947/Main-Jis-Din-Bhulaa-Du-Hindi-2021-20210210191001-500x500.jpg" onclick="loadTrack(183,0)">
+	<img src="https://c.saavncdn.com/706/Lut-Gaye-Feat-Emraan-Hashmi--Hindi-2021-20210217051001-500x500.jpg" onclick="loadTrack(184,0)">
+	<img src="https://c.saavncdn.com/225/Number-Likh-Hindi-2021-20210614121018-500x500.jpg" onclick="loadTrack(185,0)">
+	<img src="https://c.saavncdn.com/939/Paani-Paani-Hindi-2021-20210603103127-500x500.jpg" onclick="loadTrack(159,0)">
+	<img src="https://a10.gaanacdn.com/gn_img/albums/P7m3GvNKqx/m3GvgVj6Kq/size_l_1623915543.webp" onclick="loadTrack(186,0)">
+	<img src="https://c.saavncdn.com/367/Kedarnath-Hindi-2019-20190219-500x500.jpg" onclick="loadTrack(87,0)">
+	<img src="https://c.saavncdn.com/259/Nain-Bengali-Hindi-2021-20210714071001-500x500.jpg" onclick="loadTrack(219,0)">
+	<img src="https://c.saavncdn.com/074/Sonu-Ke-Titu-Ki-Sweety-Hindi-2018-20180214153942-500x500.jpg" onclick="loadTrack(215,0)">
+	<img src="https://c.saavncdn.com/439/Taaron-Ke-Shehar-Hindi-2020-20200920035507-500x500.jpg" onclick="loadTrack(212,0)">
+	<img src="https://c.saavncdn.com/373/Nikle-Currant-Punjabi-2018-20181011231550-500x500.jpg" onclick="loadTrack(210,0)">
+	<img src="https://c.saavncdn.com/943/Kohinoor-Hindi-2019-20191007230518-500x500.jpg" onclick="loadTrack(209,0)">
+	<img src="https://c.saavncdn.com/575/Bhaag-Milkha-Bhaag-Hindi-2013-20190607111645-500x500.jpg" onclick="loadTrack(204,0)">
+	<img src="https://i.scdn.co/image/ab67616d00001e02279e732c44948f9d56aa5413" onclick="loadTrack(204,0)">
+
+</div>
+<div class="choose"><p>Top Charts</p></div>
+
+<!--Top Juke charts hindi,english,punjabi-->
+<div class="flex reveal" id="hide_list" >
+
+	
+	<div class="mlist" id="top1">
+		<div class="wrap-flex">
+		<h2>Juke's Top 15 - Hindi</h2>
+		<i class="fa fa-play-circle"></i>
+		</div>
+		<ul>
+			<li onclick="loadTrack(115,0)">  
+				<div class="lis1"></div>
+				<div class="upperdown">
+					<div class="disco1"></div>
+					<div class="discocap1"></div>
+				</div>
+				<i class="fa fa-ellipsis-v"></i>
+			</li>
+			
+			<li onclick="loadTrack(116,0)">
+				<div class="lis1"></div>
+				<div class="upperdown">
+					<div class="disco1"></div>
+					<div class="discocap1"></div>
+				</div>
+				<i class="fa fa-ellipsis-v"></i>
+			</li>
+			<li onclick="loadTrack(114,0)">
+				<div class="lis1"></div>
+				<div class="upperdown">
+					<div class="disco1"></div>
+					<div class="discocap1"></div>
+				</div>
+				<i class="fa fa-ellipsis-v"></i>
+			</li>
+			<li onclick="loadTrack(113,0)">
+				<div class="lis1"></div>
+				<div class="upperdown">
+					<div class="disco1"></div>
+					<div class="discocap1"></div>
+				</div>
+				<i class="fa fa-ellipsis-v"></i>
+			</li>
+			<li onclick="loadTrack(112,0)">
+				<div class="lis1"></div>
+				<div class="upperdown">
+					<div class="disco1"></div>
+					<div class="discocap1"></div>
+				</div>
+				<i class="fa fa-ellipsis-v"></i>
+			</li>
+			<li onclick="loadTrack(111,0)">
+				<div class="lis1"></div>
+				<div class="upperdown">
+					<div class="disco1"></div>
+					<div class="discocap1"></div>
+				</div>
+				<i class="fa fa-ellipsis-v"></i>
+			</li>
+
+			<li onclick="loadTrack(138,0)">
+				<div class="lis1"></div>
+				<div class="upperdown">
+					<div class="disco1"></div>
+					<div class="discocap1"></div>
+				</div>
+				<i class="fa fa-ellipsis-v"></i>
+			</li>
+			<li onclick="loadTrack(152,0)">
+				<div class="lis1"></div>
+				<div class="upperdown">
+					<div class="disco1"></div>
+					<div class="discocap1"></div>
+				</div>
+				<i class="fa fa-ellipsis-v"></i>
+			</li>
+			<li onclick="loadTrack(136,0)">
+				<div class="lis1"></div>
+				<div class="upperdown">
+					<div class="disco1"></div>
+					<div class="discocap1"></div>
+				</div>
+				<i class="fa fa-ellipsis-v"></i>
+			</li>
+			<li onclick="loadTrack(99,0)">
+				<div class="lis1"></div>
+				<div class="upperdown">
+					<div class="disco1"></div>
+					<div class="discocap1"></div>
+				</div>
+				<i class="fa fa-ellipsis-v"></i>
+			</li>
+			<li onclick="loadTrack(119,0)">
+				<div class="lis1"></div>
+				<div class="upperdown">
+					<div class="disco1"></div>
+					<div class="discocap1"></div>
+				</div>
+				<i class="fa fa-ellipsis-v"></i>
+			</li>
+
+			<li onclick="loadTrack(122,0)">
+				<div class="lis1"></div>
+				<div class="upperdown">
+					<div class="disco1"></div>
+					<div class="discocap1"></div>
+				</div>
+				<i class="fa fa-ellipsis-v"></i>
+			</li>
+			<li onclick="loadTrack(98,0)">
+				<div class="lis1"></div>
+				<div class="upperdown">
+					<div class="disco1"></div>
+					<div class="discocap1"></div>
+				</div>
+				<i class="fa fa-ellipsis-v"></i>
+			</li>
+			<li onclick="loadTrack(87,0)">
+				<div class="lis1"></div>
+				<div class="upperdown">
+					<div class="disco1"></div>
+					<div class="discocap1"></div>
+				</div>
+				<i class="fa fa-ellipsis-v"></i>
+			</li>
+			<li onclick="loadTrack(80,0)">
+				<div class="lis1"></div>
+				<div class="upperdown">
+					<div class="disco1"></div>
+					<div class="discocap1"></div>
+				</div>
+				<i class="fa fa-ellipsis-v"></i>
+			</li>
+		</ul>
+	</div>
+
+	<div class="mlist" id="top2">
+		<div class="wrap-flex">
+			<h2>Juke's Top 15 - English</h2>
+			<i class="fa fa-play-circle"></i>
+			</div>
+		<ul>
+			<li onclick="loadTrack(97,0)">  
+				<div class="lis1"></div>
+				<div class="upperdown" onclick="loadTrack(115,0)">
+					<div class="disco1"></div>
+					<div class="discocap1"></div>
+				</div>
+				<i class="fa fa-ellipsis-v"></i>
+			</li>
+			
+			<li onclick="loadTrack(96,0)">
+				<div class="lis1"></div>
+				<div class="upperdown">
+					<div class="disco1"></div>
+					<div class="discocap1"></div>
+				</div>
+				<i class="fa fa-ellipsis-v"></i>
+			</li>
+			<li onclick="loadTrack(95,0)">
+				<div class="lis1"></div>
+				<div class="upperdown">
+					<div class="disco1"></div>
+					<div class="discocap1"></div>
+				</div>
+				<i class="fa fa-ellipsis-v"></i>
+			</li>
+			<li onclick="loadTrack(57,0)">
+				<div class="lis1"></div>
+				<div class="upperdown">
+					<div class="disco1"></div>
+					<div class="discocap1"></div>
+				</div>
+				<i class="fa fa-ellipsis-v"></i>
+			</li>
+			<li onclick="loadTrack(94,0)">
+				<div class="lis1"></div>
+				<div class="upperdown">
+					<div class="disco1"></div>
+					<div class="discocap1"></div>
+				</div>
+				<i class="fa fa-ellipsis-v"></i>
+			</li>
+			<li onclick="loadTrack(91,0)">
+				<div class="lis1"></div>
+				<div class="upperdown">
+					<div class="disco1"></div>
+					<div class="discocap1"></div>
+				</div>
+				<i class="fa fa-ellipsis-v"></i>
+			</li>
+			<li onclick="loadTrack(89,0)">
+				<div class="lis1"></div>
+				<div class="upperdown">
+					<div class="disco1"></div>
+					<div class="discocap1"></div>
+				</div>
+				<i class="fa fa-ellipsis-v"></i>
+			</li>
+			<li onclick="loadTrack(45,0)">
+				<div class="lis1"></div>
+				<div class="upperdown">
+					<div class="disco1"></div>
+					<div class="discocap1"></div>
+				</div>
+				<i class="fa fa-ellipsis-v"></i>
+			</li>
+			<li onclick="loadTrack(42,0)">
+				<div class="lis1"></div>
+				<div class="upperdown">
+					<div class="disco1"></div>
+					<div class="discocap1"></div>
+				</div>
+				<i class="fa fa-ellipsis-v"></i>
+			</li>
+			<li onclick="loadTrack(62,0)">
+				<div class="lis1"></div>
+				<div class="upperdown">
+					<div class="disco1"></div>
+					<div class="discocap1"></div>
+				</div>
+				<i class="fa fa-ellipsis-v"></i>
+			</li>
+			<li onclick="loadTrack(163,0)">
+				<div class="lis1"></div>
+				<div class="upperdown">
+					<div class="disco1"></div>
+					<div class="discocap1"></div>
+				</div>
+				<i class="fa fa-ellipsis-v"></i>
+			</li>
+			<li onclick="loadTrack(164,0)">
+				<div class="lis1"></div>
+				<div class="upperdown">
+					<div class="disco1"></div>
+					<div class="discocap1"></div>
+				</div>
+				<i class="fa fa-ellipsis-v"></i>
+			</li>
+			<li onclick="loadTrack(165,0)">
+				<div class="lis1"></div>
+				<div class="upperdown">
+					<div class="disco1"></div>
+					<div class="discocap1"></div>
+				</div>
+				<i class="fa fa-ellipsis-v"></i>
+			</li>
+			<li onclick="loadTrack(166,0)">
+				<div class="lis1"></div>
+				<div class="upperdown">
+					<div class="disco1"></div>
+					<div class="discocap1"></div>
+				</div>
+				<i class="fa fa-ellipsis-v"></i>
+			</li>
+			<li onclick="loadTrack(169,0)">
+				<div class="lis1"></div>
+				<div class="upperdown">
+					<div class="disco1"></div>
+					<div class="discocap1"></div>
+				</div>
+				<i class="fa fa-ellipsis-v"></i>
+			</li>
+		</ul>
+	</div>
+
+	<div class="mlist" id="top3">
+		<div class="wrap-flex">
+			<h2>Juke's Top 15 - Punjabi</h2>
+			<i class="fa fa-play-circle"></i>
+			</div>
+		<ul>
+			<li onclick="loadTrack(178,0)">
+				<div class="lis1"></div>
+				<div class="upperdown">
+					<div class="disco1"></div>
+					<div class="discocap1"></div>
+				</div>
+				<i class="fa fa-ellipsis-v"></i>
+			</li>
+			<li onclick="loadTrack(179,0)">  
+				<div class="lis1"></div>
+				<div class="upperdown">
+					<div class="disco1"></div>
+					<div class="discocap1"></div>
+				</div>
+				<i class="fa fa-ellipsis-v"></i>
+			</li>
+			
+			<li onclick="loadTrack(180,0)">
+				<div class="lis1"></div>
+				<div class="upperdown">
+					<div class="disco1"></div>
+					<div class="discocap1"></div>
+				</div>
+				<i class="fa fa-ellipsis-v"></i>
+			</li>
+			<li onclick="loadTrack(181,0)">
+				<div class="lis1"></div>
+				<div class="upperdown">
+					<div class="disco1"></div>
+					<div class="discocap1"></div>
+				</div>
+				<i class="fa fa-ellipsis-v"></i>
+			</li>
+			<li onclick="loadTrack(67,0)">
+				<div class="lis1"></div>
+				<div class="upperdown">
+					<div class="disco1"></div>
+					<div class="discocap1"></div>
+				</div>
+				<i class="fa fa-ellipsis-v"></i>
+			</li>
+			<li onclick="loadTrack(66,0)">
+				<div class="lis1"></div>
+				<div class="upperdown">
+					<div class="disco1"></div>
+					<div class="discocap1"></div>
+				</div>
+				<i class="fa fa-ellipsis-v"></i>
+			</li>
+			<li onclick="loadTrack(65,0)">
+				<div class="lis1"></div>
+				<div class="upperdown">
+					<div class="disco1"></div>
+					<div class="discocap1"></div>
+				</div>
+				<i class="fa fa-ellipsis-v"></i>
+			</li>
+			<li onclick="loadTrack(43,0)">
+				<div class="lis1"></div>
+				<div class="upperdown">
+					<div class="disco1"></div>
+					<div class="discocap1"></div>
+				</div>
+				<i class="fa fa-ellipsis-v"></i>
+			</li>
+			<li onclick="loadTrack(35,0)">
+				<div class="lis1"></div>
+				<div class="upperdown">
+					<div class="disco1"></div>
+					<div class="discocap1"></div>
+				</div>
+				<i class="fa fa-ellipsis-v"></i>
+			</li>
+			<li onclick="loadTrack(100,0)">
+				<div class="lis1"></div>
+				<div class="upperdown">
+					<div class="disco1"></div>
+					<div class="discocap1"></div>
+				</div>
+				<i class="fa fa-ellipsis-v"></i>
+			</li>
+			<li onclick="loadTrack(173,0)">
+				<div class="lis1"></div>
+				<div class="upperdown">
+					<div class="disco1"></div>
+					<div class="discocap1"></div>
+				</div>
+				<i class="fa fa-ellipsis-v"></i>
+			</li>
+			<li onclick="loadTrack(174,0)">
+				<div class="lis1"></div>
+				<div class="upperdown">
+					<div class="disco1"></div>
+					<div class="discocap1"></div>
+				</div>
+				<i class="fa fa-ellipsis-v"></i>
+			</li>
+			<li onclick="loadTrack(175,0)">
+				<div class="lis1"></div>
+				<div class="upperdown">
+					<div class="disco1"></div>
+					<div class="discocap1"></div>
+				</div>
+				<i class="fa fa-ellipsis-v"></i>
+			</li>
+			<li onclick="loadTrack(176,0)">
+				<div class="lis1"></div>
+				<div class="upperdown">
+					<div class="disco1"></div>
+					<div class="discocap1"></div>
+				</div>
+				<i class="fa fa-ellipsis-v"></i>
+			</li>
+			<li onclick="loadTrack(177,0)">
+				<div class="lis1"></div>
+				<div class="upperdown">
+					<div class="disco1"></div>
+					<div class="discocap1"></div>
+				</div>
+				<i class="fa fa-ellipsis-v"></i>
+			</li>
+
+		</ul>
+	</div>
+</div>
+
+
+
+
+	<div class="player"  id="sundi"> 
+	<!-- Define the section for displaying details -->
+	<div class="main">
+		<div class="details"> 
+		<div class="left"><i class="fa fa-angle-down" onclick="mainpage()"></i><span class="kaun"><i class="fa fa-ellipsis-v" onclick="disoption()"></i></span> </div>
+		<div class="track-art"></div> 
+		<div class="thumb"><i class="fa fa-thumbs-o-up" id="fa12"></i><div class="track-name"></div><i class="fa fa-thumbs-o-down" id="fa13"></i></div>
+		<div class="track-artist"></div> 
+		</div> 
+
+	<!-- Define the section for displaying track buttons -->
+		<div class="slider_container"> 
+		<input type="range" min="1" max="100"
+			value="0" class="seek_slider" onchange="seekTo()"> 
+		<div class="florence">
+		<div class="current-time">00:00</div> 
+		<div class="total-duration">00:00</div> 
+		</div>
+		</div> 
+
+	<!-- Define the section for displaying the volume slider-->
+	
+
+		<div class="buttons"> 
+		<div class="heart1"><i class="fa fa-heart"></i> </div>
+
+		<div class="prev-track" onclick="prevTrack()"> 
+			<i class="fa fa-step-backward"></i> 
+		</div> 
+		<div class="playpause-track" onclick="playpauseTrack()"> 
+			<i class="fa fa-play-circle"></i> 
+		</div> 
+		<div class="next-track" onclick="nextTrack()"> 
+			<i class="fa fa-step-forward"></i> 
+		</div> 
+		<div class="heart2">
+			<i class="fa fa-music"></i>
+		</div>
+		</div> 
+
+	<!-- Define the section for displaying the seek slider-->
+	<span class="ext">
+		<i class="fa fa-headphones"></i>
+		<i class="fa fa-arrows-alt"></i>
+	</span>
+	
+	</div> 
+	
+	<div class="options ">
+		<li><i class="fa fa-user"></i>Account </li>
+		<li><i class="fa fa-heart"></i>Like</li>
+		<li><i class="fa fa-repeat"></i>Repeat</li>
+		<li><i class="fa fa-music"></i>Set as Jukebox Tune</li>
+		<li><i class="fa fa-share"></i>Share</li>
+		<li><i class="fa fa-comments"></i>Review</li>
+		<li><i class="fa fa-list-ul"></i>Playlist</li>
+		<li><i class="fa fa-cogs"></i>Settings</li>
+
+	</div>
+
+</div>
+
+
+<div class="cir" id="hide_spinner">
+<div class="track-art1" onclick="playerkidherhai()"></div>
+</div>
+
+
+</section>
+
+
+
+<section class="write" id="images_hide">
+	
+</section>
+
+<span id="charts">
+<div class="choose"><p>Songs</p></div>
+<div class="charts">	
+<div class="chart">
+		<span  class="reveal" onclick="loadTrack(205,0)"><img src="https://c.saavncdn.com/575/Bhaag-Milkha-Bhaag-Hindi-2013-20190607111645-500x500.jpg"><h1>Zinda</h1><p>Shankar Ehshan</p></span>
+		<span  class="reveal" onclick="loadTrack(207,0)"><img src="https://c.saavncdn.com/033/Sham-Bhi-Koi-Hindi-2021-20210605121743-500x500.jpg"><h1>Sham Bhi koi</h1><p>Jalraj</p></span>
+		<span class="reveal" onclick="loadTrack(33,0)"><img src="block/aankh.jpg"><br><h1>Aankh Marey</h1><p>Mika Singh</p></span>
+		<span  class="reveal" onclick="loadTrack(132,0)"><img src="https://c.saavncdn.com/205/Haan-Main-Galat-From-Love-Aaj-Kal--Hindi-2020-20200128113239-500x500.jpg"><h1>Haan Main Galat</h1><p>Pritam</p></span>
+		<span  class="reveal" onclick="loadTrack(38,0)"><img src="block/believer.jpg"><h1>Believer</h1><p>Dragon</p></span>
+		<span  class="reveal" onclick="loadTrack(34,0)"><img src="block/nocompitition.jpg"><h1>No Compition</h1><p>Jass Manak,Divine</p></span>
+		<span  class="reveal" onclick="loadTrack(36,0)"><img src="block/mornibanke.jpg"><h1>Morni Banke</h1><p>Guru Randhawa</p></span>
+		<span  class="reveal" onclick="loadTrack(157,0)"><img src="https://c.saavncdn.com/214/Bheegi-Bheegi-Hindi-2020-20200510234001-500x500.jpg"><h1>Dheeme Dheeme</h1><p>Neha Kakkar,Tony Kakkar</p></span>
+		<span  class="reveal" onclick="loadTrack(196,0)"><img src="https://c.saavncdn.com/102/Astronaut-In-The-Ocean-English-2021-20210226023119-500x500.jpg"><h1>Astronaut-Ocean</h1><p>Masked Wolf</p></span>
+		<span  class="reveal" onclick="loadTrack(197,0)"><img src="https://c.saavncdn.com/443/SOUR-English-2021-20210622205946-500x500.jpg"><h1>Good 4 You</h1><p>Olivia Rodrigo</p></span>
+		<span  class="reveal" onclick="loadTrack(203,0)"><img src="https://c.saavncdn.com/901/Udta-Punjab-Hindi-2016-20180116-500x500.jpg"><h1>Ud-da Punjab</h1><p>Amit Trivedi</p></span>
+		<span  class="reveal" onclick="loadTrack(3,0)"><img src="block/a101.jpeg"><h1>Kaam 25</h1><p>Divine</p></span>
+		<span  class="reveal" onclick="loadTrack(9,0)"><img src="block/closer.jpg"><h1>Closer</h1><p>Charlie Puth</p></span>
+		<span  class="reveal" onclick="loadTrack(11,0)"><img src="block/kesari.jpg"><h1>Mahi Ve</h1><p>Arijit Singh</p></span>
+		<span  class="reveal" onclick="loadTrack(13,0)"><img src="block/mera.jpg"><h1>Mera Wala Dance</h1><p>Mika Singh</p></span>
+		<span  class="reveal" onclick="loadTrack(14,0)"><img src="block/one.jpg"><h1>She Move It</h1><p>Badshah</p></span>
+		<span  class="reveal" onclick="loadTrack(16,0)"><img src="block/dholida.jpg"><h1>Dholida</h1><p>Udit Narayan</p></span>
+		<span  class="reveal" onclick="loadTrack(210,0)"><img src="https://c.saavncdn.com/373/Nikle-Currant-Punjabi-2018-20181011231550-500x500.jpg"><h1>Nikle Current</h1><p>Jassie Gill,Neha Kakkar</p></span>
+</div>
+<div class="chart1">
+		<span class="reveal" onclick="loadTrack(187,0)"><img src="https://c.saavncdn.com/367/Kedarnath-Hindi-2019-20190219-500x500.jpg"><h1>Qaafirana</h1><p>Arijit Singh</p></span>
+		<span class="reveal" onclick="loadTrack(22,0)"><img src="block/oneside.jpg"><h1>One Side</h1><p>Divine</p></span>
+		<span class="reveal" onclick="loadTrack(46,0)"><img src="block/soneya1.jpg"><h1>Mere Soneya</h1><p>Kabir</p></span>
+		<span class="reveal" onclick="loadTrack(15,0)"><img src="block/heartless.jpg"><h1>Heartless</h1><p>Badshah</p></span>
+		<span class="reveal" onclick="loadTrack(14,0)"><img src="block/one.jpg"><h1>She Move It Like</h1><p>Badshah</p></span>
+		<span class="reveal" onclick="loadTrack(7,0)"><img src="block/farak.jpg"><h1>Farak</h1><p>Divine</p></span>
+		<span class="reveal" onclick="loadTrack(188,0)"><img src="https://c.saavncdn.com/438/Rabba-Mehar-Kari-Hindi-2021-20210213092052-500x500.jpg"><h1>Rabba Mehar Kari</h1><p>Darshan Raval</p></span>
+		<span class="reveal" onclick="loadTrack(194,0)"><img src="https://c.saavncdn.com/651/Levitating-feat-DaBaby--English-2020-20200928114801-500x500.jpg"><h1>Levitating</h1><p>Dua Lipa</p></span>
+		<span class="reveal" onclick="loadTrack(210,0)"><img src="https://c.saavncdn.com/943/Kohinoor-Hindi-2019-20191007230518-500x500.jpg"><h1>Gandhi Money</h1><p>Divine</p></span>
+		<span class="reveal" onclick="loadTrack(200,0)"><img src="https://c.saavncdn.com/741/Shiv-Shiv-Shankara-Hindi--Hindi-2020-20201107104830-500x500.jpg"><h1>Shiv Shiv Shankar</h1><p>Hansraj Raghuvanshi</p></span>
+		<span class="reveal" onclick="loadTrack(195,0)"><img src="https://c.saavncdn.com/660/Butter-English-2021-20210526234150-500x500.jpg"><h1>Butter</h1><p>BTS</p></span>
+		<span class="reveal" onclick="loadTrack(190,0)"><img src="https://c.saavncdn.com/151/Ek-Villain-Hindi-2014-500x500.jpg"><h1>Banjara</h1><p>Mithoon,Mohammad Irfan</p></span>
+		<span  class="reveal" onclick="loadTrack(18,0)"><img src="block/bom.jpg"><h1>Bom Diggy</h1><p>Jasmin Walia,Jack</p></span>
+		<span  class="reveal" onclick="loadTrack(20,0)"><img src="block/gully.jpg"><h1>Asli Hip Hop</h1><p>Ranveer Singh</p></span>
+		<span  class="reveal" onclick="loadTrack(21,0)"><img src="block/shape.jpg"><h1>Shape Of You</h1><p>Ed Sheeran</p></span>
+		<span  class="reveal" onclick="loadTrack(34,0)"><img src="block/nocom.jpg"><h1>No Competition</h1><p>Jass Manak</p></span>
+		<span  class="reveal" onclick="loadTrack(43,0)"><img src="https://c.saavncdn.com/099/Teri-Aankhon-Mein-Hindi-2020-20201007061000-500x500.jpg"><h1>Teri-Aankhon</h1><p>Darshan Raval</p></span>
+		<span  class="reveal" onclick="loadTrack(69,0)"><img src="block/laalbindi.jpg"><h1>Laal Bindi</h1><p>Akull</p></span>
+	</div>
+</div>
+
+
+<div class="footer" id="foot">
+	<div class="socials">
+		<i class="fa fa-instagram"></i>
+		<i class="fa fa-linkedin"></i>
+		<i class="fa fa-twitter"></i>
+		<i class="fa fa-facebook-official"></i>
+	</div>
+	<div class="reserv">
+		<h1><i class="fa fa-copyright"></i>2021 <a href="http://starwebzz.in">Starwebzz</a> Inc. | All Rights Reserved.</h1>
+	</div>
+</div>
+</span>
+
+<script src="mainnew.js"></script>
+
+</body>
+</html>

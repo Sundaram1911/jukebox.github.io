@@ -1,9 +1,25 @@
 $('.back').on("scroll", function () {
     reveal();
+	console.log("scrolling/....");
 });
-
+function slideleft(){
+	document.getElementById('banner').scrollLeft += 500;
+	console.log("left");
+}
+function slideright(){
+	document.getElementById('banner').scrollLeft -= 500;
+	console.log("right");
+}
 window.onload = function(){
 	$('#loader-wrapper').fadeOut();
+	//top categories songs
+song(115,0),song(116,1),song(114,2),song(113,3),song(112,4),song(111,5),song(138,6),song(152,7),song(136,8),song(99,9),
+						song(119,10),song(122,11),song(98,12),song(87,13),song(80,14),
+						song(97,15),song(96,16),song(95,17),song(57,18),song(94,19),song(91,20),song(89,21),song(45,22),song(42,23),song(62,24),
+						song(163,25),song(164,26),song(165,27),song(166,28),song(169,29),
+						song(178,30),song(179,31),song(180,32),song(181,33),song(67,34),song(66,35),song(65,36),song(43,37),song(35,38),song(100,39),
+						song(173,40),song(174,41),song(175,42),song(176,43),song(177,44);
+						
 	//love_mood
 	art_song(175,0),art_song(158,1),art_song(157,2),art_song(156,3),art_song(155,4),
 	art_song(141,5),art_song(137,6),art_song(135,7),art_song(134,8),art_song(128,9),
@@ -12,10 +28,26 @@ window.onload = function(){
 	art_song(131,12),art_song(132,13),art_song(138,14),art_song(142,15),art_song(148,16),
 	art_song(150,17),art_song(159,18),art_song(160,19),art_song(161,20),art_song(163,21),
 	art_song(177,22),art_song(93,23);
-	//workout mood
-	art_song(3,24),
-	art_song(209,25),art_song(22,26),art_song(23,27),art_song(27,28),art_song(28,29);
-	//top charts song
+	//desi rap
+	art_song(209,24),art_song(3,25),art_song(7,26),art_song(22,27),
+	art_song(101,28),art_song(23,29),art_song(28,30),art_song(29,31);
+	//shreya goshal
+	art_song(121,32),art_song(228,33),art_song(229,34),art_song(230,35),
+	art_song(231,36),art_song(232,37),art_song(233,38),art_song(234,39),
+	art_song(235,40);
+	//neha kakkar
+	art_song(40,41),art_song(41,42),art_song(120,43),art_song(131,44),
+	art_song(157,45),art_song(161,46),art_song(210,47);
+	//badshah
+	art_song(14,48),art_song(15,49),art_song(117,50),art_song(159,51),
+	art_song(160,52),art_song(248,53),art_song(250,54);
+	//arijit singh
+	art_song(4,55),art_song(11,56),art_song(30,57),art_song(46,58),
+	art_song(111,59),art_song(112,60),art_song(113,61),
+	art_song(115,62),art_song(116,63),art_song(129,64),art_song(152,65),
+	art_song(155,66),art_song(187,67),art_song(213,68),art_song(214,66),art_song(215,67),art_song(221,68),art_song(230,69),art_song(231,70);
+
+
 		
 }
 
@@ -558,7 +590,7 @@ let track_list = [
 { 
 	name: "Walking Miracle", //79
 	artist: "Divine", 
-	image:"block/Walking.jpeg", 
+	image:"https://c.saavncdn.com/715/Punya-Paap-Hindi-2020-20201201190529-500x500.jpg", 
 	path: "https://snoidcdnems05.cdnsrv.jio.com/jiosaavn.cdn.jio.com/715/d1f39ab3bfa1db021b853cbd77b97811_160.mp4", 
 },
 { 
@@ -1074,7 +1106,7 @@ let track_list = [
 { 
 	name: "Let Me Love You", //165
 	artist: "DJ Snake", 
-	image: "https://a10.gaanacdn.com/images/albums/75/1734375/crop_175x175_1734375.jpg",
+	image: "https://c.saavncdn.com/898/Let-Me-Love-You-English-2016-150x150.jpg",
 	path: "https://sdlhivkecdnems05.cdnsrv.jio.com/jiosaavn.cdn.jio.com/273/d1912077904b928c57eeb27b4b61d068_160.mp4"
 },
 { 
@@ -1504,62 +1536,221 @@ let track_list = [
 	path:'https://sdlhivkecdnems01.cdnsrv.jio.com/jiosaavn.cdn.jio.com/222/115d5cb9924b84b4b8ff3a5a4d732ef1_160.mp4'
 },
 {
-	name:'Ranjha',
+	name:'Ranjha',//237
 	artist:'Bpraak',
 	image:'https://c.saavncdn.com/264/Ranjha-From-Shershaah--Hindi-2021-20210804173407-500x500.jpg',
 	path:'https://snoidcdnems06.cdnsrv.jio.com/jiosaavn.cdn.jio.com/264/eb5bf3908be1c26cfda000e615c647d6_160.mp4'
 },
 {
-	name:'Barsaat ki Dhun',
+	name:'Barsaat ki Dhun',//238
 	artist:'Jubin Nautiyal',
 	image:'https://c.saavncdn.com/600/Barsaat-Ki-Dhun-Hindi-2021-20210720121009-500x500.jpg',
 	path:'https://sgdccdnems03.cdnsrv.jio.com/jiosaavn.cdn.jio.com/600/34fcd4b1b45889b24dd35246104156e7_160.mp4'
 },
 {
-	name:'Gallan Kardi',
+	name:'Gallan Kardi',//239
 	artist:'Jazzy B,Jyotika tangri',
 	image:'https://c.saavncdn.com/423/Jawaani-Jaaneman-Hindi-2020-20201117092602-500x500.jpg',
 	path:'https://sgdccdnems04.cdnsrv.jio.com/jiosaavn.cdn.jio.com/423/9350d142b11210217ff344c478af692e_160.mp4'
 },
 {
-	name:'Jee Ni Karda',
+	name:'Jee Ni Karda',//240
 	artist:'JAss Manak,Nikita Gandhi',
 	image:'https://c.saavncdn.com/302/Jee-Ni-Karda-From-Sardar-Ka-Grandson--Hindi-2021-20210425051001-500x500.jpg',
 	path:'https://sgdccdnems01.cdnsrv.jio.com/jiosaavn.cdn.jio.com/302/9e06321a66a8de23911fd5b8b62a08d0_160.mp4'
 },
 {
-	name:'Naah (Bala)',
+	name:'Naah (Bala)',//241
 	artist:'Hardy Sandhu',
 	image:'https://c.saavncdn.com/647/Naah-Goriye-From-Bala--Hindi-2019-20191025062350-500x500.jpg',
 	path:'https://sdlhivkcdnems05.cdnsrv.jio.com/jiosaavn.cdn.jio.com/647/8705ed29f0c98c39bd5e64d1bd624268_160.mp4'
 },
 {
-	name:'Montero',
+	name:'Montero',//242
 	artist:'Lil Nas X',
 	image:'https://c.saavncdn.com/012/MONTERO-Call-Me-By-Your-Name--English-2021-20210322233947-500x500.jpg',
 	path:'https://snoidcdnems04.cdnsrv.jio.com/jiosaavn.cdn.jio.com/012/f5b28379824be192ddde090a6c046c55_160.mp4'
 },
 {
-	name:'Dont Let Me down',
+	name:'Dont Let Me down',//243
 	artist:'Chainsmokers',
 	image:'https://c.saavncdn.com/848/Don-t-Let-Me-Down-English-2016-500x500.jpg',
 	path:'https://snoidcdnems03.cdnsrv.jio.com/jiosaavn.cdn.jio.com/848/29c0372cad82dee0a7b942eb15119a8d_160.mp4'
 },
 {
-	name:'Attention',
+	name:'Attention',//244
 	artist:'Charlie Puth',
 	image:'https://c.saavncdn.com/292/Attention-English-2017-500x500.jpg',
 	path:'https://sdlhivkecdnems03.cdnsrv.jio.com/jiosaavn.cdn.jio.com/292/cd080a5ab86f380a194bda417682efb2_160.mp4'
 },
 {
-	name:'Lovely',
+	name:'Lovely',//245
 	artist:'Billie Eilish',
 	image:'https://c.saavncdn.com/947/lovely-English-2018-20180418150240-500x500.jpg',
 	path:'https://sgdccdnems02.cdnsrv.jio.com/jiosaavn.cdn.jio.com/947/580fe2c0cb03ba147b00a4b2261764d4_160.mp4'
+},
+{
+	name:'Soulmate',//246
+	artist:'Akull,Aasta Gill',
+	image:'https://c.saavncdn.com/942/Soulmate-Hindi-2021-20210905053510-500x500.jpg',
+	path:'https://sklktcdnems04.cdnsrv.jio.com/jiosaavn.cdn.jio.com/942/489c3d9779c0b9bb262aa4e156b7fa33_160.mp4'
+},
+{
+	name:'Hamko To Pyar Ho Gaya',//247
+	artist:'Raj Barman',
+	image:'https://c.saavncdn.com/540/Humko-Toh-Pyaar-Hogaya-Hindi-2021-20210921153541-500x500.jpg',
+	path:'https://sklktcdnems01.cdnsrv.jio.com/jiosaavn.cdn.jio.com/540/f0ee20b6535cac6b1910000c718a1e36_160.mp4'
+},
+{
+	name:'Bachpan Ka Pyar',//248
+	artist:'Badshah,Aasta Gill',
+	image:'https://sdlhivkecdnems03.cdnsrv.jio.com/c.saavncdn.com/199/Bachpan-Ka-Pyaar-Hindi-2021-20210809110458-500x500.jpg',
+	path:'https://sgdccdnems02.cdnsrv.jio.com/jiosaavn.cdn.jio.com/199/a0e0fc7ed3dc5a24428c10123fb601ee_160.mp4'
+},
+{
+	name:'52 Gaj Ka Daman',//249
+	artist:'Renuka Panwar',
+	image:'https://sdlhivkecdnems06.cdnsrv.jio.com/c.saavncdn.com/407/52-Gaj-Ka-Daman-Haryanvi-2020-20201123150200-500x500.jpg',
+	path:'https://snoidcdnems06.cdnsrv.jio.com/jiosaavn.cdn.jio.com/407/ba3d00092e06bca0e8800e4a393f015c_160.mp4'
+},
+{
+	name:'Bawla',//250
+	artist:'Badshah',
+	image:'https://sdlhivkcdnems01.cdnsrv.jio.com/c.saavncdn.com/843/Baawla-Hindi-2021-20210727000901-500x500.jpg',
+	path:'https://snoidcdnems01.cdnsrv.jio.com/jiosaavn.cdn.jio.com/843/d0ce4530026663b6e51d0019fc26bdcc_160.mp4'
+},
+{
+	name:'Fly',//251
+	artist:'Badshah,Amit Uchana',
+	image:'https://sdlhivkecdnems01.cdnsrv.jio.com/c.saavncdn.com/316/Fly-Hindi-2021-20210305161034-500x500.jpg',
+	path:'https://sklktecdnems04.cdnsrv.jio.com/jiosaavn.cdn.jio.com/316/83cf51e286f3d5685b58e162861e5917_160.mp4'
+},
+{
+	name:'Kabhi Kabhi Aditi',//252
+	artist:'Rashid Ali',
+	image:'https://c.saavncdn.com/033/Jaane-Tu-Ya-Jaane-Na-Hindi-2008-20180314-500x500.jpg',
+	path:'https://sdlhivkcdnems04.cdnsrv.jio.com/jiosaavn.cdn.jio.com/033/bb3857c294f9e4d3b24f70a1d12da7df_160.mp4'
+},
+{
+	name:'Stay',//253
+	artist:'Justin Bieber',
+	image:'https://c.saavncdn.com/895/Stay-English-2021-20210706223809-500x500.jpg',
+	path:'https://sgdccdnems03.cdnsrv.jio.com/jiosaavn.cdn.jio.com/895/9a3f48fb98e9dd0b201f6cacfb554408_96.mp4'
+},
+{
+	name:'Dont Go',//254
+	artist:'Justin Bieber',
+	image:'https://c.saavncdn.com/806/Don-t-Go-English-2021-20210820034521-500x500.jpg',
+	path:'https://sklktecdnems06.cdnsrv.jio.com/jiosaavn.cdn.jio.com/806/fc593350b74d80d72615424b5e0c3837_96.mp4'
+},
+{
+	name:'Radha Rani',//255
+	artist:'Nandlal Changa',
+	image:'https://sgdccdnems04.cdnsrv.jio.com/c.saavncdn.com/091/Radha-Rani-Gujarati-2019-20210805233324-500x500.jpg',
+	path:'https://sdlhivkcdnems01.cdnsrv.jio.com/jiosaavn.cdn.jio.com/091/642f791b5147c959564a126b40de0b73_160.mp4'
+},
+{
+	name:'Radha Rani',//256
+	artist:'Hansraj Raghuwanshi',
+	image:'https://sgdccdnems03.cdnsrv.jio.com/c.saavncdn.com/197/Radha-Rani-Hindi-2021-20210825231351-500x500.jpg',
+	path:'https://sklktecdnems01.cdnsrv.jio.com/jiosaavn.cdn.jio.com/197/7e82b307966a62932b8dc13d0faa4bb1_160.mp4'
+},
+{
+	name:'Ram Siya Ram',//257
+	artist:'Sachet Parampara',
+	image:'https://sklktecdnems02.cdnsrv.jio.com/c.saavncdn.com/215/Ram-Siya-Ram-Hindi-2021-20210222031001-500x500.jpg',
+	path:'https://sgdccdnems04.cdnsrv.jio.com/jiosaavn.cdn.jio.com/215/5a6134d5860b9b47cc9fb2e058e22a18_160.mp4'
+},
+{
+	name:'Radhe Radhe',//258
+	artist:'Hansraj Raghuwanshi',
+	image:'https://sgdccdnems04.cdnsrv.jio.com/c.saavncdn.com/716/Radhe-Radhe-Hindi--Hindi-2020-20200911113300-500x500.jpg',
+	path:'https://sgdccdnems03.cdnsrv.jio.com/jiosaavn.cdn.jio.com/716/119d253f2edfb61d88592e9afa6ba6be_160.mp4'
+},
+{
+	name:'Laagi Lagan Shankara ',//259
+	artist:'Hansraj Raghuwanshi',
+	image:'https://sgdccdnems01.cdnsrv.jio.com/c.saavncdn.com/117/Laagi-Lagan-Shankara-Hindi-2021-20210327211201-500x500.jpg',
+	path:'https://sgdccdnems01.cdnsrv.jio.com/jiosaavn.cdn.jio.com/117/1f98ca0d395119240137747ad7000869_160.mp4'
+},
+{
+	name:'Shiv Sama Rahe',//260
+	artist:'Hansraj Raghuwanshi',
+	image:'https://sgdccdnems01.cdnsrv.jio.com/c.saavncdn.com/974/Shiv-Sama-Rahe-Hindi-2021-20210102222527-500x500.jpg',
+	path:'https://sdlhivkecdnems04.cdnsrv.jio.com/jiosaavn.cdn.jio.com/974/76c1c33c5fea44cd419d1ec77f26114a_160.mp4'
+},
+{
+	name:'Bhole Shankar',//261
+	artist:'Hansraj Raghuwanshi',
+	image:'https://sgdccdnems04.cdnsrv.jio.com/c.saavncdn.com/739/Bhole-Shankar-Hindi-2021-20210718021256-500x500.jpg',
+	path:'https://sklktcdnems04.cdnsrv.jio.com/jiosaavn.cdn.jio.com/739/ff926807e63891073fdef10ea6ae91d7_160.mp4'
+},
+{
+	name:'Main Shiv Ka',//262
+	artist:'Hansraj Raghuwanshi',
+	image:'https://snoidcdnems02.cdnsrv.jio.com/c.saavncdn.com/838/Main-Shiv-Ka-Shiv-Mere-Punjabi-2021-20210507195445-500x500.jpg',
+	path:'https://snoidcdnems04.cdnsrv.jio.com/jiosaavn.cdn.jio.com/838/f50d0044fad4536b91acf7042f015e18_160.mp4'
+},
+{
+	name:'Radhe Tere Charno Ki',//263
+	artist:'Vidhi Sharma',
+	image:'https://sklktecdnems03.cdnsrv.jio.com/c.saavncdn.com/814/Radhe-Tere-Charno-Ki-Gar-Dhul-Mil-Jaye-Hindi-2019-20190223101024-500x500.jpg',
+	path:'https://sklktcdnems03.cdnsrv.jio.com/jiosaavn.cdn.jio.com/814/4db019443ae88e7850d514c3125516ab_160.mp4'
+},
+{
+	name:'Chan Vekhya',
+	artist:'Harnoor',
+	image:'https://sklktecdnems03.cdnsrv.jio.com/c.saavncdn.com/280/Chan-Vekhya-Punjabi-2021-20210425005022-500x500.jpg',
+	path:'https://sdlhivkecdnems02.cdnsrv.jio.com/jiosaavn.cdn.jio.com/280/a8fb17ec5de0254f8d9475210e3a0ddd_96.mp4'
+},
+{
+	name:'Waalian',
+	artist:'Harnoor',
+	image:'https://sklktcdnems07.cdnsrv.jio.com/c.saavncdn.com/176/Waalian-Punjabi-2020-20201027084423-500x500.jpg',
+	path:'https://sklktecdnems04.cdnsrv.jio.com/jiosaavn.cdn.jio.com/176/03d2acb306837f7b1b7889d880f0dce1_96.mp4'
+},
+{
+	name:'Moonlight',
+	artist:'Harnoor',
+	image:'https://sklktecdnems03.cdnsrv.jio.com/c.saavncdn.com/876/Moonlight-Punjabi-2020-20201228211420-500x500.jpg',
+	path:'https://snoidcdnems05.cdnsrv.jio.com/jiosaavn.cdn.jio.com/876/d939be5982e687b43c18602606d5dc29_96.mp4'
+},
+{
+	name:'Parshawan',
+	artist:'Harnoor',
+	image:'https://sklktcdnems02.cdnsrv.jio.com/c.saavncdn.com/685/Parshawan-Punjabi-2021-20211026135139-500x500.jpg',
+	path:'https://sdlhivkecdnems02.cdnsrv.jio.com/jiosaavn.cdn.jio.com/685/ab797b5e94e50b896ecf777c299a4c71_96.mp4'
+},
+{
+	name:'Bijlee-Bijlee',
+	artist:'Hardy Sandhu',
+	image:'https://snoidcdnems01.cdnsrv.jio.com/c.saavncdn.com/984/Bijlee-Bijlee-Punjabi-2021-20211028053337-500x500.jpg',
+	path:'https://sklktcdnems07.cdnsrv.jio.com/jiosaavn.cdn.jio.com/984/3d7461bde05ef45fa34c28997a1f9604_96.mp4'
+},
+{
+	name:'Jugnu',
+	artist:'Badshah',
+	image:'https://sgdccdnems02.cdnsrv.jio.com/c.saavncdn.com/272/Jugnu-Hindi-2021-20211024110230-500x500.jpg',
+	path:'https://snoidcdnems07.cdnsrv.jio.com/jiosaavn.cdn.jio.com/272/848475f738a2707e2c1a59b7ff029c05_96.mp4'
+},
+{
+	name:'Aila-Re-Aillaa',
+	artist:'Daler Mehandi,Tanishk',
+	image:'https://sgdccdnems02.cdnsrv.jio.com/c.saavncdn.com/840/Aila-Re-Aillaa-From-Sooryavanshi--Hindi-2021-20211021021001-500x500.jpg',
+	path:'https://snoidcdnems05.cdnsrv.jio.com/jiosaavn.cdn.jio.com/840/f75af1acdaf047933ee13264cd5aae32_96.mp4'
 }
 ]; 
 
+function filter(){
+	track_list.map((x)=>{
+		console.log(x.name);
+		console.log(x.artist);
+		console.log(x.image);
+	})
+}
+
 function search_music(){
+	
 	let input = document.getElementById('searchbar').value;
 	input = input.toLowerCase();
 	let x = document.getElementsByClassName('sea');
@@ -1573,6 +1764,7 @@ function search_music(){
 		}
 	}
 	document.getElementById("list").style.display = "block";
+	
 }
 
 function viewsearch(){
@@ -1613,6 +1805,7 @@ function playerkidherhai(){  //for spinner to open running track b1
 	$('.artists').css('display', 'none');
 	$('.choose').css('display', 'none');
 	$('#hide_slider').css('display', 'none');
+	$('.head').css('display','none');
 }
 function mainpage(){  //circle spinner return to mainpage  b2
 	document.getElementById("sundi").style.display="none";
@@ -1632,11 +1825,13 @@ function mainpage(){  //circle spinner return to mainpage  b2
 	$('.artists').css('display', 'flex');
 	$('.choose').css('display', 'block');
 	$('#hide_slider').css('display', 'block');
+	$('.head').css('display','block');
 }
 
 function displayblocks(){ //for mainpage listen event a
 	document.getElementById("gupta").style.display="block";
 	document.getElementById("images_hide").style.display="block";
+	document.getElementById("appname").style.display="block";
 	document.getElementById("sundaram").style.display="none";
 	document.getElementById("hide_spinner").style.display="block";
 	document.getElementById("sundi").style.display="none";
@@ -1656,6 +1851,8 @@ function displayblocks(){ //for mainpage listen event a
 	$('#banner').css('display', 'flex');
 	$('.artists').css('display', 'flex');
 	$('#hide_slider').css('display', 'block');
+	$('.head').css('display','block');
+	$('.choose').css('display', 'block');
 }
 function hideblocks(){  //for 2nd page jukebox title back to mainpage function a2
 	document.getElementById("sundaram").style.display="block";
@@ -1664,11 +1861,12 @@ function hideblocks(){  //for 2nd page jukebox title back to mainpage function a
 	document.getElementById("sundi").style.display= "none";
 	document.getElementById("foot").style.display="none";
 	document.getElementById("charts").style.display="none";
-	document.getElementsByClassName("back")[0].style.backgroundImage = "url('main/back4.png')";
-	document.getElementById("appname").style.display="block";
+	document.getElementsByClassName("head")[0].style.display="inline-flex";
+	document.getElementsByClassName("back")[0].style.backgroundImage = "url('main/5th.png')";
+	document.getElementById("appname").style.display="none";
 	$('.artists').css('display', 'none');
-	$('#banner').css('display', 'flex');
-	$('#hide_slider').css('display', 'block');
+	$('#banner').css('display', 'none');
+	$('#hide_slider').css('display', 'none');
 	$('.choose').css('display', 'block');
 }
 
@@ -1775,6 +1973,7 @@ document.getElementById("appname").style.display="none";
 $('#hide_slider').css('display', 'none');
 $('.artists').css('display', 'none');
 $('.choose').css('display', 'none');
+$('.head').css('display','none');
 
 if ( 'mediaSession' in navigator ) {
 	navigator.mediaSession.metadata = new MediaMetadata({
@@ -1864,8 +2063,10 @@ a= document.getElementById('holder1').innerText;
 track_index = a;
 console.log(track_index);
 if (track_index < track_list.length) 
-	track_index -= 1; 
-else track_index = 0; 
+	track_index ++; 
+else
+	track_index = 0;
+
 var were=0;
 // Load and play the new track 
 loadTrack(track_index,were); 
@@ -1875,9 +2076,10 @@ playTrack();
 
 function prevTrack() { 
 // Go back to the last track if the 
-
+a= document.getElementById('holder1').innerText;
+track_index = a;
 if (track_index < track_list.length) 
-	track_index += 1; 
+	track_index --; 
 else track_index = 0; 
 // Load and play the new track 3 
 var were = 0;
@@ -1987,7 +2189,7 @@ function myFunction123() {
 
 
 function displaysidemenu(){
-	document.getElementById("option").style.width = "410px";
+	document.getElementById("option").style.width = "300px";
 	document.getElementById("bars").style.display="none";
 	document.getElementById("close").style.display="block";
 	console.log("event fired display menu");
@@ -2018,81 +2220,45 @@ var firebaseConfig = {
 	const auth = firebase.auth();
 
 
-	function signUp(){
-		
-		var email = document.getElementById("email");
-		var password = document.getElementById("password");
-		
-		const promise = auth.createUserWithEmailAndPassword(email.value, password.value);
-		promise.catch(e => alert(e.message));
-
-	}
-
-	function signIn(){
-		var email = document.getElementById("email");
-		var password = document.getElementById("password");
-		
-		const promise = auth.signInWithEmailAndPassword(email.value, password.value);
-		promise.catch(e => alert(e.message));
-	}
+	
 	
 	function signOut(){
 		auth.signOut();
 		alert("Signed Out");
 	}
 	
+
 	auth.onAuthStateChanged(function(user){
 		
 		if(user){
-			var email = user.email;
-			alert('active user ' + email);
-			//Take user to a different or home page
-			showuserdetails(user)
-			document.getElementById('userdetails').style.display = 'block';
-			document.getElementById('googlesign').style.display="none";
-			document.getElementById('googlesignout').style.display="block";
-			//is signed in
-			
+		  var contact = user.phoneNumber;
+		 
+		  //Take user to a different or home page
+		  showuserdetails(contact)
+		 
+		  //is signed in
 		}else{
-			alert('no active user');
-			document.getElementById('userdetails').style.display = 'none';
-			document.getElementById('googlesign').style.display="block";
-			document.getElementById('googlesignout').style.display="none";
-			//no user is signed in
+		  alert('no active user');
+		  window.location="index.html"
+		  //no user is signed in
 		}
 		
-	});
+	  });
+	  function showuserdetails(user){
+		console.log(user);
+		document.getElementById('fetch').innerHTML = `
+		<p>${user}</p>`
+		document.getElementById('fetchdesk').innerHTML = `
+		<p>${user}</p>`
 
-	googleSignIn=()=>{
-		base_provider = new firebase.auth.GoogleAuthProvider()
-		firebase.auth().signInWithPopup(base_provider).then(function(result){
-			console.log(result)
-			console.log('sign btn clicked');
-			document.getElementById('userdetails').styel.display = 'block';
-		}).catch(function(err){
-			console.log(err)
-		})
-	}
-
-	googleSignOut=()=>{
-		firebase.auth().signOut().then(()=>{
-			document.getElementById('googlesign').style.display="block";
-			document.getElementById('googlesignout').style.display="none";
-		}).catch(e=>{
-			console.log(e)
-		})
-	}
-	function showuserdetails(user){
-		document.getElementById('userdetails').innerHTML = `
-		<h2 id="dash">Dashboard</h2>
-		<img src="${user.photoURL}" id="userimg">
-		<p id="username">${user.displayName}</p>
-		<p id="useremail">${user.email}</p> <br/>`
-
-	}
-
+	  }
+	
+function disoption(){
+	var element = document.getElementsByClassName('options')[0];
+	element.classList.toggle("optionsactive");
+}
 //databse storage for new songs of jukebox 
-var messagesRef = firebase.database().ref('new_request_song');
+var messagesRef = firebase.database().ref('jukebox-a0183-default-rtdb');
 
 // Listen for form submit
 document.getElementById('request_song').addEventListener('submit', submitForm);
