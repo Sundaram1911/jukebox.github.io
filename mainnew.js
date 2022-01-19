@@ -1698,46 +1698,53 @@ let track_list = [
 	path:'https://sklktcdnems03.cdnsrv.jio.com/jiosaavn.cdn.jio.com/814/4db019443ae88e7850d514c3125516ab_160.mp4'
 },
 {
-	name:'Chan Vekhya',
+	name:'Chan Vekhya',//264
 	artist:'Harnoor',
 	image:'https://sklktecdnems03.cdnsrv.jio.com/c.saavncdn.com/280/Chan-Vekhya-Punjabi-2021-20210425005022-500x500.jpg',
 	path:'https://sdlhivkecdnems02.cdnsrv.jio.com/jiosaavn.cdn.jio.com/280/a8fb17ec5de0254f8d9475210e3a0ddd_96.mp4'
 },
 {
-	name:'Waalian',
+	name:'Waalian',//265
 	artist:'Harnoor',
 	image:'https://sklktcdnems07.cdnsrv.jio.com/c.saavncdn.com/176/Waalian-Punjabi-2020-20201027084423-500x500.jpg',
 	path:'https://sklktecdnems04.cdnsrv.jio.com/jiosaavn.cdn.jio.com/176/03d2acb306837f7b1b7889d880f0dce1_96.mp4'
 },
 {
-	name:'Moonlight',
+	name:'Moonlight',//266
 	artist:'Harnoor',
 	image:'https://sklktecdnems03.cdnsrv.jio.com/c.saavncdn.com/876/Moonlight-Punjabi-2020-20201228211420-500x500.jpg',
 	path:'https://snoidcdnems05.cdnsrv.jio.com/jiosaavn.cdn.jio.com/876/d939be5982e687b43c18602606d5dc29_96.mp4'
 },
 {
-	name:'Parshawan',
+	name:'Parshawan',//267
 	artist:'Harnoor',
 	image:'https://sklktcdnems02.cdnsrv.jio.com/c.saavncdn.com/685/Parshawan-Punjabi-2021-20211026135139-500x500.jpg',
 	path:'https://sdlhivkecdnems02.cdnsrv.jio.com/jiosaavn.cdn.jio.com/685/ab797b5e94e50b896ecf777c299a4c71_96.mp4'
 },
 {
-	name:'Bijlee-Bijlee',
+	name:'Bijlee-Bijlee',//268
 	artist:'Hardy Sandhu',
 	image:'https://snoidcdnems01.cdnsrv.jio.com/c.saavncdn.com/984/Bijlee-Bijlee-Punjabi-2021-20211028053337-500x500.jpg',
 	path:'https://sklktcdnems07.cdnsrv.jio.com/jiosaavn.cdn.jio.com/984/3d7461bde05ef45fa34c28997a1f9604_96.mp4'
 },
 {
-	name:'Jugnu',
+	name:'Jugnu',//269
 	artist:'Badshah',
 	image:'https://sgdccdnems02.cdnsrv.jio.com/c.saavncdn.com/272/Jugnu-Hindi-2021-20211024110230-500x500.jpg',
 	path:'https://snoidcdnems07.cdnsrv.jio.com/jiosaavn.cdn.jio.com/272/848475f738a2707e2c1a59b7ff029c05_96.mp4'
 },
 {
-	name:'Aila-Re-Aillaa',
+	name:'Aila-Re-Aillaa',//270
 	artist:'Daler Mehandi,Tanishk',
 	image:'https://sgdccdnems02.cdnsrv.jio.com/c.saavncdn.com/840/Aila-Re-Aillaa-From-Sooryavanshi--Hindi-2021-20211021021001-500x500.jpg',
 	path:'https://snoidcdnems05.cdnsrv.jio.com/jiosaavn.cdn.jio.com/840/f75af1acdaf047933ee13264cd5aae32_96.mp4'
+},
+{	
+	name:'Excuses',//271
+	artist:'Gurinder Gill,Ap Dhillon',
+	image:'https://sgdccdnems01.cdnsrv.jio.com/c.saavncdn.com/890/Excuses-English-2021-20210930112054-500x500.jpg',
+	path:'https://sklktcdnems06.cdnsrv.jio.com/jiosaavn.cdn.jio.com/890/a18aabc4681dc6c334d5d29b67e84a0f_160.mp4'
+
 }
 ]; 
 
@@ -1800,6 +1807,7 @@ function playerkidherhai(){  //for spinner to open running track b1
 	$('#banner').css('display', 'none');
 	document.getElementsByClassName("choose")[0].style.display="none";
 	document.getElementsByClassName("choose")[1].style.display="none";
+	document.getElementsByClassName("back")[0].style.backgroundColor = "white";
 	document.getElementById("appname").style.display="none";
 	document.getElementById("searchicon1").style.display="none";
 	$('.artists').css('display', 'none');
@@ -1819,6 +1827,7 @@ function mainpage(){  //circle spinner return to mainpage  b2
 	document.getElementsByClassName("choose")[0].style.display="block";
 	document.getElementsByClassName("choose")[1].style.display="block";
 	document.getElementById("m").style.display="none";
+	document.getElementsByClassName("back")[0].style.backgroundColor = "black";
 	document.getElementById("closeicon1").style.display="none";
 	document.getElementById("searchicon1").style.display="block";
 	document.getElementById("appname").style.display="block";
@@ -1867,6 +1876,7 @@ function hideblocks(){  //for 2nd page jukebox title back to mainpage function a
 	$('.artists').css('display', 'none');
 	$('#banner').css('display', 'none');
 	$('#hide_slider').css('display', 'none');
+	document.getElementsByClassName("back")[0].style.backgroundColor = "black";
 	$('.choose').css('display', 'block');
 }
 
@@ -1895,6 +1905,9 @@ function displaysongs(m){
 	document.getElementsByClassName("disco")[j].innerHTML =  x ;
 	document.getElementsByClassName("discocap")[j].innerHTML = y;
 	}
+	
+
+	
 }
 let artist_img = document.querySelector('.artist_img');
 let artist_s = document.querySelector('.artist_s');
@@ -1965,6 +1978,7 @@ document.getElementById("charts").style.display="none";
 document.getElementById("banner").style.display="none";
 document.getElementsByClassName("choose")[0].style.display="none";
 document.getElementsByClassName("choose")[1].style.display="none";
+document.getElementsByClassName("back")[0].style.backgroundColor = "white";
 document.getElementById('sundi').style.display ="block";
 document.getElementById("closeicon1").style.display="none";
 document.getElementById("searchicon1").style.display="none";
